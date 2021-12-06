@@ -1,0 +1,167 @@
+# OptiFine Alternatives
+
+## Why?
+
+OptiFine was originally a great mod offering many quality of life improvements for player in the beginning. However, over the years, its benefits have dwindled and has caused many issues for modders. This is due to Minecraft's codebase improving over the years and OptiFine's aggressiveness towards replacing entire swaths of code while being closed source making it very difficult to figure out why OptiFine has broken another modder's mod. 
+Also worth noting that OptiFine natively doesn't support Fabric and it's hard to maintain OptiFabric.
+
+In the modern Minecraft era, with Fabric's community effort, modders have begun to create alternatives for most of OptiFine's features to allow players to maintain better performance, better mod compatibility, and better support.
+
+[OptiFabric: A note about the 1.16 crashes][optifabric_issue]
+
+[optifabric_issue]: https://github.com/modmuss50/OptiFabric/issues/242
+
+## This list
+
+This list will list recommended OptiFine alternatives by me (LambdAurora), so it has some requirements for mods to be listed here:
+ - They must be publicly available, if it's only accessible through Discord they are not eligible.
+ - Mods must respect the Minecraft's EULA.
+ - Mods must not refer to a cheat client.
+ - Mods that change gameplay in a way (e.g. zoom) that have a way for servers to disable them will be favored.
+
+This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
+
+**Warning: this list is under re-construction, some mods may be missing, do not hesitate to open a pull request on the *data* branch!**
+
+## Alternatives
+
+### Performance
+
+#### Client
+
+- [Sodium] - Modern rendering engine and client-side optimization mod for Minecraft.  
+  - Available for: 1.16 -> 1.17, 1.18 (Alpha)  
+
+#### General
+
+- [Lithium] - No-compromises game logic/server optimization mod.  
+  - Available for: 1.16 -> 1.17, 1.18 (Beta)  
+- [Phosphor] - No-compromises lighting engine optimization mod.  
+  - Available for: 1.12 (Forge), 1.15 -> 1.17  
+- [Starlight] - Rewrites the light engine to fix lighting performance and lighting errors. Uses a custom format for light storage.  
+  - Available for: 1.17, 1.18 (WIP)  
+
+### Cosmetic
+
+- [Chime] - Adds predicates for more interactive item models, CIT replacement with a custom format.  
+  - Available for: 1.16  
+- [Connected Block Textures] - An implementation of the MCPatcher/Optifine connected textures format on the Fabric modloader. Unmaintained.  
+  - Available for: 1.16  
+  Requires [Fabric Renderer API](#compatibility "More information.")  
+- [Continuity] - A Fabric mod that allows for efficient connected textures.  
+  - Available for: 1.17 -> 1.18  
+  Requires [Fabric Renderer API](#compatibility "More information.")  
+- [LambdaBetterGrass] - Adds better grass and snow to the game.  
+  - Available for: 1.16 -> 1.18  
+  Requires [Fabric Renderer API](#compatibility "More information.")  
+- [LambDynamicLights] - Adds dynamic lighting to the game.  
+  - Available for: 1.15 -> 1.18  
+
+### Shaders
+
+- [Canvas Renderer] - A new rendering engine. Incompatible with Sodium.  
+  - Available for: 1.16 (Abandonned), 1.17 -> 1.18  
+- [Iris] - A new shaders mod for Minecraft intended to be compatible with existing ShadersMod/Optifine shaders.  
+  - Available for: 1.16 -> 1.18  
+
+### Fog
+
+- [ClearView] - Controls which kinds of fogs are shown.  
+  - Available for: 1.15 -> 1.16  
+- [Custom Fog] - A mod allowing you to customize the appearance of fog in your world.  
+  - Available for: 1.15 -> 1.17  
+- [Fog Control] - Allows the user to adjust the (client) distance at which fogs render or disable them completely.   
+  - Available for: 1.17  
+- [FogYeet] - Small mod for 1.15 to remove fog.  
+  - Available for: 1.15  
+- [NoFog] - A simple client-side mod supporting both forge and fabric that removes all fog. (ARR)  
+  - Available for: 1.16 -> 1.18  
+
+### Zoom
+
+- [Logical Zoom] - Super simple zoom key for Minecraft.  
+  - Available for: 1.15 -> 1.18  
+- [Ok Zoomer] - Adds a highly-configurable zoom key for Fabric. The zoom is yours!  
+  - Available for: 1.14 -> 1.18  
+
+[Sodium]: https://curseforge.com/minecraft/mc-mods/sodium "Sodium CurseForge page"
+[Lithium]: https://curseforge.com/minecraft/mc-mods/lithium "Lithium CurseForge page"
+[Phosphor]: https://curseforge.com/minecraft/mc-mods/phosphor "Phosphor CurseForge page"
+[Starlight]: https://curseforge.com/minecraft/mc-mods/starlight "Starlight CurseForge page"
+[Chime]: https://curseforge.com/minecraft/mc-mods/chime-fabric "Chime CurseForge page"
+[Connected Block Textures]: https://curseforge.com/minecraft/mc-mods/connected-block-textures "Connected Block Textures CurseForge page"
+[Continuity]: https://curseforge.com/minecraft/mc-mods/continuity "Continuity CurseForge page"
+[LambdaBetterGrass]: https://curseforge.com/minecraft/mc-mods/lambdabettergrass "LambdaBetterGrass CurseForge page"
+[LambDynamicLights]: https://curseforge.com/minecraft/mc-mods/lambdynamiclights "LambDynamicLights CurseForge page"
+[Canvas Renderer]: https://curseforge.com/minecraft/mc-mods/canvas-renderer "Canvas Renderer CurseForge page"
+[Iris]: https://curseforge.com/minecraft/mc-mods/irisshaders "Iris CurseForge page"
+[ClearView]: https://curseforge.com/minecraft/mc-mods/clearview "ClearView CurseForge page"
+[Custom Fog]: https://curseforge.com/minecraft/mc-mods/custom-fog "Custom Fog CurseForge page"
+[Fog Control]: https://modrinth.com/mod/fog-control "Fog Control Modrinth page"
+[FogYeet]: https://modrinth.com/mod/fogyeet "FogYeet Modrinth page"
+[NoFog]: https://curseforge.com/minecraft/mc-mods/nofog "NoFog CurseForge page"
+[Logical Zoom]: https://curseforge.com/minecraft/mc-mods/logical-zoom "Logical Zoom CurseForge page"
+[Ok Zoomer]: https://curseforge.com/minecraft/mc-mods/ok-zoomer "Ok Zoomer CurseForge page"
+
+
+### Extras
+
+The mods listed below are not part of the OptiFine alternatives directly but those are still nice to have.
+
+- [Hydrogen] - Reduces the memory usage of the game in more modded scenarios.
+  - Available for: 1.16 -> 1.17
+- [Krypton] - A mod to optimize the Minecraft networking stack
+  - Available for: 1.16 -> 1.18
+- [LazyDFU] - Makes the initialization of DataFixerUpper "lazy". DataFixerUpper (or DFU for short) is the system used by Minecraft to convert old worlds to the current version you're running, in Vanilla it's initialized at startup and is slow (and eats a lot of resources). This mod delays the initialization of DFU by initializing only when needed, if you're playing only on multiplayer it'll never get initialized for example.
+  - Available for: 1.14 -> 1.18
+- [DashLoader] - Attempts to improve loading times by caching the game's content. May be incompatible with some of the mods in this list.
+  - Available for: 1.16 -> 1.17
+- [Overworld Two] provides an alternative optimized world generator for overworld and nether. Much faster than Vanilla but isn't identical to Vanilla.
+  - Available for: 1.16
+- [Sodium Extra] - Adds features that should not be in Sodium.
+  - Available for: 1.16 -> 1.17
+
+[Hydrogen]: https://modrinth.com/mod/hydrogen "Hydrogen Modrinth page"
+[Krypton]: https://modrinth.com/mod/krypton "Krypton Modrinth page"
+[LazyDFU]: https://modrinth.com/mod/lazydfu "LazyDFU Modrinth page"
+[DashLoader]: https://modrinth.com/mod/dashloader "DashLoader Modrinth page"
+[Overworld Two]: https://www.curseforge.com/minecraft/mc-mods/overworld-two "Overworld Two Curseforge Page"
+[Sodium Extra]: https://modrinth.com/mod/sodium-extra "Sodium Extra Modrinth page"
+
+### No Dynamic FOV
+
+**As of 1.16.2 and above, this is now a vanilla feature under the accessibility settings. If you are playing in 1.16.2 or above, the mods for this feature are irrelevant.**
+
+Those are client-only mod that prevents Minecraft from changing the FOV in all situations.
+
+- [motioNO] - disables dynamic FOV.
+- [FovLock] - adds dynamic FOV lock button.
+
+[motioNO]: https://www.curseforge.com/minecraft/mc-mods/motiono "MotioNo CurseForge page"
+[FovLock]: https://github.com/ChloeDawn/FovLock "FovLock GitHub page"
+
+## Compatibility
+
+Sodium and Canvas Renderer are incompatible.
+
+Some mods require the Fabric Renderer API to work, Canvas supports it, but Sodium will not support it by default, [Indium] is required to support it.
+
+- [Indium] - Adds support of the Fabric Renderer API to [Sodium].
+  - Available for: 1.16 -> 1.17
+
+[Requires the Fabric Renderer API]: #compatibility
+
+## Missing
+
+- custom entity models (might come in Vanilla to an unknown date)
+- Fishingline and Lead: custom widths and textures.
+
+## Need help?
+
+If you need help about Sodium, Lithium, Phosphor (any of CaffeineMC's mod to be short), [please check out CaffeineMC's discord server](https://jellysquid.me/discord).
+
+If you need help related to LambDynamicLights, LambdaBetterGrass, or if you don't want to post in the comments a suggestion you can check out [my own discord server](https://discord.lambdaurora.dev)
+
+## Other lists
+
+ - [Useful Fabric server-side mods](https://github.com/comp500/fabric-serverside-mods/blob/main/README.md)
