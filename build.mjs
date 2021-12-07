@@ -22,6 +22,10 @@ const categorized_mods = await fetch_mods();
 
 build_readme_file(categorized_mods);
 
+// Build HTML files
+
+build_pages(categorized_mods);
+
 /* Functions */
 
 function new_category(name) {
@@ -104,4 +108,8 @@ async function build_readme_file(mods) {
 
 			Deno.writeFile(BUILD_DIR + '/README.md', ENCODER.encode(content));
 		});
+}
+
+async function build_pages(mods) {
+	await Deno.copyFile('index.in.html', BUILD_DIR + '/index.html');
 }
