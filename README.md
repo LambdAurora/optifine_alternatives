@@ -51,11 +51,17 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 - [Continuity] - A Fabric mod that allows for efficient connected textures.  
   - Available for: 1.17 -> 1.18  
   Requires [Fabric Renderer API](#compatibility "More information.")  
+- [FabricSkyboxes] - Allows resource packs to define custom skyboxes. OptiFine format is not compatible by default, converters are available.  
+  - Available for: 1.16 -> 1.18  
 - [LambdaBetterGrass] - Adds better grass and snow to the game.  
   - Available for: 1.16 -> 1.18  
   Requires [Fabric Renderer API](#compatibility "More information.")  
 - [LambDynamicLights] - Adds dynamic lighting to the game.  
   - Available for: 1.15 -> 1.18  
+- [Raised Clouds] - Allows changing the height at which clouds appear.  
+  - Available for: 1.16  
+- [Soaring Clouds] - Allows changing the height at which clouds appear.  
+  - Available for: 1.15 -> 1.16  
 
 ### Shaders
 
@@ -91,8 +97,11 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 [Chime]: https://curseforge.com/minecraft/mc-mods/chime-fabric "Chime CurseForge page"
 [Connected Block Textures]: https://curseforge.com/minecraft/mc-mods/connected-block-textures "Connected Block Textures CurseForge page"
 [Continuity]: https://curseforge.com/minecraft/mc-mods/continuity "Continuity CurseForge page"
+[FabricSkyboxes]: https://modrinth.com/mod/fabricskyboxes "FabricSkyboxes Modrinth page"
 [LambdaBetterGrass]: https://curseforge.com/minecraft/mc-mods/lambdabettergrass "LambdaBetterGrass CurseForge page"
 [LambDynamicLights]: https://curseforge.com/minecraft/mc-mods/lambdynamiclights "LambDynamicLights CurseForge page"
+[Raised Clouds]: https://curseforge.com/minecraft/mc-mods/raised-clouds "Raised Clouds CurseForge page"
+[Soaring Clouds]: https://curseforge.com/minecraft/mc-mods/soaring-clouds "Soaring Clouds CurseForge page"
 [Canvas Renderer]: https://curseforge.com/minecraft/mc-mods/canvas-renderer "Canvas Renderer CurseForge page"
 [Iris]: https://curseforge.com/minecraft/mc-mods/irisshaders "Iris CurseForge page"
 [ClearView]: https://curseforge.com/minecraft/mc-mods/clearview "ClearView CurseForge page"
