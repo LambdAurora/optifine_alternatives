@@ -61,14 +61,14 @@ async function fetch_mods() {
 			}
 
 			if (!found) {
-				const new_category = new_category(mod_category);
-				current_level.push(new_category);
+				const category = new_category(mod_category);
+				current_level.push(category);
 
 				if (i + 1 === mod.categories.length) { // Last category
-					new_category.mods.push(mod);
+					category.mods.push(mod);
 				}
 
-				current_level = new_category.categories;
+				current_level = category.categories;
 			}
 		}
 	}
