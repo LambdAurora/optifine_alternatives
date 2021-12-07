@@ -14,7 +14,6 @@ console.log("Creating build directory.");
 if (existsSync(BUILD_DIR))
 	await Deno.remove(BUILD_DIR, {recursive: true});
 await Deno.mkdir(BUILD_DIR);
-await Deno.mkdir(PAGES_BUILD_DIR);
 
 console.log("Building...");
 const categorized_mods = await fetch_mods();
