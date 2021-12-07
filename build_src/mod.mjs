@@ -3,8 +3,8 @@ import { load_hosts } from "./host.mjs";
 import { load_requirements } from "./requirement.mjs";
 
 function new_version(version) {
-	if (typeof version === 'number') {
-		return {id: version, note: null};
+	if (typeof version === "number") {
+		return {id: version, note: ""};
 	} else {
 		return version;
 	}
@@ -39,7 +39,6 @@ export default class Mod {
 			}
 		}
 
-		this.versions = [...new Set(this.versions.sort((a, b) => a.id - b.id))];
 		return this;
 	}
 
@@ -149,7 +148,7 @@ export default class Mod {
 
 		for (let i = 1; i < this.versions.length; i++) {
 			if (this.versions[i].id !== current.id + 1 || this.versions[i].note !== current.note) {
-				const note = current.note === null ? '' : ` (${current.note})`;
+				const note = current.note === "" ? "" : ` (${current.note})`;
 				prettified += (prettified.length === 0 ? '' : ', ')
 				           + (min === current ? `1.${current.id}${note}` : `1.${min.id} -> 1.${current.id}${note}`);
 				min = current = this.versions[i];
@@ -158,7 +157,7 @@ export default class Mod {
 			}
 		}
 
-		const note = current.note === null ? '' : ` (${current.note})`;
+		const note = current.note === "" ? "" : ` (${current.note})`;
 		prettified += (prettified.length === 0 ? '' : ', ')
 				   + (min === current ? `1.${current.id}${note}` : `1.${min.id} -> 1.${current.id}${note}`);
 
@@ -183,8 +182,10 @@ export default class Mod {
 			summary.push(`  `);
 		}
 
+		const metadata_list = new md.List([new md.ListEntry(`Available for: ${this.get_prettified_version()}  `)]);
+
 		entry.push(summary)
-		     .push(new md.List([new md.ListEntry(`Available for: ${this.get_prettified_version()}  `)]));
+		     .push(metadata_list);
 
 		return this.resolve_requirements().then(requirements => {
 			const requirements_md = new md.Paragraph();
@@ -196,7 +197,7 @@ export default class Mod {
 			}
 
 			if (requirements.length !== 0) {
-				return entry.push(requirements_md);
+				metadata_list.push(requirements_md);
 			}
 
 			return entry;

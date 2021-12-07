@@ -9,7 +9,7 @@ export default new Mod(
 .add_category('Cosmetic')
 .add_link(
 	{ host: 'curseforge', params: { namespace: 'moremcmeta-fabric' } },
-	{ host: 'curseforge', params: { note: 'Forge' } },
+	{ host: 'curseforge', params: { modloader: 'Forge' } },
 	{ host: 'modrinth' },
 	{ host: 'github' }
 );

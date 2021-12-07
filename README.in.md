@@ -72,7 +72,7 @@ Some mods require the Fabric Renderer API to work, Canvas supports it, but Sodiu
 - [Indium] - Adds support of the Fabric Renderer API to [Sodium].
   - Available for: 1.16 -> 1.17
 
-[Requires the Fabric Renderer API]: #compatibility
+[Indium]: https://modrinth.com/mod/indium "Indium Modrinth Page"
 
 ## Missing
 

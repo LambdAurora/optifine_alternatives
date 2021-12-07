@@ -40,7 +40,7 @@ async function fetch_mods() {
 		new_category("Cosmetic"),
 		new_category("Shaders"),
 		new_category("Fog"),
-		{ name: "Utility", mods: [], categories: [new_category("Zoom")] },
+		{ name: "Utility", mods: [], categories: [new_category("Cloud Height"), new_category("Zoom")] },
 		new_category("Extras")
 	];
 
