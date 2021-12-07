@@ -36,7 +36,7 @@ async function fetch_mods() {
 		new_category('Cosmetic'),
 		new_category('Shaders'),
 		new_category('Fog'),
-		new_category('Zoom'),
+		{ name: 'Utility', mods: [], categories: [new_category('Zoom')] },
 		new_category('Extras')
 	];
 
