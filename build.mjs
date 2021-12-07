@@ -5,6 +5,7 @@ import { load_mods } from "./build_src/mod.mjs";
 const WEBSITE = "https://lambdaurora.dev/";
 const WEBSITE_PREFIX = WEBSITE + "optifine_alternatives/";
 const BUILD_DIR = "./build";
+const PAGES_BUILD_DIR = BUILD_DIR + "/pages";
 const DECODER = new TextDecoder("utf-8");
 const ENCODER = new TextEncoder();
 
@@ -14,6 +15,7 @@ console.log("Creating build directory.");
 if (existsSync(BUILD_DIR))
 	await Deno.remove(BUILD_DIR, {recursive: true});
 await Deno.mkdir(BUILD_DIR);
+await Deno.mkdir(PAGES_BUILD_DIR);
 
 console.log("Building...");
 const categorized_mods = await fetch_mods();
@@ -36,12 +38,12 @@ async function fetch_mods() {
 	const mods = (await load_mods()).sort((a, b) => a.namespace.localeCompare(b.namespace));
 
 	const categorized_mods = [
-		{ name: 'Performance', mods: [], categories: [new_category('Client'), new_category('General')] },
-		new_category('Cosmetic'),
-		new_category('Shaders'),
-		new_category('Fog'),
-		{ name: 'Utility', mods: [], categories: [new_category('Zoom')] },
-		new_category('Extras')
+		{ name: "Performance", mods: [], categories: [new_category("Client"), new_category("General")] },
+		new_category("Cosmetic"),
+		new_category("Shaders"),
+		new_category("Fog"),
+		{ name: "Utility", mods: [], categories: [new_category("Zoom")] },
+		new_category("Extras")
 	];
 
 	// Build categorization of mods.
@@ -85,7 +87,7 @@ async function build_mod_tree(md_doc, mods, level = 3) {
 		if (category.mods.length === 0 && category.categories.length === 0)
 			continue;
 
-		md_doc.push(new md.Heading(category.name, 'h' + level));
+		md_doc.push(new md.Heading(category.name, "h" + level));
 
 		if (category.mods.length !== 0) {
 			md_doc.push(new md.List(await Promise.all(category.mods.map((mod) => mod.to_markdown()))));
@@ -104,12 +106,14 @@ async function build_readme_file(mods) {
 		.then(results => {
 			let content = DECODER.decode(results[0]);
 
-			content = content.replace('${mods}', md_doc.toString());
+			content = content.replace("${mods}", md_doc.toString());
 
-			Deno.writeFile(BUILD_DIR + '/README.md', ENCODER.encode(content));
+			Deno.writeFile(BUILD_DIR + "/README.md", ENCODER.encode(content));
 		});
 }
 
 async function build_pages(mods) {
-	await Deno.copyFile('index.in.html', BUILD_DIR + '/index.html');
+
+
+	await Deno.copyFile("index.in.html", PAGES_BUILD_DIR + "/index.html");
 }
