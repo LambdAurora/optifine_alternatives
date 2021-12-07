@@ -5,7 +5,6 @@ import { load_mods } from "./build_src/mod.mjs";
 const WEBSITE = "https://lambdaurora.dev/";
 const WEBSITE_PREFIX = WEBSITE + "optifine_alternatives/";
 const BUILD_DIR = "./build";
-const PAGES_BUILD_DIR = BUILD_DIR + "/docs"; // GitHub forces two folders: `/` or `/docs`.
 const DECODER = new TextDecoder("utf-8");
 const ENCODER = new TextEncoder();
 
@@ -113,5 +112,5 @@ async function build_readme_file(mods) {
 }
 
 async function build_pages(mods) {
-	await Deno.copyFile("index.in.html", PAGES_BUILD_DIR + "/index.html");
+	await Deno.copyFile("index.in.html", BUILD_DIR + "/index.html");
 }
