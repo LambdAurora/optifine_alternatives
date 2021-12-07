@@ -35,7 +35,7 @@ export default class Requirement {
 		if (this.is_mod()) {
 			return "[TODO]";
 		} else {
-			return new md.Link('#compatibility', this.name, 'More information.');
+			return new md.Link("#compatibility", this.name, "More information.");
 		}
 	}
 };
@@ -49,14 +49,14 @@ export async function load_requirements() {
 	if (!STATE.loaded) {
 		const requirements = [];
 
-		for await (const dir_entry of Deno.readDir('./requirements')) {
-			if (dir_entry.isFile && dir_entry.name.endsWith('.mjs')) {
+		for await (const dir_entry of Deno.readDir("./requirements")) {
+			if (dir_entry.isFile && dir_entry.name.endsWith(".mjs")) {
 				requirements.push(dir_entry.name.substr(0, dir_entry.name.length - 4));
 			}
 		}
 
 		STATE.requirements = await Promise.all(requirements.map(async (id) => {
-			const requirement = (await import(`../requirements/${id}.mjs`))['default'];
+			const requirement = (await import(`../requirements/${id}.mjs`))["default"];
 			requirement.id = id;
 			return requirement;
 		}));

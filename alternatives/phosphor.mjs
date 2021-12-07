@@ -1,14 +1,14 @@
-import Mod from '../build_src/mod.mjs';
+import Mod from "../build_src/mod.mjs";
 
 export default new Mod(
-	'Phosphor',
-	'CaffeineMC',
-	'No-compromises lighting engine optimization mod.',
+	"Phosphor",
+	"CaffeineMC",
+	"No-compromises lighting engine optimization mod.",
 )
-.add_version({id: 12, note: 'Forge'}, 15, 16, 17)
-.add_category('Performance', 'General')
+.add_version({id: 12, note: "Forge"}, 15, 16, 17)
+.add_category("Performance", "General")
 .add_link(
-	{ host: 'curseforge' },
-	{ host: 'modrinth' },
-	{ host: 'github' }
+	{ host: "curseforge" },
+	{ host: "modrinth" },
+	{ host: "github" }
 );

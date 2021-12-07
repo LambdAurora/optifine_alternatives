@@ -9,6 +9,6 @@ export default new Mod(
 .add_category("Cosmetic")
 .add_link(
 	{ host: "curseforge" },
-	{ host: "curseforge", params: { namespace: "clear-skies-forge-port", modloader: 'Forge' } },
+	{ host: "curseforge", params: { namespace: "clear-skies-forge-port", modloader: "Forge" } },
 	{ host: "github" },
 );

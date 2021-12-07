@@ -1,14 +1,14 @@
-import Mod from '../build_src/mod.mjs';
+import Mod from "../build_src/mod.mjs";
 
 export default new Mod(
-	'Starlight',
-	'PaperMC',
-	'Rewrites the light engine to fix lighting performance and lighting errors. Uses a custom format for light storage.',
+	"Starlight",
+	"PaperMC",
+	"Rewrites the light engine to fix lighting performance and lighting errors. Uses a custom format for light storage.",
 )
-.add_version(17, {id: 18, note: 'WIP'})
-.add_category('Performance', 'General')
+.add_version(17, {id: 18, note: "WIP"})
+.add_category("Performance", "General")
 .add_link(
-	{ host: 'curseforge' },
-	{ host: 'modrinth' },
-	{ host: 'github' }
+	{ host: "curseforge" },
+	{ host: "modrinth" },
+	{ host: "github" }
 );

@@ -141,15 +141,15 @@ export default class Mod {
 	 */
 	get_prettified_version() {
 		if (this.versions.length === 0)
-			return '';
+			return "";
 
-		let prettified = '';
+		let prettified = "";
 		let min = this.versions[0], current = min;
 
 		for (let i = 1; i < this.versions.length; i++) {
 			if (this.versions[i].id !== current.id + 1 || this.versions[i].note !== current.note) {
 				const note = current.note === "" ? "" : ` (${current.note})`;
-				prettified += (prettified.length === 0 ? '' : ', ')
+				prettified += (prettified.length === 0 ? "" : ", ")
 				           + (min === current ? `1.${current.id}${note}` : `1.${min.id} -> 1.${current.id}${note}`);
 				min = current = this.versions[i];
 			} else {
@@ -158,7 +158,7 @@ export default class Mod {
 		}
 
 		const note = current.note === "" ? "" : ` (${current.note})`;
-		prettified += (prettified.length === 0 ? '' : ', ')
+		prettified += (prettified.length === 0 ? "" : ", ")
 				   + (min === current ? `1.${current.id}${note}` : `1.${min.id} -> 1.${current.id}${note}`);
 
 		return prettified;
@@ -193,7 +193,7 @@ export default class Mod {
 			for (const requirement of requirements) {
 				requirements_md.push(`Requires `)
 				               .push(requirement.get_markdown_link())
-				               .push('  ');
+				               .push("  ");
 			}
 
 			if (requirements.length !== 0) {
@@ -214,14 +214,14 @@ export async function load_mods() {
 	if (!STATE.loaded) {
 		const mods = [];
 
-		for await (const dir_entry of Deno.readDir('./alternatives')) {
-			if (dir_entry.isFile && dir_entry.name.endsWith('.mjs')) {
+		for await (const dir_entry of Deno.readDir("./alternatives")) {
+			if (dir_entry.isFile && dir_entry.name.endsWith(".mjs")) {
 				mods.push(dir_entry.name.substr(0, dir_entry.name.length - 4));
 			}
 		}
 
 		STATE.mods = await Promise.all(mods.map(async (id) => {
-			const mod = (await import(`../alternatives/${id}.mjs`))['default'];
+			const mod = (await import(`../alternatives/${id}.mjs`))["default"];
 			mod.namespace = id;
 			return mod;
 		}));

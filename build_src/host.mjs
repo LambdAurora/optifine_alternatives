@@ -30,14 +30,14 @@ export async function load_hosts() {
 	if (!STATE.loaded) {
 		const hosts = [];
 
-		for await (const dir_entry of Deno.readDir('./hosts')) {
-			if (dir_entry.isFile && dir_entry.name.endsWith('.mjs')) {
+		for await (const dir_entry of Deno.readDir("./hosts")) {
+			if (dir_entry.isFile && dir_entry.name.endsWith(".mjs")) {
 				hosts.push(dir_entry.name.substr(0, dir_entry.name.length - 4));
 			}
 		}
 
 		STATE.hosts = await Promise.all(hosts.map(async (id) => {
-			const requirement = (await import(`../hosts/${id}.mjs`))['default'];
+			const requirement = (await import(`../hosts/${id}.mjs`))["default"];
 			requirement.id = id;
 			return requirement;
 		}));
