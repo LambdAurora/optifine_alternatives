@@ -45,6 +45,8 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 
 - [Chime] - Adds predicates for more interactive item models, CIT replacement with a custom format.  
   - Available for: 1.16  
+- [Colormatic] - An independent implementation of the custom colors mod for Minecraft.  
+  - Available for: 1.14 -> 1.18  
 - [Connected Block Textures] - An implementation of the MCPatcher/Optifine connected textures format on the Fabric modloader. Unmaintained.  
   - Available for: 1.16  
   Requires [Fabric Renderer API](#compatibility "More information.")  
@@ -83,7 +85,16 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 - [NoFog] - A simple client-side mod supporting both forge and fabric that removes all fog. (ARR)  
   - Available for: 1.16 -> 1.18  
 
-### Zoom
+### Utility
+
+- [Fabrishot] - Take insanely large screenshots because why not?  
+  - Available for: 1.16 -> 1.18  
+- [Resolution Control] - Allows you to set render resolutions and take large screenshots.  
+  - Available for: 1.14 -> 1.16  
+- [ResolutionControl+] - Allows you to set render resolutions and take large screenshots.  
+  - Available for: 1.16  
+
+#### Zoom
 
 - [Logical Zoom] - Super simple zoom key for Minecraft.  
   - Available for: 1.15 -> 1.18  
@@ -95,6 +106,7 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 [Phosphor]: https://curseforge.com/minecraft/mc-mods/phosphor "Phosphor CurseForge page"
 [Starlight]: https://curseforge.com/minecraft/mc-mods/starlight "Starlight CurseForge page"
 [Chime]: https://curseforge.com/minecraft/mc-mods/chime-fabric "Chime CurseForge page"
+[Colormatic]: https://curseforge.com/minecraft/mc-mods/colormatic "Colormatic CurseForge page"
 [Connected Block Textures]: https://curseforge.com/minecraft/mc-mods/connected-block-textures "Connected Block Textures CurseForge page"
 [Continuity]: https://curseforge.com/minecraft/mc-mods/continuity "Continuity CurseForge page"
 [FabricSkyboxes]: https://modrinth.com/mod/fabricskyboxes "FabricSkyboxes Modrinth page"
@@ -109,6 +121,9 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 [Fog Control]: https://modrinth.com/mod/fog-control "Fog Control Modrinth page"
 [FogYeet]: https://modrinth.com/mod/fogyeet "FogYeet Modrinth page"
 [NoFog]: https://curseforge.com/minecraft/mc-mods/nofog "NoFog CurseForge page"
+[Fabrishot]: https://curseforge.com/minecraft/mc-mods/fabrishot "Fabrishot CurseForge page"
+[Resolution Control]: https://curseforge.com/minecraft/mc-mods/resolution-control "Resolution Control CurseForge page"
+[ResolutionControl+]: https://modrinth.com/mod/resolution-control-plus "ResolutionControl+ Modrinth page"
 [Logical Zoom]: https://curseforge.com/minecraft/mc-mods/logical-zoom "Logical Zoom CurseForge page"
 [Ok Zoomer]: https://curseforge.com/minecraft/mc-mods/ok-zoomer "Ok Zoomer CurseForge page"
 
