@@ -29,6 +29,12 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 
 #### Client
 
+- [Cull Leaves] - Adds culling to leaf blocks, providing a huge performance boost over vanilla. Similar to OptiFine's Smart Leaves feature.  
+  - Available for: 1.16 -> 1.18  
+- [Cull Particles] - Don't render particles that can't be seen. Unneeded with Sodium.  
+  - Available for: 1.15 -> 1.18  
+- [Dynamic FPS] - Improve performance when Minecraft is in the background.  
+  - Available for: 1.14 -> 1.18  
 - [Sodium] - Modern rendering engine and client-side optimization mod for Minecraft.  
   - Available for: 1.16 -> 1.17, 1.18 (Alpha)  
 
@@ -43,6 +49,8 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 
 ### Cosmetic
 
+- [Animatica] - A mod implementing the OptiFine/MCPatcher animated texture format.  
+  - Available for: 1.17  
 - [Chime] - Adds predicates for more interactive item models, CIT replacement with a custom format.  
   - Available for: 1.16  
 - [Colormatic] - An independent implementation of the custom colors mod for Minecraft.  
@@ -60,10 +68,25 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
   Requires [Fabric Renderer API](#compatibility "More information.")  
 - [LambDynamicLights] - Adds dynamic lighting to the game.  
   - Available for: 1.15 -> 1.18  
+- [MoreMcmeta] - Animate almost any Minecraft texture with more options.  
+  - Available for: 1.16 -> 1.17  
 - [Raised Clouds] - Allows changing the height at which clouds appear.  
   - Available for: 1.16  
 - [Soaring Clouds] - Allows changing the height at which clouds appear.  
   - Available for: 1.15 -> 1.16  
+- [Transparent] - Allows resource packs to make entities support transparency.  
+  - Available for: 1.15 -> 1.18  
+
+#### Splash Screen
+
+- [Custom Splash Screen] - Change Minecraft's loading screen to your liking! Completely configurable!  
+  - Available for: 1.16 -> 1.17  
+- [Dark Loading Screen] - A simple mod to make the loading screen darker.  
+  - Available for: 1.15 -> 1.18  
+- [Quilt Loading Screen] - A loading screen based off of The Quilt Community's server banner.  
+  - Available for: 1.16 -> 1.18  
+- [Splash] - Splash is a Fabric mod that allows you to customize the colors of your splash screen.  
+  - Available for: 1.16 -> 1.17  
 
 ### Shaders
 
@@ -101,10 +124,14 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 - [Ok Zoomer] - Adds a highly-configurable zoom key for Fabric. The zoom is yours!  
   - Available for: 1.14 -> 1.18  
 
+[Cull Leaves]: https://curseforge.com/minecraft/mc-mods/cull-leaves "Cull Leaves CurseForge page"
+[Cull Particles]: https://curseforge.com/minecraft/mc-mods/cull-particles-fabric "Cull Particles CurseForge page"
+[Dynamic FPS]: https://curseforge.com/minecraft/mc-mods/dynamic-fps "Dynamic FPS CurseForge page"
 [Sodium]: https://curseforge.com/minecraft/mc-mods/sodium "Sodium CurseForge page"
 [Lithium]: https://curseforge.com/minecraft/mc-mods/lithium "Lithium CurseForge page"
 [Phosphor]: https://curseforge.com/minecraft/mc-mods/phosphor "Phosphor CurseForge page"
 [Starlight]: https://curseforge.com/minecraft/mc-mods/starlight "Starlight CurseForge page"
+[Animatica]: https://curseforge.com/minecraft/mc-mods/animatica "Animatica CurseForge page"
 [Chime]: https://curseforge.com/minecraft/mc-mods/chime-fabric "Chime CurseForge page"
 [Colormatic]: https://curseforge.com/minecraft/mc-mods/colormatic "Colormatic CurseForge page"
 [Connected Block Textures]: https://curseforge.com/minecraft/mc-mods/connected-block-textures "Connected Block Textures CurseForge page"
@@ -112,8 +139,14 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 [FabricSkyboxes]: https://modrinth.com/mod/fabricskyboxes "FabricSkyboxes Modrinth page"
 [LambdaBetterGrass]: https://curseforge.com/minecraft/mc-mods/lambdabettergrass "LambdaBetterGrass CurseForge page"
 [LambDynamicLights]: https://curseforge.com/minecraft/mc-mods/lambdynamiclights "LambDynamicLights CurseForge page"
+[MoreMcmeta]: https://curseforge.com/minecraft/mc-mods/moremcmeta-fabric "MoreMcmeta CurseForge page"
 [Raised Clouds]: https://curseforge.com/minecraft/mc-mods/raised-clouds "Raised Clouds CurseForge page"
 [Soaring Clouds]: https://curseforge.com/minecraft/mc-mods/soaring-clouds "Soaring Clouds CurseForge page"
+[Transparent]: https://curseforge.com/minecraft/mc-mods/transparent-fabric "Transparent CurseForge page"
+[Custom Splash Screen]: https://curseforge.com/minecraft/mc-mods/custom-splash-screen "Custom Splash Screen CurseForge page"
+[Dark Loading Screen]: https://curseforge.com/minecraft/mc-mods/dark-loading-screen "Dark Loading Screen CurseForge page"
+[Quilt Loading Screen]: https://modrinth.com/mod/quilt-loading-screen "Quilt Loading Screen Modrinth page"
+[Splash]: https://curseforge.com/minecraft/mc-mods/splash "Splash CurseForge page"
 [Canvas Renderer]: https://curseforge.com/minecraft/mc-mods/canvas-renderer "Canvas Renderer CurseForge page"
 [Iris]: https://curseforge.com/minecraft/mc-mods/irisshaders "Iris CurseForge page"
 [ClearView]: https://curseforge.com/minecraft/mc-mods/clearview "ClearView CurseForge page"
