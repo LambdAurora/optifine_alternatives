@@ -53,29 +53,31 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
   - Available for: 1.17  
 - [Chime] - Adds predicates for more interactive item models, CIT replacement with a custom format.  
   - Available for: 1.16  
+- [CIT Resewn] - Re-implements MCPatcher's CIT (custom item textures from optifine resource packs)  
+  - Available for: 1.17 -> 1.18  
+- [Clear Skies] - Horizon and fog match the sky color. True blue skies!  
+  - Available for: 1.15 -> 1.17, 1.16 (Forge)  
 - [Colormatic] - An independent implementation of the custom colors mod for Minecraft.  
   - Available for: 1.14 -> 1.18  
 - [Connected Block Textures] - An implementation of the MCPatcher/Optifine connected textures format on the Fabric modloader. Unmaintained.  
   - Available for: 1.16  
-  Requires [Fabric Renderer API](#compatibility "More information.")  
+  - Requires [Fabric Renderer API](#compatibility "More information.")  
 - [Continuity] - A Fabric mod that allows for efficient connected textures.  
   - Available for: 1.17 -> 1.18  
-  Requires [Fabric Renderer API](#compatibility "More information.")  
+  - Requires [Fabric Renderer API](#compatibility "More information.")  
 - [FabricSkyboxes] - Allows resource packs to define custom skyboxes. OptiFine format is not compatible by default, converters are available.  
   - Available for: 1.16 -> 1.18  
 - [LambdaBetterGrass] - Adds better grass and snow to the game.  
   - Available for: 1.16 -> 1.18  
-  Requires [Fabric Renderer API](#compatibility "More information.")  
+  - Requires [Fabric Renderer API](#compatibility "More information.")  
 - [LambDynamicLights] - Adds dynamic lighting to the game.  
   - Available for: 1.15 -> 1.18  
 - [MoreMcmeta] - Animate almost any Minecraft texture with more options.  
   - Available for: 1.16 -> 1.17  
-- [Raised Clouds] - Allows changing the height at which clouds appear.  
-  - Available for: 1.16  
-- [Soaring Clouds] - Allows changing the height at which clouds appear.  
-  - Available for: 1.15 -> 1.16  
 - [Transparent] - Allows resource packs to make entities support transparency.  
   - Available for: 1.15 -> 1.18  
+- [Varied Mob Textures] - This mod allows the resource packs creator to have multiple randomized textures for the same mob. Uses custom format, OptiFine-based resource packs will need conversion.  
+  - Available for: 1.16  
 
 #### Splash Screen
 
@@ -117,6 +119,13 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 - [ResolutionControl+] - Allows you to set render resolutions and take large screenshots.  
   - Available for: 1.16  
 
+#### Cloud Height
+
+- [Raised Clouds] - Allows changing the height at which clouds appear.  
+  - Available for: 1.16  
+- [Soaring Clouds] - Allows changing the height at which clouds appear.  
+  - Available for: 1.15 -> 1.16  
+
 #### Zoom
 
 - [Logical Zoom] - Super simple zoom key for Minecraft.  
@@ -133,6 +142,8 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 [Starlight]: https://curseforge.com/minecraft/mc-mods/starlight "Starlight CurseForge page"
 [Animatica]: https://curseforge.com/minecraft/mc-mods/animatica "Animatica CurseForge page"
 [Chime]: https://curseforge.com/minecraft/mc-mods/chime-fabric "Chime CurseForge page"
+[CIT Resewn]: https://curseforge.com/minecraft/mc-mods/cit-resewn "CIT Resewn CurseForge page"
+[Clear Skies]: https://curseforge.com/minecraft/mc-mods/clear-skies "Clear Skies CurseForge page"
 [Colormatic]: https://curseforge.com/minecraft/mc-mods/colormatic "Colormatic CurseForge page"
 [Connected Block Textures]: https://curseforge.com/minecraft/mc-mods/connected-block-textures "Connected Block Textures CurseForge page"
 [Continuity]: https://curseforge.com/minecraft/mc-mods/continuity "Continuity CurseForge page"
@@ -140,9 +151,8 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 [LambdaBetterGrass]: https://curseforge.com/minecraft/mc-mods/lambdabettergrass "LambdaBetterGrass CurseForge page"
 [LambDynamicLights]: https://curseforge.com/minecraft/mc-mods/lambdynamiclights "LambDynamicLights CurseForge page"
 [MoreMcmeta]: https://curseforge.com/minecraft/mc-mods/moremcmeta-fabric "MoreMcmeta CurseForge page"
-[Raised Clouds]: https://curseforge.com/minecraft/mc-mods/raised-clouds "Raised Clouds CurseForge page"
-[Soaring Clouds]: https://curseforge.com/minecraft/mc-mods/soaring-clouds "Soaring Clouds CurseForge page"
 [Transparent]: https://curseforge.com/minecraft/mc-mods/transparent-fabric "Transparent CurseForge page"
+[Varied Mob Textures]: https://curseforge.com/minecraft/mc-mods/varied-mob-textures "Varied Mob Textures CurseForge page"
 [Custom Splash Screen]: https://curseforge.com/minecraft/mc-mods/custom-splash-screen "Custom Splash Screen CurseForge page"
 [Dark Loading Screen]: https://curseforge.com/minecraft/mc-mods/dark-loading-screen "Dark Loading Screen CurseForge page"
 [Quilt Loading Screen]: https://modrinth.com/mod/quilt-loading-screen "Quilt Loading Screen Modrinth page"
@@ -157,6 +167,8 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 [Fabrishot]: https://curseforge.com/minecraft/mc-mods/fabrishot "Fabrishot CurseForge page"
 [Resolution Control]: https://curseforge.com/minecraft/mc-mods/resolution-control "Resolution Control CurseForge page"
 [ResolutionControl+]: https://modrinth.com/mod/resolution-control-plus "ResolutionControl+ Modrinth page"
+[Raised Clouds]: https://curseforge.com/minecraft/mc-mods/raised-clouds "Raised Clouds CurseForge page"
+[Soaring Clouds]: https://curseforge.com/minecraft/mc-mods/soaring-clouds "Soaring Clouds CurseForge page"
 [Logical Zoom]: https://curseforge.com/minecraft/mc-mods/logical-zoom "Logical Zoom CurseForge page"
 [Ok Zoomer]: https://curseforge.com/minecraft/mc-mods/ok-zoomer "Ok Zoomer CurseForge page"
 
@@ -206,7 +218,7 @@ Some mods require the Fabric Renderer API to work, Canvas supports it, but Sodiu
 - [Indium] - Adds support of the Fabric Renderer API to [Sodium].
   - Available for: 1.16 -> 1.17
 
-[Requires the Fabric Renderer API]: #compatibility
+[Indium]: https://modrinth.com/mod/indium "Indium Modrinth Page"
 
 ## Missing
 
