@@ -3,41 +3,40 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Refresh" content="0; URL=https://github.com/LambdAurora/optifine_alternatives">
 		<title>OptiFine Alternatives on Fabric</title>
 
-		<link rel="preload" href="https://lambdaurora.dev/style.css" as="style">
+		<link rel="preload" href="${WEBSITE}/style.css" as="style">
 
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="OptiFine Alternatives on Fabric">
 		<meta property="og:site_name" content="LambdAurora">
-		<meta property="og:url" content="https://lambdaurora.dev/optifine_alternatives">
+		<meta property="og:url" content="${WEBSITE_PREFIX}">
 		<meta property="og:description" content="A list of recommended OptiFine alternatives on the Fabric mod loader.">
 
 		<meta name="keywords" content="LambdAurora, OptiFine, OptiFine alternatives, LambdaBetterGrass, LambDynamicLights">
 
-		<link rel="stylesheet" type="text/css" href="https://lambdaurora.dev/style.css">
+		<link rel="stylesheet" type="text/css" href="${WEBSITE}/style.css">
 	</head>
 	<body>
 		<header></header>
-		<main>
-			<p>Redirecting...</p>
-			<!--
-				<script src="https://giscus.app/client.js"
-					data-repo="LambdAurora/optifine_alternatives"
-					data-repo-id="R_kgDOGffthQ"
-					data-category="General"
-					data-category-id="DIC_kwDOGffthc4CALxQ"
-					data-mapping="specific"
-					data-term="OptiFine Alternatives Comments"
-					data-reactions-enabled="1"
-					data-emit-metadata="0"
-					data-theme="preferred_color_scheme"
-					data-lang="en"
-					crossorigin="anonymous"
-					async>
-				</script>
-			-->
+		<main class="ls_container">
+			<!-- Temp stuff -->
+			${list_content}
+
+			<script src="https://giscus.app/client.js"
+				data-repo="LambdAurora/optifine_alternatives"
+				data-repo-id="R_kgDOGffthQ"
+				data-category="General"
+				data-category-id="DIC_kwDOGffthc4CALxQ"
+				data-mapping="specific"
+				data-term="OptiFine Alternatives Comments"
+				data-reactions-enabled="1"
+				data-emit-metadata="0"
+				data-theme="${WEBSITE_PREFIX}/giscus_style.css"
+				data-lang="en"
+				crossorigin="anonymous"
+				async>
+			</script>
 		</main>
 		<footer class="ls_app_footer">
 			<div class="ls_app_footer_license">
@@ -51,5 +50,6 @@
 				</span>
 			</div>
 		</footer>
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
 	</body>
 </html>

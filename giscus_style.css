@@ -1,0 +1,49 @@
+/* Giscus styling start */
+
+:root {
+	--color-fg-default: var(--ls_theme_foreground);
+	--color-bg-primary: var(--ls_theme_background_highlight);
+	--color-bg-tertiary: var(--ls_theme_background_accentuated);
+	--color-bg-overlay: var(--ls_theme_background_popover);
+	--color-social-reaction-bg: var(--ls_theme_background_highlight);
+
+	--color-btn-primary-hover-bg: var(--ls_theme_background_accentuated);
+
+	--color-border-default: var(--ls_theme_border_color);
+}
+
+.btn {
+	border-color: transparent;
+}
+
+.btn-primary {
+	color: var(--ls_theme_on_primary);
+	background-color: var(--ls_theme_primary);
+}
+
+.btn-primary:hover {
+	color: var(--ls_theme_primary);
+}
+
+.btn-primary[disabled] {
+	color: rgba(0, 0, 0, .37);
+	background-color: rgba(0, 0, 0, .12);
+	cursor: default;
+}
+
+@media (prefers-color-scheme: dark) {
+	.btn-primary[disabled] {
+		color: rgba(255, 255, 255, .37);
+		background-color: rgba(255, 255, 255, .12);
+	}
+}
+
+.gsc-reactions-popover {
+	box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2),
+	0 4px 5px 0 rgba(0, 0, 0, .14),
+	0 1px 10px 0 rgba(0, 0, 0, .12);
+}
+
+.mb-\[-1px\] {
+	margin-bottom: initial;
+}

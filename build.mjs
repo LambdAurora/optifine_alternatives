@@ -2,8 +2,8 @@ import { default as md, html } from "https://lambdaurora.dev/lib.md/lib/index.mj
 import { existsSync } from "https://deno.land/std/fs/mod.ts";
 import { load_mods } from "./build_src/mod.mjs";
 
-const WEBSITE = "https://lambdaurora.dev/";
-const WEBSITE_PREFIX = WEBSITE + "optifine_alternatives/";
+const WEBSITE = "https://lambdaurora.dev";
+const WEBSITE_PREFIX = WEBSITE + "/optifine_alternatives";
 const BUILD_DIR = "./build";
 const DECODER = new TextDecoder("utf-8");
 const ENCODER = new TextEncoder();
@@ -111,5 +111,48 @@ async function build_readme_file(mods) {
 }
 
 async function build_pages(mods) {
-	await Deno.copyFile("index.in.html", BUILD_DIR + "/index.html");
+	Promise.all([
+		Deno.readFile("giscus_style.css"),
+		fetch(WEBSITE + "/style.css")
+			.then(response => {
+				if (!response.ok) {
+					throw new Error(`Could not fetch ${WEBSITE + "/style.css"}, cannot compose giscus stylesheet.`);
+				}
+
+				return response.text();
+			})
+	]).then(args => {
+		let content = DECODER.decode(args[0]);
+
+		Deno.writeFile(BUILD_DIR + "/giscus_style.css", ENCODER.encode(args[1] + "\n\n" + content));
+	});
+
+	let md_doc = new md.MDDocument();
+
+	Promise.all([Deno.readFile("index.in.html"), Deno.readFile("README.in.md"), build_mod_tree(md_doc, mods)])
+	.then(args => {
+		let content = DECODER.decode(args[0]);
+
+		let readme = DECODER.decode(args[1]);
+		readme = readme.replace("${mods}", md_doc.toString());
+
+		md_doc = md.parser.parse(readme, { auto_link: true });
+		let article = html.create_element("article");
+		md.render_to_html(md_doc, { parent: article });
+
+		article.children.find(child => child.tag === html.Tag.h1)
+			.append_child(html.create_element("span").with_attr("class", ["right"]).with_child(html.create_element("a")
+				.with_attr("class", ["github-button", "right"])
+				.with_attr("href", "https://github.com/LambdAurora/optifine_alternatives")
+				.with_attr("data-color-scheme", "no-preference: light_high_contrast; light: light_high_contrast; dark: dark_high_contrast;")
+				.with_attr("data-icon", "octicon-star")
+				.with_attr("data-show-count", "true")
+				.with_attr("aria-label", "Star LambdAurora/optifine_alternatives on GitHub")
+			));
+
+		content = content.replace(/\$\{WEBSITE\}/g, WEBSITE).replace(/\$\{WEBSITE_PREFIX\}/g, WEBSITE_PREFIX)
+			.replace("${list_content}", article.html());
+
+		Deno.writeFile(BUILD_DIR + "/index.html", ENCODER.encode(content));
+	});
 }
