@@ -152,7 +152,7 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 [Colormatic]: https://curseforge.com/minecraft/mc-mods/colormatic "Colormatic CurseForge page"
 [Connected Block Textures]: https://curseforge.com/minecraft/mc-mods/connected-block-textures "Connected Block Textures CurseForge page"
 [Continuity]: https://curseforge.com/minecraft/mc-mods/continuity "Continuity CurseForge page"
-[Custom Entity Models (CEM)]: https://github.com/dorianpb/cem "Custom Entity Models (CEM) GitHub page"
+[Custom Entity Models (CEM)]: https://curseforge.com/minecraft/mc-mods/custom-entity-models-cem "Custom Entity Models (CEM) CurseForge page"
 [FabricSkyboxes]: https://modrinth.com/mod/fabricskyboxes "FabricSkyboxes Modrinth page"
 [LambdaBetterGrass]: https://curseforge.com/minecraft/mc-mods/lambdabettergrass "LambdaBetterGrass CurseForge page"
 [LambDynamicLights]: https://curseforge.com/minecraft/mc-mods/lambdynamiclights "LambDynamicLights CurseForge page"
