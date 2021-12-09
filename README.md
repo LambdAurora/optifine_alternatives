@@ -2,7 +2,7 @@
 
 ## Why?
 
-OptiFine was originally a great mod offering many quality of life improvements for player in the beginning. However, over the years, its benefits have dwindled and has caused many issues for modders. This is due to Minecraft's codebase improving over the years and OptiFine's aggressiveness towards replacing entire swaths of code while being closed source making it very difficult to figure out why OptiFine has broken another modder's mod. 
+OptiFine was originally a great mod offering many quality of life improvements for the player in the beginning. However, over the years, its benefits have dwindled and has caused many issues for modders. This is due to Minecraft's codebase improving over the years and OptiFine's aggressiveness towards replacing entire swaths of code while being closed source making it very difficult to figure out why OptiFine has broken another modder's mod. 
 Also worth noting that OptiFine natively doesn't support Fabric and it's hard to maintain OptiFabric.
 
 In the modern Minecraft era, with Fabric's community effort, modders have begun to create alternatives for most of OptiFine's features to allow players to maintain better performance, better mod compatibility, and better support.
@@ -35,6 +35,8 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
   - Available for: 1.15 -> 1.18  
 - [Dynamic FPS] - Improve performance when Minecraft is in the background.  
   - Available for: 1.14 -> 1.18  
+- [EntityCulling] - Using async path-tracing to hide (Block-)Entities that are not visible.  
+  - Available for: 1.16 -> 1.18  
 - [Sodium] - Modern rendering engine and client-side optimization mod for Minecraft.  
   - Available for: 1.16 -> 1.17, 1.18 (Alpha)  
 
@@ -93,7 +95,7 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 ### Shaders
 
 - [Canvas Renderer] - A new rendering engine. Incompatible with Sodium.  
-  - Available for: 1.16 (Abandonned), 1.17 -> 1.18  
+  - Available for: 1.16 (Abandoned), 1.17 -> 1.18  
 - [Iris] - A new shaders mod for Minecraft intended to be compatible with existing ShadersMod/Optifine shaders.  
   - Available for: 1.16 -> 1.18  
 
@@ -136,6 +138,7 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 [Cull Leaves]: https://curseforge.com/minecraft/mc-mods/cull-leaves "Cull Leaves CurseForge page"
 [Cull Particles]: https://curseforge.com/minecraft/mc-mods/cull-particles-fabric "Cull Particles CurseForge page"
 [Dynamic FPS]: https://curseforge.com/minecraft/mc-mods/dynamic-fps "Dynamic FPS CurseForge page"
+[EntityCulling]: https://curseforge.com/minecraft/mc-mods/entityculling "EntityCulling CurseForge page"
 [Sodium]: https://curseforge.com/minecraft/mc-mods/sodium "Sodium CurseForge page"
 [Lithium]: https://curseforge.com/minecraft/mc-mods/lithium "Lithium CurseForge page"
 [Phosphor]: https://curseforge.com/minecraft/mc-mods/phosphor "Phosphor CurseForge page"
