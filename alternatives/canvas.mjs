@@ -5,7 +5,7 @@ export default new Mod(
 	"vram-guild",
 	"A new rendering engine. Incompatible with Sodium.",
 )
-.add_version({id: 16, note: "Abandonned"}, 17, 18)
+.add_version({id: 16, note: "Abandoned"}, 17, 18)
 .add_category("Shaders")
 .add_link(
 	{ host: "curseforge", params: { namespace: "canvas-renderer" } },
