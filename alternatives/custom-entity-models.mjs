@@ -8,6 +8,6 @@ export default new Mod(
 .add_version(16, 17)
 .add_category("Cosmetic")
 .add_link(
-	{ host: "cursforge", params: { namespace: "custom-entity-models-cem" } },
+	{ host: "curseforge", params: { namespace: "custom-entity-models-cem" } },
 	{ host: "github", params: { namespace: "cem" } }
 );
