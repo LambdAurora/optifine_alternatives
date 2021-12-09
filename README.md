@@ -67,6 +67,8 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 - [Continuity] - A Fabric mod that allows for efficient connected textures.  
   - Available for: 1.17 -> 1.18  
   - Requires [Fabric Renderer API](#compatibility "More information.")  
+- [Custom Entity Models (CEM)] - An implementation of custom entity models heavily based off of Optifine's format that aims to achieve feature parity with Optifine's custom entity models.  
+  - Available for: 1.16 -> 1.17  
 - [FabricSkyboxes] - Allows resource packs to define custom skyboxes. OptiFine format is not compatible by default, converters are available.  
   - Available for: 1.16 -> 1.18  
 - [LambdaBetterGrass] - Adds better grass and snow to the game.  
@@ -150,6 +152,7 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 [Colormatic]: https://curseforge.com/minecraft/mc-mods/colormatic "Colormatic CurseForge page"
 [Connected Block Textures]: https://curseforge.com/minecraft/mc-mods/connected-block-textures "Connected Block Textures CurseForge page"
 [Continuity]: https://curseforge.com/minecraft/mc-mods/continuity "Continuity CurseForge page"
+[Custom Entity Models (CEM)]: https://github.com/dorianpb/cem "Custom Entity Models (CEM) GitHub page"
 [FabricSkyboxes]: https://modrinth.com/mod/fabricskyboxes "FabricSkyboxes Modrinth page"
 [LambdaBetterGrass]: https://curseforge.com/minecraft/mc-mods/lambdabettergrass "LambdaBetterGrass CurseForge page"
 [LambDynamicLights]: https://curseforge.com/minecraft/mc-mods/lambdynamiclights "LambDynamicLights CurseForge page"
@@ -225,7 +228,8 @@ Some mods require the Fabric Renderer API to work, Canvas supports it, but Sodiu
 
 ## Missing
 
-- custom entity models (might come in Vanilla to an unknown date)
+- custom entity models (might come in Vanilla to an unknown date?)
+  currently incompletely replaced: current existing implementations are very hardcoded to Vanilla entities
 - Fishingline and Lead: custom widths and textures.
 
 ## Need help?
