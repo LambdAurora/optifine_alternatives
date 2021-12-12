@@ -37,6 +37,8 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
   - Available for: 1.14 -> 1.18  
 - [EntityCulling] - Using async path-tracing to hide (Block-)Entities that are not visible.  
   - Available for: 1.16 -> 1.18  
+- [LazyDFU] - Makes the initialization of DataFixerUpper "lazy". DataFixerUpper (or DFU for short) is the system used by Minecraft to convert old worlds to the current version you're running, in Vanilla it's initialized at startup and is slow (and eats a lot of resources). This mod delays the initialization of DFU by initializing only when needed, if you're playing only on multiplayer it'll never get initialized for example.  
+  - Available for: 1.14 -> 1.18, 1.16 -> 1.18 (Forge)  
 - [Sodium] - Modern rendering engine and client-side optimization mod for Minecraft.  
   - Available for: 1.16 -> 1.17, 1.18 (Alpha)  
 
@@ -58,7 +60,7 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 - [CIT Resewn] - Re-implements MCPatcher's CIT (custom item textures from optifine resource packs)  
   - Available for: 1.17 -> 1.18  
 - [Clear Skies] - Horizon and fog match the sky color. True blue skies!  
-  - Available for: 1.15 -> 1.17, 1.16 (Forge)  
+  - Available for: 1.15 -> 1.18, 1.16 (Forge)  
 - [Colormatic] - An independent implementation of the custom colors mod for Minecraft.  
   - Available for: 1.14 -> 1.18  
 - [Connected Block Textures] - An implementation of the MCPatcher/Optifine connected textures format on the Fabric modloader. Unmaintained.  
@@ -141,6 +143,7 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 [Cull Particles]: https://curseforge.com/minecraft/mc-mods/cull-particles-fabric "Cull Particles CurseForge page"
 [Dynamic FPS]: https://curseforge.com/minecraft/mc-mods/dynamic-fps "Dynamic FPS CurseForge page"
 [EntityCulling]: https://curseforge.com/minecraft/mc-mods/entityculling "EntityCulling CurseForge page"
+[LazyDFU]: https://curseforge.com/minecraft/mc-mods/lazydfu "LazyDFU CurseForge page"
 [Sodium]: https://curseforge.com/minecraft/mc-mods/sodium "Sodium CurseForge page"
 [Lithium]: https://curseforge.com/minecraft/mc-mods/lithium "Lithium CurseForge page"
 [Phosphor]: https://curseforge.com/minecraft/mc-mods/phosphor "Phosphor CurseForge page"
@@ -183,22 +186,28 @@ This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 
 The mods listed below are not part of the OptiFine alternatives directly but those are still nice to have.
 
+- [Ears] - Faithful fancy fashion features for fuzzy folk. It offers a lot of skin customization options, directly encoded into the skin file uploaded to Mojang. A very good alternative to express yourself than restrictive capes.
+  - Available for: b1.7.3, 1.2.5, 1.4.7 -> 1.18, Not so Seecret Saturday (a1.1.2), New Frontier Craft (b1.7.3)
+- [DashLoader] - Attempts to improve loading times by caching the game's content. May be incompatible with some of the mods in this list.
+  - Available for: 1.16 -> 1.18
+- [Entity View Distance] - This mods allows more precise manipulation of entity view distance on client and server 
+  - Available for: 1.17 -> 1.18
+- [FerriteCore] - Memory usage optimizations.
+  - Available for: [1.16 -> 1.18][FerriteCore], [1.16 -> 1.18 (Forge)](https://www.curseforge.com/minecraft/mc-mods/ferritecore)
 - [Hydrogen] - Reduces the memory usage of the game in more modded scenarios.
   - Available for: 1.16 -> 1.17
 - [Krypton] - A mod to optimize the Minecraft networking stack
   - Available for: 1.16 -> 1.18
-- [LazyDFU] - Makes the initialization of DataFixerUpper "lazy". DataFixerUpper (or DFU for short) is the system used by Minecraft to convert old worlds to the current version you're running, in Vanilla it's initialized at startup and is slow (and eats a lot of resources). This mod delays the initialization of DFU by initializing only when needed, if you're playing only on multiplayer it'll never get initialized for example.
-  - Available for: 1.14 -> 1.18
-- [DashLoader] - Attempts to improve loading times by caching the game's content. May be incompatible with some of the mods in this list.
-  - Available for: 1.16 -> 1.17
 - [Overworld Two] provides an alternative optimized world generator for overworld and nether. Much faster than Vanilla but isn't identical to Vanilla.
   - Available for: 1.16
 - [Sodium Extra] - Adds features that should not be in Sodium.
   - Available for: 1.16 -> 1.17
 
+[Ears]: https://www.curseforge.com/minecraft/mc-mods/ears/ "Ears Curseforge page"
+[FerriteCore]: https://modrinth.com/mod/ferrite-core "FerriteCore Modrinth page"
+[Entity View Distance]: https://www.curseforge.com/minecraft/mc-mods/entity-view-distance "Entity View Distance Curseforge page"
 [Hydrogen]: https://modrinth.com/mod/hydrogen "Hydrogen Modrinth page"
 [Krypton]: https://modrinth.com/mod/krypton "Krypton Modrinth page"
-[LazyDFU]: https://modrinth.com/mod/lazydfu "LazyDFU Modrinth page"
 [DashLoader]: https://modrinth.com/mod/dashloader "DashLoader Modrinth page"
 [Overworld Two]: https://www.curseforge.com/minecraft/mc-mods/overworld-two "Overworld Two Curseforge Page"
 [Sodium Extra]: https://modrinth.com/mod/sodium-extra "Sodium Extra Modrinth page"
