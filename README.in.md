@@ -21,7 +21,9 @@ This list will list recommended OptiFine alternatives by me (LambdAurora), so it
 
 This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 
-**Warning: this list is under re-construction, some mods may be missing, do not hesitate to open a pull request on the *data* branch!**
+### Contribute
+
+You can contribute to this list by opening a pull request on the `data` branch via [GitHub](https://github.com/LambdAurora/optifine_alternatives).
 
 ## Alternatives
 
