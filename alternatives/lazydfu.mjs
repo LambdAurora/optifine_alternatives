@@ -9,7 +9,7 @@ export default new Mod(
 	+ "if you're playing only on multiplayer it'll never get initialized for example.",
 )
 .add_version(14, 15, 16, 17, 18, { id: 16, note: "Forge" }, { id: 17, note: "Forge" }, { id: 18, note: "Forge" })
-.add_category("Performance", "Client")
+.add_category("Performance", "General")
 .add_link(
 	{ host: "curseforge" },
 	{ host: "curseforge", params: { namespace: "lazy-dfu-forge", modloader: "Forge" } },
