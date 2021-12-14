@@ -47,11 +47,11 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [LazyDFU] - Makes the initialization of DataFixerUpper "lazy". DataFixerUpper (or DFU for short) is the system used by Minecraft to convert old worlds to the current version you're running, in Vanilla it's initialized at startup and is slow (and eats a lot of resources). This mod delays the initialization of DFU by initializing only when needed, if you're playing only on multiplayer it'll never get initialized for example.  
   - Available for: 1.14 -> 1.18, 1.16 -> 1.18 (Forge)  
 - [Lithium] - No-compromises game logic/server optimization mod.  
-  - Available for: 1.16 -> 1.17, 1.18 (Beta)  
+  - Available for: 1.16 -> 1.18  
 - [Phosphor] - No-compromises lighting engine optimization mod.  
   - Available for: 1.12 (Forge), 1.15 -> 1.17  
 - [Starlight] - Rewrites the light engine to fix lighting performance and lighting errors. Uses a custom format for light storage.  
-  - Available for: 1.17, 1.18 (WIP)  
+  - Available for: 1.17 -> 1.18  
 
 ### Cosmetic
 
@@ -72,7 +72,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
   - Available for: 1.17 -> 1.18  
   - Requires [Fabric Renderer API](#compatibility "More information.")  
 - [Custom Entity Models (CEM)] - An implementation of custom entity models heavily based off of Optifine's format that aims to achieve feature parity with Optifine's custom entity models.  
-  - Available for: 1.16 -> 1.17  
+  - Available for: 1.16 -> 1.18  
 - [FabricSkyboxes] - Allows resource packs to define custom skyboxes. OptiFine format is not compatible by default, converters are available.  
   - Available for: 1.16 -> 1.18  
 - [LambdaBetterGrass] - Adds better grass and snow to the game.  
@@ -90,7 +90,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 #### Splash Screen
 
 - [Custom Splash Screen] - Change Minecraft's loading screen to your liking! Completely configurable!  
-  - Available for: 1.16 -> 1.17  
+  - Available for: 1.16 -> 1.18  
 - [Dark Loading Screen] - A simple mod to make the loading screen darker.  
   - Available for: 1.15 -> 1.18  
 - [Quilt Loading Screen] - A loading screen based off of The Quilt Community's server banner.  
@@ -203,7 +203,7 @@ The mods listed below are not part of the OptiFine alternatives directly but tho
 - [Overworld Two] provides an alternative optimized world generator for overworld and nether. Much faster than Vanilla but isn't identical to Vanilla.
   - Available for: 1.16
 - [Sodium Extra] - Adds features that should not be in Sodium.
-  - Available for: 1.16 -> 1.17
+  - Available for: 1.16 -> 1.18
 
 [Ears]: https://www.curseforge.com/minecraft/mc-mods/ears/ "Ears Curseforge page"
 [FerriteCore]: https://modrinth.com/mod/ferrite-core "FerriteCore Modrinth page"
@@ -233,7 +233,7 @@ Sodium and Canvas Renderer are incompatible.
 Some mods require the Fabric Renderer API to work, Canvas supports it, but Sodium will not support it by default, [Indium] is required to support it.
 
 - [Indium] - Adds support of the Fabric Renderer API to [Sodium].
-  - Available for: 1.16 -> 1.17
+  - Available for: 1.16 -> 1.18(Alpha)
 
 [Indium]: https://modrinth.com/mod/indium "Indium Modrinth Page"
 
