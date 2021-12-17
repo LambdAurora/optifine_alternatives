@@ -151,7 +151,7 @@ async function build_pages(mods) {
 			));
 
 		content = content.replace(/\$\{WEBSITE\}/g, WEBSITE).replace(/\$\{WEBSITE_PREFIX\}/g, WEBSITE_PREFIX)
-			.replace("${list_content}", article.html());
+			.replace("${list_content}", article.html({ prettified: false }));
 
 		Deno.writeFile(BUILD_DIR + "/index.html", ENCODER.encode(content));
 	});
