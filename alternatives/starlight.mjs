@@ -5,7 +5,7 @@ export default new Mod(
 	"PaperMC",
 	"Rewrites the light engine to fix lighting performance and lighting errors. Uses a custom format for light storage.",
 )
-.add_version(17, {id: 18, note: "WIP"})
+.add_version(17, 18)
 .add_category("Performance", "General")
 .add_link(
 	{ host: "curseforge" },

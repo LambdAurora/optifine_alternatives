@@ -5,7 +5,7 @@ export default new Mod(
 	"TeamMidnightDust",
 	"Change Minecraft's loading screen to your liking! Completely configurable!",
 )
-.add_version(16, 17)
+.add_version(16, 17, 18)
 .add_category("Cosmetic", "Splash Screen")
 .add_link(
 	{ host: "curseforge" },
