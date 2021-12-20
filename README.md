@@ -49,7 +49,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Lithium] - No-compromises game logic/server optimization mod.  
   - Available for: 1.16 -> 1.18  
 - [Phosphor] - No-compromises lighting engine optimization mod.  
-  - Available for: 1.12 (Forge), 1.15 -> 1.17  
+  - Available for: 1.12 (Forge), 1.15 -> 1.18  
 - [Starlight] - Rewrites the light engine to fix lighting performance and lighting errors. Uses a custom format for light storage.  
   - Available for: 1.17 -> 1.18  
 
