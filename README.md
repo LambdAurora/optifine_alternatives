@@ -56,7 +56,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 ### Cosmetic
 
 - [Animatica] - A mod implementing the OptiFine/MCPatcher animated texture format.  
-  - Available for: 1.17  
+  - Available for: 1.17 -> 1.18  
 - [Chime] - Adds predicates for more interactive item models, CIT replacement with a custom format.  
   - Available for: 1.16  
 - [CIT Resewn] - Re-implements MCPatcher's CIT (custom item textures from optifine resource packs)  
