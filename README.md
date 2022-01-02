@@ -37,6 +37,8 @@ You can contribute to this list by opening a pull request on the `data` branch v
   - Available for: 1.15 -> 1.18  
 - [Dynamic FPS] - Improve performance when Minecraft is in the background.  
   - Available for: 1.14 -> 1.18  
+- [Enhanced Block Entities] - Reduce FPS lag with block entities, as well as customize them with resource packs.  
+  - Available for: 1.16 -> 1.18  
 - [EntityCulling] - Using async path-tracing to hide (Block-)Entities that are not visible.  
   - Available for: 1.16 -> 1.18  
 - [Sodium] - Modern rendering engine and client-side optimization mod for Minecraft.  
@@ -47,7 +49,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [LazyDFU] - Makes the initialization of DataFixerUpper "lazy". DataFixerUpper (or DFU for short) is the system used by Minecraft to convert old worlds to the current version you're running, in Vanilla it's initialized at startup and is slow (and eats a lot of resources). This mod delays the initialization of DFU by initializing only when needed, if you're playing only on multiplayer it'll never get initialized for example.  
   - Available for: 1.14 -> 1.18, 1.16 -> 1.18 (Forge)  
 - [Lithium] - No-compromises game logic/server optimization mod.  
-  - Available for: 1.16 -> 1.18  
+  - Available for: 1.15 -> 1.18  
 - [Phosphor] - No-compromises lighting engine optimization mod.  
   - Available for: 1.12 (Forge), 1.15 -> 1.18  
 - [Starlight] - Rewrites the light engine to fix lighting performance and lighting errors. Uses a custom format for light storage.  
@@ -73,13 +75,21 @@ You can contribute to this list by opening a pull request on the `data` branch v
   - Requires [Fabric Renderer API](#compatibility "More information.")  
 - [Custom Entity Models (CEM)] - An implementation of custom entity models heavily based off of Optifine's format that aims to achieve feature parity with Optifine's custom entity models.  
   - Available for: 1.16 -> 1.18  
+- [Custom GUI] - A mod allowing to animate GUI textures or replace container textures with minimal predicates.  
+  - Available for: 1.16 -> 1.17  
 - [FabricSkyboxes] - Allows resource packs to define custom skyboxes. OptiFine format is not compatible by default, converters are available.  
   - Available for: 1.16 -> 1.18  
+- [JMX] - JMX adds support for FREX Rendering API features to Minecraft JSON model loading. It can also be configured to load all JSON models as FREX meshes, which may offer a modest reduction in memory usage due to more efficient data structures.  
+  - Available for: 1.16 -> 1.18  
+- [JsonEM (Json Entity Models)] - Data driven entity model library, should work with most entities. Does not support OptiFine's format.  
+  - Available for: 1.18  
 - [LambdaBetterGrass] - Adds better grass and snow to the game.  
   - Available for: 1.16 -> 1.18  
   - Requires [Fabric Renderer API](#compatibility "More information.")  
 - [LambDynamicLights] - Adds dynamic lighting to the game.  
   - Available for: 1.15 -> 1.18  
+- [More Block Predicates] - Allows resource packs to change block models depending on new conditions! Custom format.  
+  - Available for: 1.17  
 - [MoreMcmeta] - Animate almost any Minecraft texture with more options.  
   - Available for: 1.16 -> 1.17  
 - [Transparent] - Allows resource packs to make entities support transparency.  
@@ -144,6 +154,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 [Cull Leaves]: https://curseforge.com/minecraft/mc-mods/cull-leaves "Cull Leaves CurseForge page"
 [Cull Particles]: https://curseforge.com/minecraft/mc-mods/cull-particles-fabric "Cull Particles CurseForge page"
 [Dynamic FPS]: https://curseforge.com/minecraft/mc-mods/dynamic-fps "Dynamic FPS CurseForge page"
+[Enhanced Block Entities]: https://curseforge.com/minecraft/mc-mods/enhanced-block-entities "Enhanced Block Entities CurseForge page"
 [EntityCulling]: https://curseforge.com/minecraft/mc-mods/entityculling "EntityCulling CurseForge page"
 [Sodium]: https://curseforge.com/minecraft/mc-mods/sodium "Sodium CurseForge page"
 [LazyDFU]: https://curseforge.com/minecraft/mc-mods/lazydfu "LazyDFU CurseForge page"
@@ -158,9 +169,13 @@ You can contribute to this list by opening a pull request on the `data` branch v
 [Connected Block Textures]: https://curseforge.com/minecraft/mc-mods/connected-block-textures "Connected Block Textures CurseForge page"
 [Continuity]: https://curseforge.com/minecraft/mc-mods/continuity "Continuity CurseForge page"
 [Custom Entity Models (CEM)]: https://curseforge.com/minecraft/mc-mods/custom-entity-models-cem "Custom Entity Models (CEM) CurseForge page"
+[Custom GUI]: https://modrinth.com/mod/customgui "Custom GUI Modrinth page"
 [FabricSkyboxes]: https://modrinth.com/mod/fabricskyboxes "FabricSkyboxes Modrinth page"
+[JMX]: https://curseforge.com/minecraft/mc-mods/jmx "JMX CurseForge page"
+[JsonEM (Json Entity Models)]: https://modrinth.com/mod/jsonem "JsonEM (Json Entity Models) Modrinth page"
 [LambdaBetterGrass]: https://curseforge.com/minecraft/mc-mods/lambdabettergrass "LambdaBetterGrass CurseForge page"
 [LambDynamicLights]: https://curseforge.com/minecraft/mc-mods/lambdynamiclights "LambDynamicLights CurseForge page"
+[More Block Predicates]: https://modrinth.com/mod/mbp "More Block Predicates Modrinth page"
 [MoreMcmeta]: https://curseforge.com/minecraft/mc-mods/moremcmeta-fabric "MoreMcmeta CurseForge page"
 [Transparent]: https://curseforge.com/minecraft/mc-mods/transparent-fabric "Transparent CurseForge page"
 [Varied Mob Textures]: https://curseforge.com/minecraft/mc-mods/varied-mob-textures "Varied Mob Textures CurseForge page"
@@ -241,8 +256,7 @@ Some mods require the Fabric Renderer API to work, Canvas supports it, but Sodiu
 
 - custom entity models (might come in Vanilla to an unknown date?)
   currently incompletely replaced: current existing implementations are very hardcoded to Vanilla entities
-- Fishingline and Lead: custom widths and textures.
-- Emissive textures.
+- Emissive textures (in a compatible way with rendering mods, FREX offer a way but it's not OptiFine compatible, FREX is a rendering API).
 
 ## Need help?
 
