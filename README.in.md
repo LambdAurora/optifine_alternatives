@@ -86,8 +86,7 @@ Some mods require the Fabric Renderer API to work, Canvas supports it, but Sodiu
 
 - custom entity models (might come in Vanilla to an unknown date?)
   currently incompletely replaced: current existing implementations are very hardcoded to Vanilla entities
-- Fishingline and Lead: custom widths and textures.
-- Emissive textures.
+- Emissive textures (in a compatible way with rendering mods, FREX offer a way but it's not OptiFine compatible, FREX is a rendering API).
 
 ## Need help?
 

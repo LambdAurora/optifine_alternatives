@@ -5,7 +5,7 @@ export default new Mod(
 	"CaffeineMC",
 	"No-compromises game logic/server optimization mod.",
 )
-.add_version(16, 17, 18)
+.add_version(15, 16, 17, 18)
 .add_category("Performance", "General")
 .add_link(
 	{ host: "curseforge" },
