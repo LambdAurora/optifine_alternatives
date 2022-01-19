@@ -60,7 +60,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Animatica] - A mod implementing the OptiFine/MCPatcher animated texture format.  
   - Available for: 1.17 -> 1.18  
 - [Chime] - Adds predicates for more interactive item models, CIT replacement with a custom format.  
-  - Available for: 1.16  
+  - Available for: 1.16, 1.18  
 - [CIT Resewn] - Re-implements MCPatcher's CIT (custom item textures from optifine resource packs)  
   - Available for: 1.17 -> 1.18  
 - [Clear Skies] - Horizon and fog match the sky color. True blue skies!  
@@ -156,10 +156,10 @@ You can contribute to this list by opening a pull request on the `data` branch v
 [Dynamic FPS]: https://curseforge.com/minecraft/mc-mods/dynamic-fps "Dynamic FPS CurseForge page"
 [Enhanced Block Entities]: https://curseforge.com/minecraft/mc-mods/enhanced-block-entities "Enhanced Block Entities CurseForge page"
 [EntityCulling]: https://curseforge.com/minecraft/mc-mods/entityculling "EntityCulling CurseForge page"
-[Sodium]: https://curseforge.com/minecraft/mc-mods/sodium "Sodium CurseForge page"
+[Sodium]: https://modrinth.com/mod/sodium "Sodium Modrinth page"
 [LazyDFU]: https://curseforge.com/minecraft/mc-mods/lazydfu "LazyDFU CurseForge page"
-[Lithium]: https://curseforge.com/minecraft/mc-mods/lithium "Lithium CurseForge page"
-[Phosphor]: https://curseforge.com/minecraft/mc-mods/phosphor "Phosphor CurseForge page"
+[Lithium]: https://modrinth.com/mod/lithium "Lithium Modrinth page"
+[Phosphor]: https://modrinth.com/mod/phosphor "Phosphor Modrinth page"
 [Starlight]: https://curseforge.com/minecraft/mc-mods/starlight "Starlight CurseForge page"
 [Animatica]: https://curseforge.com/minecraft/mc-mods/animatica "Animatica CurseForge page"
 [Chime]: https://curseforge.com/minecraft/mc-mods/chime-fabric "Chime CurseForge page"

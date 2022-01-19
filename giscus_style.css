@@ -64,7 +64,7 @@ main {
 
 	margin: 40px auto;
 	padding: 0 10px;
-	max-width: 850px;
+	max-width: 60em;
 	box-sizing: border-box;
 }
 
@@ -126,7 +126,6 @@ a {
 
 .ls_responsive_img {
 	width: 100%;
-	max-width: 600px;
 	height: auto;
 }
 
