@@ -8,7 +8,7 @@ export default new Mod(
 .add_version(15, 16, 17, 18)
 .add_category("Performance", "General")
 .add_link(
-	{ host: "curseforge" },
 	{ host: "modrinth" },
+	{ host: "curseforge" },
 	{ host: "github" }
 );
