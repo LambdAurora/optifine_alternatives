@@ -247,8 +247,8 @@ Sodium and Canvas Renderer are incompatible.
 
 Some mods require the Fabric Renderer API to work, Canvas supports it, but Sodium will not support it by default, [Indium] is required to support it.
 
-- [Indium] - Adds support of the Fabric Renderer API to [Sodium].
-  - Available for: 1.16 -> 1.18(Alpha)
+- [Indium] - Adds support of the Fabric Renderer API to [Sodium](https://www.curseforge.com/minecraft/mc-mods/sodium).
+  - Available for: 1.16 -> 1.18 (Alpha)
 
 [Indium]: https://modrinth.com/mod/indium "Indium Modrinth Page"
 
