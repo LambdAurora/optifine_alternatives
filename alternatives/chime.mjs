@@ -5,7 +5,7 @@ export default new Mod(
 	"Emi",
 	"Adds predicates for more interactive item models, CIT replacement with a custom format.",
 )
-.add_version(16)
+.add_version(16, 18)
 .add_category("Cosmetic")
 .add_link(
 	{ host: "curseforge", params: { namespace: "chime-fabric" } },
