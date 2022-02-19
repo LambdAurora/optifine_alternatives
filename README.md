@@ -77,6 +77,8 @@ You can contribute to this list by opening a pull request on the `data` branch v
   - Available for: 1.16 -> 1.18  
 - [Custom GUI] - A mod allowing to animate GUI textures or replace container textures with minimal predicates.  
   - Available for: 1.16 -> 1.17  
+- [Entity Texture Features] - A Fabric mod implementing randomized & emissive texture support for mobs set by the resourcepack. Fully compatible with the Optifine format & Sodium.  
+  - Available for: 1.16 -> 1.18  
 - [FabricSkyboxes] - Allows resource packs to define custom skyboxes. OptiFine format is not compatible by default, converters are available.  
   - Available for: 1.16 -> 1.18  
 - [JMX] - JMX adds support for FREX Rendering API features to Minecraft JSON model loading. It can also be configured to load all JSON models as FREX meshes, which may offer a modest reduction in memory usage due to more efficient data structures.  
@@ -170,6 +172,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 [Continuity]: https://curseforge.com/minecraft/mc-mods/continuity "Continuity CurseForge page"
 [Custom Entity Models (CEM)]: https://curseforge.com/minecraft/mc-mods/custom-entity-models-cem "Custom Entity Models (CEM) CurseForge page"
 [Custom GUI]: https://modrinth.com/mod/customgui "Custom GUI Modrinth page"
+[Entity Texture Features]: https://curseforge.com/minecraft/mc-mods/entity-texture-features-fabric "Entity Texture Features CurseForge page"
 [FabricSkyboxes]: https://modrinth.com/mod/fabricskyboxes "FabricSkyboxes Modrinth page"
 [JMX]: https://curseforge.com/minecraft/mc-mods/jmx "JMX CurseForge page"
 [JsonEM (Json Entity Models)]: https://modrinth.com/mod/jsonem "JsonEM (Json Entity Models) Modrinth page"
@@ -256,7 +259,7 @@ Some mods require the Fabric Renderer API to work, Canvas supports it, but Sodiu
 
 - custom entity models (might come in Vanilla to an unknown date?)
   currently incompletely replaced: current existing implementations are very hardcoded to Vanilla entities
-- Emissive textures (in a compatible way with rendering mods, FREX offer a way but it's not OptiFine compatible, FREX is a rendering API).
+- Emissive block textures (in a compatible way with rendering mods, FREX offer a way but it's not OptiFine compatible, FREX is a rendering API).
 
 ## Need help?
 
