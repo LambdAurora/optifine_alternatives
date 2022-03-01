@@ -5,6 +5,7 @@ export default new Mod(
 	"CaffeineMC",
 	"Modern rendering engine and client-side optimization mod for Minecraft.",
 )
+.icon("https://cdn.modrinth.com/data/AANobbMI/icon.png")
 .add_version(16, 17, {id: 18, note: "Alpha"})
 .add_category("Performance", "Client")
 .add_link(

@@ -38,6 +38,18 @@ export default class Requirement {
 			return new md.Link("#compatibility", this.name, "More information.");
 		}
 	}
+
+	get_html_link() {
+		if (this.is_mod()) {
+			return new html.Text("[TODO]");
+		} else {
+			return html.create_element("a")
+				.with_attr("href", "#compatibility")
+				.with_attr("title", "More information.")
+				.with_child(new html.Text(this.name)
+			);
+		}
+	}
 };
 
 const STATE = {

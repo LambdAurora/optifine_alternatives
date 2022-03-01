@@ -127,20 +127,58 @@ async function build_pages(mods) {
 		Deno.writeFile(BUILD_DIR + "/giscus_style.css", ENCODER.encode(args[1] + "\n\n" + content));
 	});
 
-	let md_doc = new md.MDDocument();
+	async function build_mod_cards(parent, mods, level = 3) {
+		for (const category of mods) {
+			if (category.mods.length === 0 && category.categories.length === 0)
+				continue;
+	
+			const details = html.create_element("details")
+			parent.append_child(details);
 
-	Promise.all([Deno.readFile("index.in.html"), Deno.readFile("README.in.md"), build_mod_tree(md_doc, mods)])
+			details.append_child(
+				html.create_element("summary")
+					.with_child(
+						html.create_element("h" + level)
+							.with_attr("id", encodeURI(category.name).replace(/%20/g, "-").toLocaleLowerCase())
+							.with_child(category.name)
+					)
+			);
+	
+			if (category.mods.length !== 0) {
+				details.attr("open", "");
+
+				const rendered_mods = await Promise.all(category.mods.map((mod) => mod.to_html()));
+				rendered_mods.forEach(mod => {
+					details.append_child(mod);
+				});
+
+				details.append_child(html.create_element("hr"));
+			}
+	
+			if (category.categories.length !== 0) {
+				details.attr("open", "");
+
+				await build_mod_cards(details, category.categories, level + 1);
+			}
+		}
+	}
+
+	const section = html.create_element("section");
+
+	Promise.all([Deno.readFile("index.in.html"), Deno.readFile("README.in.md"), build_mod_cards(section, mods)])
 	.then(args => {
+		const INSERT_MODS_MARKER = "insert_mods";
+
 		let content = DECODER.decode(args[0]);
 
 		let readme = DECODER.decode(args[1]);
-		readme = readme.replace("${mods}", md_doc.toString());
+		readme = readme.replace("${mods}", `<!--${INSERT_MODS_MARKER}-->`);
 
-		md_doc = md.parser.parse(readme, { auto_link: true });
+		const md_doc = md.parser.parse(readme, { auto_link: true });
 		let article = html.create_element("article");
 		md.render_to_html(md_doc, { parent: article });
 
-		article.children.find(child => child.tag === html.Tag.h1)
+		article.children.find(child => child instanceof html.Element && child.tag === html.Tag.h1)
 			.append_child(html.create_element("span").with_attr("class", ["right"]).with_child(html.create_element("a")
 				.with_attr("class", ["github-button", "right"])
 				.with_attr("href", "https://github.com/LambdAurora/optifine_alternatives")
@@ -149,6 +187,14 @@ async function build_pages(mods) {
 				.with_attr("data-show-count", "true")
 				.with_attr("aria-label", "Star LambdAurora/optifine_alternatives on GitHub")
 			));
+
+		for (let i = 0; i < article.children.length; i++) {
+			const child = article.children[i];
+
+			if (child instanceof html.Comment && child.content === INSERT_MODS_MARKER) {
+				article.children[i] = section;
+			}
+		}
 
 		content = content.replace(/\$\{WEBSITE\}/g, WEBSITE).replace(/\$\{WEBSITE_PREFIX\}/g, WEBSITE_PREFIX)
 			.replace("${list_content}", article.html({ prettified: false }));

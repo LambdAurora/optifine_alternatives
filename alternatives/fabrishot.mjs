@@ -5,6 +5,7 @@ export default new Mod(
 	"ramidzkh",
 	"Take insanely large screenshots because why not?",
 )
+.icon("https://cdn.modrinth.com/data/3qsfQtE9/icon.png")
 .add_version(16, 17, 18)
 .add_category("Utility")
 .add_link(

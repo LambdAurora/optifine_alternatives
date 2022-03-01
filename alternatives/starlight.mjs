@@ -5,6 +5,7 @@ export default new Mod(
 	"PaperMC",
 	"Rewrites the light engine to fix lighting performance and lighting errors. Uses a custom format for light storage. Incompatible with Phosphor.",
 )
+.icon("https://cdn.modrinth.com/data/H8CaAYZC/icon.png")
 .add_version(17, 18)
 .add_category("Performance", "General")
 .add_link(

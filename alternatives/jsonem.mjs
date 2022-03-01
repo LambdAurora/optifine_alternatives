@@ -5,6 +5,7 @@ export default new Mod(
 	"FoundationGames",
 	"Data driven entity model library, should work with most entities. Does not support OptiFine's format.",
 )
+.icon("https://cdn.modrinth.com/data/fumdX4iT/icon.png")
 .add_version(18)
 .add_category("Cosmetic")
 .add_link(

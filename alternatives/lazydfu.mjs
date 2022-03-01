@@ -8,6 +8,7 @@ export default new Mod(
 	+ "in Vanilla it's initialized at startup and is slow (and eats a lot of resources). This mod delays the initialization of DFU by initializing only when needed, "
 	+ "if you're playing only on multiplayer it'll never get initialized for example.",
 )
+.icon("https://cdn.modrinth.com/data/hvFnDODi/icon.png")
 .add_version(14, 15, 16, 17, 18, { id: 16, note: "Forge" }, { id: 17, note: "Forge" }, { id: 18, note: "Forge" })
 .add_category("Performance", "General")
 .add_link(

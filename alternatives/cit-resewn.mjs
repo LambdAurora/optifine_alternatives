@@ -5,6 +5,7 @@ export default new Mod(
 	"shsupercm",
 	"Re-implements MCPatcher's CIT (custom item textures from optifine resource packs)",
 )
+.icon("https://cdn.modrinth.com/data/otVJckYQ/icon.png")
 .add_version(17, 18)
 .add_category("Cosmetic")
 .add_link(

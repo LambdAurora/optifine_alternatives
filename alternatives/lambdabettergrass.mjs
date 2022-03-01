@@ -5,6 +5,7 @@ export default new Mod(
 	"LambdAurora",
 	"Adds better grass and snow to the game.",
 )
+.icon("https://cdn.modrinth.com/data/2Uev7LdA/icon.png")
 .add_version(16, 17, 18)
 .add_category("Cosmetic")
 .add_link(

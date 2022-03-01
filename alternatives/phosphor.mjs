@@ -5,6 +5,7 @@ export default new Mod(
 	"CaffeineMC",
 	"No-compromises lighting engine optimization mod. Incompatible with Starlight.",
 )
+.icon("https://cdn.modrinth.com/data/hEOCdOgW/icon.png")
 .add_version({id: 12, note: "Forge"}, 15, 16, 17, 18)
 .add_category("Performance", "General")
 .add_link(

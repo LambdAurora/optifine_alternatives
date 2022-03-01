@@ -5,6 +5,7 @@ export default new Mod(
 	"FoundationGames",
 	"Reduce FPS lag with block entities, as well as customize them with resource packs.",
 )
+.icon("https://cdn.modrinth.com/data/OVuFYfre/icon.png")
 .add_version(16, 17, 18)
 .add_category("Performance", "Client")
 .add_link(

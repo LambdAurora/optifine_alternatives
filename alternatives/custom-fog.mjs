@@ -5,6 +5,7 @@ export default new Mod(
 	"Setadokalo",
 	"A mod allowing you to customize the appearance of fog in your world.",
 )
+.icon("https://cdn.modrinth.com/data/2JyZgJxC/icon.png")
 .add_version(15, 16, 17)
 .add_category("Fog")
 .add_link(
