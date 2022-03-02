@@ -11,5 +11,5 @@ export default new Mod(
 .add_link(
 	{ host: "modrinth" },
 	{ host: "curseforge" },
-	{ host: "github", params: { author: "wafflecoffee" } }
+	{ host: "github", params: { author: "emmods" } }
 );

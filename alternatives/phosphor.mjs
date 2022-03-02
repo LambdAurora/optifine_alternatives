@@ -11,5 +11,5 @@ export default new Mod(
 .add_link(
 	{ host: "modrinth" },
 	{ host: "curseforge" },
-	{ host: "github" }
+	{ host: "github", params: { namespace: "phosphor-fabric" } }
 );
