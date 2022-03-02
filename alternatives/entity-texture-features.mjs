@@ -10,6 +10,6 @@ export default new Mod(
 .add_category("Cosmetic")
 .add_link(
 	{ host: "curseforge", params: { namespace: "entity-texture-features-fabric" } },
-	{ host: "modrinth" },
-	{ host: "github" }
+	{ host: "modrinth", params: { namespace: "entitytexturefeatures" } },
+	{ host: "github", params: { author: "Traben-0", namespace: "EmissiveMod" } }
 );

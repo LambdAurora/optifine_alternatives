@@ -10,6 +10,6 @@ export default new Mod(
 .add_category("Cosmetic")
 .add_link(
 	{ host: "curseforge" },
-	{ host: "modrinth" },
+	{ host: "modrinth", params: { namespace: "imx" } },
 	{ host: "github", params: { namespace: "json-model-extensions" } }
 );
