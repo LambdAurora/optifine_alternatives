@@ -1,5 +1,7 @@
 /* Giscus styling start */
 
+@import url("https://lambdaurora.dev/style.css");
+
 :root {
 	--color-fg-default: var(--ls_theme_foreground);
 	--color-bg-primary: var(--ls_theme_background_highlight);

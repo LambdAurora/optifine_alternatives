@@ -111,7 +111,7 @@ async function build_readme_file(mods) {
 }
 
 async function build_pages(mods) {
-	Promise.all([
+	/*Promise.all([
 		Deno.readFile("giscus_style.css"),
 		fetch(WEBSITE + "/style.css")
 			.then(response => {
@@ -125,7 +125,7 @@ async function build_pages(mods) {
 		let content = DECODER.decode(args[0]);
 
 		Deno.writeFile(BUILD_DIR + "/giscus_style.css", ENCODER.encode(args[1] + "\n\n" + content));
-	});
+	});*/
 
 	async function build_mod_cards(parent, mods, level = 3) {
 		for (const category of mods) {
