@@ -152,6 +152,8 @@ You can contribute to this list by opening a pull request on the `data` branch v
   - Available for: 1.15 -> 1.18  
 - [Ok Zoomer] - Adds a highly-configurable zoom key for Fabric. The zoom is yours!  
   - Available for: 1.14 -> 1.18  
+- [Quick Spyglasser] - Adds a client-side keybind for using a spyglass anywhere in your inventory.  
+  - Available for: 1.17  
 - [Zoomify] - A rather simple zoom mod with moderate customizability.  
   - Available for: 1.18  
 
@@ -202,6 +204,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 [Soaring Clouds]: https://curseforge.com/minecraft/mc-mods/soaring-clouds "Soaring Clouds CurseForge page"
 [Logical Zoom]: https://curseforge.com/minecraft/mc-mods/logical-zoom "Logical Zoom CurseForge page"
 [Ok Zoomer]: https://curseforge.com/minecraft/mc-mods/ok-zoomer "Ok Zoomer CurseForge page"
+[Quick Spyglasser]: https://curseforge.com/minecraft/mc-mods/quick-spyglasser "Quick Spyglasser CurseForge page"
 [Zoomify]: https://curseforge.com/minecraft/mc-mods/zoomify "Zoomify CurseForge page"
 
 
