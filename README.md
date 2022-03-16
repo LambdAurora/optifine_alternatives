@@ -42,7 +42,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [EntityCulling] - Using async path-tracing to hide (Block-)Entities that are not visible.  
   - Available for: 1.16 -> 1.18  
 - [Sodium] - Modern rendering engine and client-side optimization mod for Minecraft.  
-  - Available for: 1.16 -> 1.17, 1.18 (Alpha)  
+  - Available for: 1.16 -> 1.18  
 
 #### General
 
