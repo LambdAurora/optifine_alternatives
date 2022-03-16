@@ -34,8 +34,8 @@
 }
 
 .has-reacted {
-	color: var(--ls_theme_secondary_darkened);
-	background-color: var(--ls_theme_secondary_lightened);
+	color: var(--ls_theme_secondary_darkened) !important;
+	background-color: var(--ls_theme_secondary_lightened) !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,8 +45,8 @@
 	}
 
 	.has-reacted {
-		color: var(--ls_theme_secondary_lightened);
-		background-color: var(--ls_theme_secondary_darkened);
+		color: var(--ls_theme_secondary_lightened) !important;
+		background-color: var(--ls_theme_secondary_darkened) !important;
 	}
 }
 
