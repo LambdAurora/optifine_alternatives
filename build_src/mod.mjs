@@ -15,7 +15,7 @@ export default class Mod {
 		this.name = name;
 		this.author = author;
 		this.description = description;
-		this._icon = "";
+		this._icon = { url: "", pixelated: false };
 		this.versions = [];
 		this.categories = [];
 		this.links = [];
@@ -30,9 +30,11 @@ export default class Mod {
 	 * Sets the icon of this mod.
 	 *
 	 * @param {string} icon the link to the icon for this mod
+	 * @param {boolean} pixelated `true` if the icon is pixelated, otherwise `false`
 	 */
-	icon(icon) {
-		this._icon = icon;
+	icon(icon, pixelated = false) {
+		this._icon.url = icon;
+		this._icon.pixelated = pixelated;
 		return this;
 	}
 
@@ -228,8 +230,13 @@ export default class Mod {
 
 		if (this._icon) {
 			const icon = html.create_element("img");
-			icon.src(this._icon);
+			icon.src(this._icon.url);
 			icon.alt(this.name + "'s logo");
+
+			if (this._icon.pixelated) {
+				icon.with_attr("class", "ls_pixelated");
+			}
+
 			name_div.append_child(icon);
 		}
 
