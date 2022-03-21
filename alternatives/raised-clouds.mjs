@@ -5,7 +5,7 @@ export default new Mod(
 	'haykam',
 	'Allows changing the height at which clouds appear.',
 )
-.add_version(16)
+.add_version(16, 17, 18)
 .add_category('Cosmetic')
 .add_link(
 	{ host: 'curseforge' },
