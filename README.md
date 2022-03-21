@@ -142,7 +142,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 #### Cloud Height
 
 - [Raised Clouds] - Allows changing the height at which clouds appear.  
-  - Available for: 1.16  
+  - Available for: 1.16 -> 1.18  
 - [Soaring Clouds] - Allows changing the height at which clouds appear.  
   - Available for: 1.15 -> 1.16  
 
