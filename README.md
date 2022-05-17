@@ -149,6 +149,8 @@ You can contribute to this list by opening a pull request on the `data` branch v
 
 #### Zoom
 
+- [Camera Utils] - Additional features concerning the player's camera.  
+  - Available for: 1.17 -> 1.18  
 - [Logical Zoom] - Super simple zoom key for Minecraft.  
   - Available for: 1.15 -> 1.18  
 - [Ok Zoomer] - Adds a highly-configurable zoom key for Fabric. The zoom is yours!  
@@ -203,6 +205,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 [ResolutionControl+]: https://modrinth.com/mod/resolution-control-plus "ResolutionControl+ Modrinth page"
 [Raised Clouds]: https://curseforge.com/minecraft/mc-mods/raised-clouds "Raised Clouds CurseForge page"
 [Soaring Clouds]: https://curseforge.com/minecraft/mc-mods/soaring-clouds "Soaring Clouds CurseForge page"
+[Camera Utils]: https://curseforge.com/minecraft/mc-mods/camera-utils "Camera Utils CurseForge page"
 [Logical Zoom]: https://curseforge.com/minecraft/mc-mods/logical-zoom "Logical Zoom CurseForge page"
 [Ok Zoomer]: https://curseforge.com/minecraft/mc-mods/ok-zoomer "Ok Zoomer CurseForge page"
 [Quick Spyglasser]: https://curseforge.com/minecraft/mc-mods/quick-spyglasser "Quick Spyglasser CurseForge page"
