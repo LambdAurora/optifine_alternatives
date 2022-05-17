@@ -18,6 +18,7 @@ This list will list recommended OptiFine alternatives by me (LambdAurora), so it
  - Mods must respect the Minecraft's EULA.
  - Mods must not refer to a cheat client.
  - Mods that change gameplay in a way (e.g. zoom) that have a way for servers to disable them will be favored.
+ - Free and open-source mods are favored.
 
 This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 
