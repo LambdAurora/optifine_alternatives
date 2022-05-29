@@ -14,9 +14,11 @@ In the modern Minecraft era, with Fabric's community effort, modders have begun 
 ## This list
 
 This list will list recommended OptiFine alternatives by me (LambdAurora), so it has some requirements for mods to be listed here:
- - They must be publicly available, if it's only accessible through Discord they are not eligible.
- - Mods must respect the Minecraft's EULA.
- - Mods must not refer to a cheat client.
+
+ - They must be publicly available, if they're only available on request they are not eligible.
+ - Mods must respect the Mojang EULA.
+ - Cheat ("PVP") clients (Badlion / Lunar / etc.) are not considered mods.
+ - Mods must not refer to cheat clients.
  - Mods that change gameplay in a way (e.g. zoom) that have a way for servers to disable them will be favored.
  - Free and open-source mods are favored.
 
@@ -85,7 +87,7 @@ Some mods require the Fabric Renderer API to work, Canvas supports it, but Sodiu
 
 ## Missing
 
-- custom entity models (might come in Vanilla to an unknown date?)
+- Custom entity models (might come in Vanilla to an unknown date?)
   currently incompletely replaced: current existing implementations are very hardcoded to Vanilla entities
 - Emissive block textures (in a compatible way with rendering mods, FREX offer a way but it's not OptiFine compatible, FREX is a rendering API).
 
@@ -93,7 +95,7 @@ Some mods require the Fabric Renderer API to work, Canvas supports it, but Sodiu
 
 If you need help about Sodium, Lithium, Phosphor (any of CaffeineMC's mod to be short), [please check out CaffeineMC's discord server](https://jellysquid.me/discord).
 
-If you need help related to LambDynamicLights, LambdaBetterGrass, or if you don't want to post in the comments a suggestion you can check out [my own discord server](https://discord.lambdaurora.dev)
+If you need help related to LambDynamicLights, LambdaBetterGrass, or Inspecio, if you don't want to post in the comments a suggestion you can check out [my own discord server](https://discord.lambdaurora.dev)
 
 ## Other lists
 
