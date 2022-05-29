@@ -18,9 +18,9 @@ This list will list recommended OptiFine alternatives by me (LambdAurora), so it
  - They must be publicly available, if they're only available on request they are not eligible.
  - Mods must respect the Mojang EULA.
  - Cheat ("PVP") clients (Badlion / Lunar / etc.) are not considered mods.
+ - Mods must not refer to cheat clients.
  - Mods that change gameplay in a way (e.g. zoom) that have a way for servers to disable them will be favored.
  - Free and open-source mods are favored.
- - Mods must not refer to cheat clients.
 
 This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
 
@@ -66,7 +66,7 @@ The mods listed below are not part of the OptiFine alternatives directly but tho
 
 **As of 1.16.2 and above, this is now a vanilla feature under the accessibility settings. If you are playing in 1.16.2 or above, the mods for this feature are irrelevant.**
 
-Those are client-only mod that prevents Minecraft from changing the FOV in all situations.
+These are client-only mods that prevent Minecraft from changing the FOV in all situations.
 
 - [motioNO] - disables dynamic FOV.
 - [FovLock] - adds dynamic FOV lock button.
