@@ -52,7 +52,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [LazyDFU] - Makes the initialization of DataFixerUpper "lazy". DataFixerUpper (or DFU for short) is the system used by Minecraft to convert old worlds to the current version you're running, in Vanilla it's initialized at startup and is slow (and eats a lot of resources). This mod delays the initialization of DFU by initializing only when needed, if you're playing only on multiplayer it'll never get initialized for example.  
   - Available for: fabric,quilt: 1.14 -> 1.19, forge: 1.16 -> 1.18  
 - [Lithium] - No-compromises game logic/server optimization mod.  
-  - Available for: fabric,quilt: 1.15 -> 1.18  
+  - Available for: fabric,quilt: 1.15 -> 1.19  
 - [Phosphor] - No-compromises lighting engine optimization mod. Incompatible with Starlight.  
   - Available for: fabric,quilt: 1.15 -> 1.18  
 - [Starlight] - Rewrites the light engine to fix lighting performance and lighting errors. Uses a custom format for light storage. Incompatible with Phosphor.  
