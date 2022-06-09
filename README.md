@@ -92,7 +92,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
   - Available for: fabric,quilt: 1.16 -> 1.18  
   - Requires [Fabric Renderer API](#compatibility "More information.")  
 - [LambDynamicLights] - Adds dynamic lighting to the game.  
-  - Available for: fabric,quilt: 1.15 -> 1.18  
+  - Available for: fabric,quilt: 1.15 -> 1.19  
 - [More Block Predicates] - Allows resource packs to change block models depending on new conditions! Custom format.  
   - Available for: fabric,quilt: 1.17 -> 1.18  
 - [MoreMcmeta] - Animate almost any Minecraft texture with more options.  
