@@ -35,132 +35,132 @@ You can contribute to this list by opening a pull request on the `data` branch v
 #### Client
 
 - [Cull Leaves] - Adds culling to leaf blocks, providing a huge performance boost over vanilla. Similar to OptiFine's Smart Leaves feature.  
-  - Available for: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.19  
 - [Cull Particles] - Don't render particles that can't be seen. Unneeded with Sodium.  
-  - Available for: 1.15 -> 1.18  
+  - Available for: fabric,quilt: 1.15 -> 1.19  
 - [Dynamic FPS] - Improve performance when Minecraft is in the background.  
-  - Available for: 1.14 -> 1.18  
+  - Available for: fabric,quilt: 1.14 -> 1.19  
 - [Enhanced Block Entities] - Reduce FPS lag with block entities, as well as customize them with resource packs.  
-  - Available for: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.18  
 - [EntityCulling] - Using async path-tracing to hide (Block-)Entities that are not visible.  
-  - Available for: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.19, forge: 1.8.9, forge: 1.16 -> 1.19  
 - [Sodium] - Modern rendering engine and client-side optimization mod for Minecraft.  
-  - Available for: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.19  
 
 #### General
 
 - [LazyDFU] - Makes the initialization of DataFixerUpper "lazy". DataFixerUpper (or DFU for short) is the system used by Minecraft to convert old worlds to the current version you're running, in Vanilla it's initialized at startup and is slow (and eats a lot of resources). This mod delays the initialization of DFU by initializing only when needed, if you're playing only on multiplayer it'll never get initialized for example.  
-  - Available for: 1.14 -> 1.18, 1.16 -> 1.18 (Forge)  
+  - Available for: fabric,quilt: 1.14 -> 1.19, forge: 1.16 -> 1.18  
 - [Lithium] - No-compromises game logic/server optimization mod.  
-  - Available for: 1.15 -> 1.18  
+  - Available for: fabric,quilt: 1.15 -> 1.18  
 - [Phosphor] - No-compromises lighting engine optimization mod. Incompatible with Starlight.  
-  - Available for: 1.12 (Forge), 1.15 -> 1.18  
+  - Available for: fabric,quilt: 1.15 -> 1.18  
 - [Starlight] - Rewrites the light engine to fix lighting performance and lighting errors. Uses a custom format for light storage. Incompatible with Phosphor.  
-  - Available for: 1.17 -> 1.18  
+  - Available for: fabric,quilt: 1.17 -> 1.19  
 
 ### Cosmetic
 
 - [Animatica] - A mod implementing the OptiFine/MCPatcher animated texture format.  
-  - Available for: 1.17 -> 1.18  
+  - Available for: fabric,quilt: 1.17 -> 1.18  
 - [Chime] - Adds predicates for more interactive item models, CIT replacement with a custom format.  
-  - Available for: 1.16, 1.18  
+  - Available for: fabric: 1.16, fabric,quilt: 1.18  
 - [CIT Resewn] - Re-implements MCPatcher's CIT (custom item textures from optifine resource packs)  
-  - Available for: 1.17 -> 1.18  
+  - Available for: fabric,quilt: 1.17 -> 1.18  
 - [Clear Skies] - Horizon and fog match the sky color. True blue skies!  
-  - Available for: 1.15 -> 1.18, 1.16 (Forge)  
+  - Available for: fabric,quilt: 1.15 -> 1.19, forge: 1.16  
 - [Colormatic] - An independent implementation of the custom colors mod for Minecraft.  
-  - Available for: 1.14 -> 1.18  
+  - Available for: fabric,quilt: 1.14 -> 1.19  
 - [Connected Block Textures] - An implementation of the MCPatcher/Optifine connected textures format on the Fabric modloader. Unmaintained.  
-  - Available for: 1.16  
+  - Available for: fabric: 1.16  
   - Requires [Fabric Renderer API](#compatibility "More information.")  
-- [Continuity] - A Fabric mod that allows for efficient connected textures.  
-  - Available for: 1.17 -> 1.18  
+- [Continuity] - A Fabric mod that allows for efficient connected textures. Support emissive textures.  
+  - Available for: fabric,quilt: 1.17 -> 1.19  
   - Requires [Fabric Renderer API](#compatibility "More information.")  
 - [Custom Entity Models (CEM)] - An implementation of custom entity models heavily based off of Optifine's format that aims to achieve feature parity with Optifine's custom entity models.  
-  - Available for: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.19  
 - [Custom GUI] - A mod allowing to animate GUI textures or replace container textures with minimal predicates.  
-  - Available for: 1.16 -> 1.17  
+  - Available for: fabric: 1.16 -> 1.17  
 - [Entity Texture Features] - A Fabric mod implementing randomized & emissive texture support for mobs set by the resourcepack. Fully compatible with the Optifine format & Sodium.  
-  - Available for: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.19, forge: 1.18  
 - [FabricSkyboxes] - Allows resource packs to define custom skyboxes. OptiFine format is not compatible by default, converters are available.  
-  - Available for: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.19  
 - [JMX] - JMX adds support for FREX Rendering API features to Minecraft JSON model loading. It can also be configured to load all JSON models as FREX meshes, which may offer a modest reduction in memory usage due to more efficient data structures.  
-  - Available for: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.19  
 - [JsonEM (Json Entity Models)] - Data driven entity model library, should work with most entities. Does not support OptiFine's format.  
-  - Available for: 1.18  
+  - Available for: fabric,quilt: 1.18  
 - [LambdaBetterGrass] - Adds better grass and snow to the game.  
-  - Available for: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.18  
   - Requires [Fabric Renderer API](#compatibility "More information.")  
 - [LambDynamicLights] - Adds dynamic lighting to the game.  
-  - Available for: 1.15 -> 1.18  
+  - Available for: fabric,quilt: 1.15 -> 1.18  
 - [More Block Predicates] - Allows resource packs to change block models depending on new conditions! Custom format.  
-  - Available for: 1.17  
+  - Available for: fabric,quilt: 1.17 -> 1.18  
 - [MoreMcmeta] - Animate almost any Minecraft texture with more options.  
-  - Available for: 1.16 -> 1.17  
+  - Available for: fabric,quilt: 1.16 -> 1.18, forge: 1.16 -> 1.18  
 - [Transparent] - Allows resource packs to make entities support transparency.  
-  - Available for: 1.15 -> 1.18  
+  - Available for: fabric,quilt,forge: 1.15 -> 1.18  
 - [Varied Mob Textures] - This mod allows the resource packs creator to have multiple randomized textures for the same mob. Uses custom format, OptiFine-based resource packs will need conversion.  
-  - Available for: 1.16  
+  - Available for: fabric: 1.16  
 
 #### Splash Screen
 
 - [Custom Splash Screen] - Change Minecraft's loading screen to your liking! Completely configurable!  
-  - Available for: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.18  
 - [Dark Loading Screen] - A simple mod to make the loading screen darker.  
-  - Available for: 1.15 -> 1.18  
+  - Available for: fabric,quilt: 1.15 -> 1.19  
 - [Quilt Loading Screen] - A loading screen based off of The Quilt Community's server banner.  
-  - Available for: 1.16 -> 1.18  
+  - Available for: quilt: 1.18, fabric: 1.16 -> 1.18  
 - [Splash] - Splash is a Fabric mod that allows you to customize the colors of your splash screen.  
-  - Available for: 1.16 -> 1.17  
+  - Available for: fabric: 1.16 -> 1.17  
 
 ### Shaders
 
 - [Canvas Renderer] - A new rendering engine. Incompatible with Sodium.  
-  - Available for: 1.16 (Abandoned), 1.17 -> 1.18  
+  - Available for: fabric,quilt: 1.17 -> 1.18, fabric: 1.16 (Abandoned)  
 - [Iris] - A new shaders mod for Minecraft intended to be compatible with existing ShadersMod/Optifine shaders.  
-  - Available for: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.19  
 
 ### Fog
 
 - [ClearView] - Controls which kinds of fogs are shown.  
-  - Available for: 1.15 -> 1.16  
+  - Available for: fabric: 1.15 -> 1.16  
 - [Custom Fog] - A mod allowing you to customize the appearance of fog in your world.  
-  - Available for: 1.15 -> 1.17  
+  - Available for: fabric,quilt: 1.15 -> 1.18  
 - [Fog Control] - Allows the user to adjust the (client) distance at which fogs render or disable them completely.   
-  - Available for: 1.17  
+  - Available for: fabric: 1.17  
 - [FogYeet] - Small mod for 1.15 to remove fog.  
-  - Available for: 1.15  
+  - Available for: fabric: 1.15  
 - [NoFog] - A simple client-side mod supporting both forge and fabric that removes all fog. (ARR)  
-  - Available for: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.18, forge: 1.10.2 -> 1.18  
 
 ### Utility
 
 - [Fabrishot] - Take insanely large screenshots because why not?  
-  - Available for: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.18  
 - [Resolution Control] - Allows you to set render resolutions and take large screenshots.  
-  - Available for: 1.14 -> 1.16  
+  - Available for: fabric: 1.14 -> 1.16  
 - [ResolutionControl+] - Allows you to set render resolutions and take large screenshots.  
-  - Available for: 1.16  
+  - Available for: fabric: 1.16  
 
 #### Cloud Height
 
 - [Raised Clouds] - Allows changing the height at which clouds appear.  
-  - Available for: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.18  
 - [Soaring Clouds] - Allows changing the height at which clouds appear.  
-  - Available for: 1.15 -> 1.16  
+  - Available for: fabric: 1.15 -> 1.16  
 
 #### Zoom
 
 - [Camera Utils] - Additional features concerning the player's camera.  
-  - Available for: 1.17 -> 1.18  
+  - Available for: fabric,quilt: 1.17 -> 1.19  
 - [Logical Zoom] - Super simple zoom key for Minecraft.  
-  - Available for: 1.15 -> 1.18  
+  - Available for: fabric,quilt: 1.15 -> 1.19  
 - [Ok Zoomer] - Adds a highly-configurable zoom key for Fabric. The zoom is yours!  
-  - Available for: 1.14 -> 1.18  
+  - Available for: quilt: 1.18.2, fabric: 1.14 -> 1.18.1  
 - [Quick Spyglasser] - Adds a client-side keybind for using a spyglass anywhere in your inventory.  
-  - Available for: 1.17  
+  - Available for: fabric: 1.17  
 - [Zoomify] - A rather simple zoom mod with moderate customizability.  
-  - Available for: 1.18  
+  - Available for: fabric,quilt: 1.18 -> 1.19  
 
 [Cull Leaves]: https://curseforge.com/minecraft/mc-mods/cull-leaves "Cull Leaves CurseForge page"
 [Cull Particles]: https://curseforge.com/minecraft/mc-mods/cull-particles-fabric "Cull Particles CurseForge page"
@@ -219,7 +219,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 The mods listed below are not part of the OptiFine alternatives directly but those are still nice to have.
 
 - [Ears] - Faithful fancy fashion features for fuzzy folk. It offers a lot of skin customization options, directly encoded into the skin file uploaded to Mojang. A very good alternative to express yourself than restrictive capes.
-  - Available for: b1.7.3, 1.2.5, 1.4.7 -> 1.18, Not so Seecret Saturday (a1.1.2), New Frontier Craft (b1.7.3)
+  - Available for: b1.7.3, 1.2.5, 1.4.7 -> 1.19, Not so Seecret Saturday (a1.1.2), New Frontier Craft (b1.7.3)
 - [DashLoader] - Attempts to improve loading times by caching the game's content. May be incompatible with some of the mods in this list.
   - Available for: 1.16 -> 1.18
 - [Entity View Distance] - This mods allows more precise manipulation of entity view distance on client and server 
@@ -229,13 +229,13 @@ The mods listed below are not part of the OptiFine alternatives directly but tho
 - [Hydrogen] - Reduces the memory usage of the game in more modded scenarios.
   - Available for: 1.16 -> 1.17
 - [Krypton] - A mod to optimize the Minecraft networking stack
-  - Available for: 1.16 -> 1.18
+  - Available for: 1.16 -> 1.19
 - [Overworld Two] provides an alternative optimized world generator for overworld and nether. Much faster than Vanilla but isn't identical to Vanilla.
   - Available for: 1.16
 - [Sodium Extra] - Adds features that should not be in Sodium.
-  - Available for: 1.16 -> 1.18
+  - Available for: 1.16 -> 1.19
 
-[Ears]: https://www.curseforge.com/minecraft/mc-mods/ears/ "Ears Curseforge page"
+[Ears]: https://ears.unascribed.com/ "Ears Website"
 [FerriteCore]: https://modrinth.com/mod/ferrite-core "FerriteCore Modrinth page"
 [Entity View Distance]: https://www.curseforge.com/minecraft/mc-mods/entity-view-distance "Entity View Distance Curseforge page"
 [Hydrogen]: https://modrinth.com/mod/hydrogen "Hydrogen Modrinth page"
@@ -262,7 +262,7 @@ Sodium and Canvas Renderer are incompatible.
 
 Some mods require the Fabric Renderer API to work, Canvas supports it, but Sodium will not support it by default, [Indium] is required to support it.
 
-- [Indium] - Adds support of the Fabric Renderer API to [Sodium](https://www.curseforge.com/minecraft/mc-mods/sodium).
+- [Indium] - Adds support of the Fabric Renderer API to [Sodium](https://modrinth.com/mod/sodium).
   - Available for: 1.16 -> 1.18 (Alpha)
 
 [Indium]: https://modrinth.com/mod/indium "Indium Modrinth Page"
@@ -271,7 +271,6 @@ Some mods require the Fabric Renderer API to work, Canvas supports it, but Sodiu
 
 - Custom entity models (might come in Vanilla to an unknown date?)
   currently incompletely replaced: current existing implementations are very hardcoded to Vanilla entities
-- Emissive block textures (in a compatible way with rendering mods, FREX offer a way but it's not OptiFine compatible, FREX is a rendering API).
 
 ## Need help?
 
