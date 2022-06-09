@@ -6,7 +6,7 @@ export default new Mod(
 	"Improve performance when Minecraft is in the background.",
 )
 .icon("https://cdn.modrinth.com/data/LQ3K71Q1/icon.png")
-.add_version(14, 15, 16, 17, 18)
+.add_version({ loader: ["fabric", "quilt"], v: [14, 15, 16, 17, 18, 19] })
 .add_category("Performance", "Client")
 .add_link(
 	{ host: "curseforge" },

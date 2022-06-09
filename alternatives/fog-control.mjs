@@ -6,7 +6,7 @@ export default new Mod(
 	"Allows the user to adjust the (client) distance at which fogs render or disable them completely. ",
 )
 .icon("https://cdn.modrinth.com/data/StFP8sqm/icon.jpg")
-.add_version(17)
+.add_version({ loader: ["fabric"], v: [17] })
 .add_category("Fog")
 .add_link(
 	{ host: "modrinth" },

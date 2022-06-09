@@ -6,7 +6,7 @@ export default new Mod(
 	"Allows you to set render resolutions and take large screenshots.",
 )
 .icon("https://cdn.modrinth.com/data/rqTgDmc8/icon.png")
-.add_version(16)
+.add_version({ id: 16, loader: ["fabric"] })
 .add_category("Utility")
 .add_link(
 	{ host: "modrinth" },

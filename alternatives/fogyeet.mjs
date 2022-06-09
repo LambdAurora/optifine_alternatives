@@ -5,7 +5,7 @@ export default new Mod(
 	"SRAZKVT",
 	"Small mod for 1.15 to remove fog.",
 )
-.add_version(15)
+.add_version({ id: 15, loader: ["fabric"] })
 .add_category("Fog")
 .add_link(
 	{ host: "modrinth" },

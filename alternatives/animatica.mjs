@@ -6,7 +6,7 @@ export default new Mod(
 	"A mod implementing the OptiFine/MCPatcher animated texture format.",
 )
 .icon("https://cdn.modrinth.com/data/PRN43VSY/icon.png")
-.add_version(17, 18)
+.add_version({ loader: ["fabric", "quilt"], v: [17, 18] })
 .add_category("Cosmetic")
 .add_link(
 	{ host: "curseforge" },

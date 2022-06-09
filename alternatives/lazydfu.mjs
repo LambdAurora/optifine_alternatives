@@ -9,7 +9,7 @@ export default new Mod(
 	+ "if you're playing only on multiplayer it'll never get initialized for example.",
 )
 .icon("https://cdn.modrinth.com/data/hvFnDODi/icon.png")
-.add_version(14, 15, 16, 17, 18, { id: 16, note: "Forge" }, { id: 17, note: "Forge" }, { id: 18, note: "Forge" })
+.add_version({ loader: ["fabric", "quilt"], v: [14, 15, 16, 17, 18, 19] }, { loader: ["forge"], v: [16, 17, 18] })
 .add_category("Performance", "General")
 .add_link(
 	{ host: "curseforge" },
