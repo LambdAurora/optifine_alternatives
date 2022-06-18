@@ -10,5 +10,6 @@ export default new Mod(
 .add_category("Performance", "Client")
 .add_link(
 	{ host: "curseforge" },
+	{ host: "modrinth" },
 	{ host: "github" }
 );
