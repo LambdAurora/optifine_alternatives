@@ -10,5 +10,6 @@ export default new Mod(
 .add_category("Cosmetic")
 .add_link(
 	{ host: "curseforge", params: { namespace: "custom-entity-models-cem" } },
+	{ host: "modrinth", params: { namespace: "cem" } },
 	{ host: "github", params: { namespace: "cem" } }
 );
