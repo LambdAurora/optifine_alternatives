@@ -54,7 +54,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Lithium] - No-compromises game logic/server optimization mod.  
   - Available for: fabric,quilt: 1.15 -> 1.19  
 - [Phosphor] - No-compromises lighting engine optimization mod. Incompatible with Starlight.  
-  - Available for: fabric,quilt: 1.15 -> 1.18  
+  - Available for: fabric,quilt: 1.15 -> 1.19  
 - [Starlight] - Rewrites the light engine to fix lighting performance and lighting errors. Uses a custom format for light storage. Incompatible with Phosphor.  
   - Available for: fabric,quilt: 1.17 -> 1.19  
 
