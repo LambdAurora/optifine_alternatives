@@ -41,7 +41,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Dynamic FPS] - Improve performance when Minecraft is in the background.  
   - Available for: fabric,quilt: 1.14 -> 1.19  
 - [Enhanced Block Entities] - Reduce FPS lag with block entities, as well as customize them with resource packs.  
-  - Available for: fabric,quilt: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.19  
 - [EntityCulling] - Using async path-tracing to hide (Block-)Entities that are not visible.  
   - Available for: fabric,quilt: 1.16 -> 1.19, forge: 1.8.9, forge: 1.16 -> 1.19  
 - [Sodium] - Modern rendering engine and client-side optimization mod for Minecraft.  
