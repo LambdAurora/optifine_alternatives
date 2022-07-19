@@ -63,7 +63,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Animatica] - A mod implementing the OptiFine/MCPatcher animated texture format.  
   - Available for: fabric,quilt: 1.17 -> 1.18  
 - [Chime] - Adds predicates for more interactive item models, CIT replacement with a custom format.  
-  - Available for: fabric: 1.16, fabric,quilt: 1.18  
+  - Available for: fabric: 1.16, fabric,quilt: 1.18 -> 1.19  
 - [CIT Resewn] - Re-implements MCPatcher's CIT (custom item textures from optifine resource packs)  
   - Available for: fabric,quilt: 1.17 -> 1.18  
 - [Clear Skies] - Horizon and fog match the sky color. True blue skies!  
@@ -131,12 +131,12 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [FogYeet] - Small mod for 1.15 to remove fog.  
   - Available for: fabric: 1.15  
 - [NoFog] - A simple client-side mod supporting both forge and fabric that removes all fog. (ARR)  
-  - Available for: fabric,quilt: 1.16 -> 1.18, forge: 1.10.2 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.19, forge: 1.10.2 -> 1.19  
 
 ### Utility
 
 - [Fabrishot] - Take insanely large screenshots because why not?  
-  - Available for: fabric,quilt: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.19  
 - [Resolution Control] - Allows you to set render resolutions and take large screenshots.  
   - Available for: fabric: 1.14 -> 1.16  
 - [ResolutionControl+] - Allows you to set render resolutions and take large screenshots.  
