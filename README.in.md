@@ -39,11 +39,11 @@ The mods listed below are not part of the OptiFine alternatives directly but tho
 - [Ears] - Faithful fancy fashion features for fuzzy folk. It offers a lot of skin customization options, directly encoded into the skin file uploaded to Mojang. A very good alternative to express yourself than restrictive capes.
   - Available for: b1.7.3, 1.2.5, 1.4.7 -> 1.19, Not so Seecret Saturday (a1.1.2), New Frontier Craft (b1.7.3)
 - [DashLoader] - Attempts to improve loading times by caching the game's content. May be incompatible with some of the mods in this list.
-  - Available for: 1.16 -> 1.18
+  - Available for: 1.16 -> 1.19
 - [Entity View Distance] - This mods allows more precise manipulation of entity view distance on client and server 
   - Available for: 1.17 -> 1.18
 - [FerriteCore] - Memory usage optimizations.
-  - Available for: [1.16 -> 1.18][FerriteCore], [1.16 -> 1.18 (Forge)](https://www.curseforge.com/minecraft/mc-mods/ferritecore)
+  - Available for: [1.16 -> 1.19][FerriteCore], [1.16 -> 1.19 (Forge)](https://www.curseforge.com/minecraft/mc-mods/ferritecore)
 - [Hydrogen] - Reduces the memory usage of the game in more modded scenarios.
   - Available for: 1.16 -> 1.17
 - [Krypton] - A mod to optimize the Minecraft networking stack
