@@ -6,11 +6,11 @@ export default new Mod(
 	"A new rendering engine. Incompatible with Sodium.",
 )
 .icon("https://cdn.modrinth.com/data/VOYxIjFI/icon.jpg")
-.add_version({ loader: ["fabric", "quilt"], v: [17, 18] }, {id: 16, loader: ["fabric"], note: "Abandoned"})
+.add_version({ loader: ["fabric", "quilt"], v: [17, 18, 19] }, {loader: ["fabric"], v: [16], note: "Abandoned"})
 .add_category("Shaders")
 .add_link(
-	{ host: "curseforge", params: { namespace: "canvas-renderer" } },
 	{ host: "modrinth" },
+	{ host: "curseforge", params: { namespace: "canvas-renderer" } },
 	{ host: "github" }
 )
 .provides("frapi");

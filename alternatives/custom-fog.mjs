@@ -9,7 +9,7 @@ export default new Mod(
 .add_version({ loader: ["fabric", "quilt"], v: [15, 16, 17, 18] })
 .add_category("Fog")
 .add_link(
-	{ host: "curseforge" },
 	{ host: "modrinth" },
+	{ host: "curseforge" },
 	{ host: "github" }
 );

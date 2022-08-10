@@ -6,10 +6,10 @@ export default new Mod(
 	"Re-implements MCPatcher's CIT (custom item textures from optifine resource packs)",
 )
 .icon("https://cdn.modrinth.com/data/otVJckYQ/icon.png")
-.add_version({ loader: ["fabric", "quilt"], v: [17, 18] })
+.add_version({ loader: ["fabric", "quilt"], v: [17, 18, 19] })
 .add_category("Cosmetic")
 .add_link(
-	{ host: "curseforge" },
 	{ host: "modrinth" },
+	{ host: "curseforge" },
 	{ host: "github", params: { namespace: "CITResewn" } },
 );

@@ -6,11 +6,11 @@ export default new Mod(
 	"Adds better grass and snow to the game.",
 )
 .icon("https://cdn.modrinth.com/data/2Uev7LdA/icon.png")
-.add_version(16, 17, 18)
+.add_version({ loader: ["quilt"], v: [18, 19] }, { loader: ["fabric"], v: [16, 17, 18, 19] })
 .add_category("Cosmetic")
 .add_link(
-	{ host: "curseforge" },
 	{ host: "modrinth" },
+	{ host: "curseforge" },
 	{ host: "github" }
 )
 .requires("frapi");
