@@ -35,13 +35,13 @@ You can contribute to this list by opening a pull request on the `data` branch v
 #### Client
 
 - [Cull Leaves] - Adds culling to leaf blocks, providing a huge performance boost over vanilla. Similar to OptiFine's Smart Leaves feature.  
-  - Available for: fabric,quilt: 1.16 -> 1.19  
+  - Available for: quilt: 1.17 -> 1.19, fabric: 1.16 -> 1.19  
 - [Cull Particles] - Don't render particles that can't be seen. Unneeded with Sodium.  
   - Available for: fabric,quilt: 1.15 -> 1.19  
 - [Dynamic FPS] - Improve performance when Minecraft is in the background.  
-  - Available for: fabric,quilt: 1.14 -> 1.19  
+  - Available for: quilt: 1.18 -> 1.19, fabric: 1.14 -> 1.19  
 - [Enhanced Block Entities] - Reduce FPS lag with block entities, as well as customize them with resource packs.  
-  - Available for: fabric,quilt: 1.16 -> 1.19  
+  - Available for: quilt: 1.18 -> 1.19, fabric: 1.16 -> 1.19  
 - [EntityCulling] - Using async path-tracing to hide (Block-)Entities that are not visible.  
   - Available for: fabric,quilt: 1.16 -> 1.19, forge: 1.8.9, forge: 1.16 -> 1.19  
 - [Sodium] - Modern rendering engine and client-side optimization mod for Minecraft.  
@@ -50,26 +50,26 @@ You can contribute to this list by opening a pull request on the `data` branch v
 #### General
 
 - [LazyDFU] - Makes the initialization of DataFixerUpper "lazy". DataFixerUpper (or DFU for short) is the system used by Minecraft to convert old worlds to the current version you're running, in Vanilla it's initialized at startup and is slow (and eats a lot of resources). This mod delays the initialization of DFU by initializing only when needed, if you're playing only on multiplayer it'll never get initialized for example.  
-  - Available for: fabric,quilt: 1.14 -> 1.19, forge: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.14 -> 1.19, forge: 1.16 -> 1.19  
 - [Lithium] - No-compromises game logic/server optimization mod.  
   - Available for: fabric,quilt: 1.15 -> 1.19  
 - [Phosphor] - No-compromises lighting engine optimization mod. Incompatible with Starlight.  
   - Available for: fabric,quilt: 1.15 -> 1.19  
 - [Starlight] - Rewrites the light engine to fix lighting performance and lighting errors. Uses a custom format for light storage. Incompatible with Phosphor.  
-  - Available for: fabric,quilt: 1.17 -> 1.19  
+  - Available for: fabric,quilt,forge: 1.17 -> 1.19  
 
 ### Cosmetic
 
 - [Animatica] - A mod implementing the OptiFine/MCPatcher animated texture format.  
-  - Available for: fabric,quilt: 1.17 -> 1.18  
+  - Available for: quilt: 1.18 -> 1.19, fabric: 1.17 -> 1.19  
 - [Chime] - Adds predicates for more interactive item models, CIT replacement with a custom format.  
   - Available for: fabric: 1.16, fabric,quilt: 1.18 -> 1.19  
 - [CIT Resewn] - Re-implements MCPatcher's CIT (custom item textures from optifine resource packs)  
-  - Available for: fabric,quilt: 1.17 -> 1.18  
+  - Available for: fabric,quilt: 1.17 -> 1.19  
 - [Clear Skies] - Horizon and fog match the sky color. True blue skies!  
   - Available for: fabric,quilt: 1.15 -> 1.19, forge: 1.16  
 - [Colormatic] - An independent implementation of the custom colors mod for Minecraft.  
-  - Available for: fabric,quilt: 1.14 -> 1.19  
+  - Available for: quilt: 1.18 -> 1.19, fabric: 1.14 -> 1.19  
 - [Connected Block Textures] - An implementation of the MCPatcher/Optifine connected textures format on the Fabric modloader. Unmaintained.  
   - Available for: fabric: 1.16  
   - Requires [Fabric Renderer API](#compatibility "More information.")  
@@ -81,44 +81,44 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Custom GUI] - A mod allowing to animate GUI textures or replace container textures with minimal predicates.  
   - Available for: fabric: 1.16 -> 1.17  
 - [Entity Texture Features] - A Fabric mod implementing randomized & emissive texture support for mobs set by the resourcepack. Fully compatible with the Optifine format & Sodium.  
-  - Available for: fabric,quilt: 1.16 -> 1.19, forge: 1.18  
+  - Available for: quilt: 1.18 -> 1.19, fabric,forge: 1.16 -> 1.19  
 - [FabricSkyboxes] - Allows resource packs to define custom skyboxes. OptiFine format is not compatible by default, converters are available.  
   - Available for: fabric,quilt: 1.16 -> 1.19  
 - [JMX] - JMX adds support for FREX Rendering API features to Minecraft JSON model loading. It can also be configured to load all JSON models as FREX meshes, which may offer a modest reduction in memory usage due to more efficient data structures.  
   - Available for: fabric,quilt: 1.16 -> 1.19  
 - [JsonEM (Json Entity Models)] - Data driven entity model library, should work with most entities. Does not support OptiFine's format.  
-  - Available for: fabric,quilt: 1.18  
+  - Available for: quilt,fabric: 1.18 -> 1.19  
 - [LambdaBetterGrass] - Adds better grass and snow to the game.  
-  - Available for: fabric,quilt: 1.16 -> 1.18  
+  - Available for: quilt: 1.18 -> 1.19, fabric: 1.16 -> 1.19  
   - Requires [Fabric Renderer API](#compatibility "More information.")  
 - [LambDynamicLights] - Adds dynamic lighting to the game.  
-  - Available for: fabric,quilt: 1.15 -> 1.19  
+  - Available for: quilt: 1.17 -> 1.19, fabric: 1.15 -> 1.19  
 - [More Block Predicates] - Allows resource packs to change block models depending on new conditions! Custom format.  
-  - Available for: fabric,quilt: 1.17 -> 1.18  
+  - Available for: fabric,quilt: 1.17 -> 1.19  
 - [MoreMcmeta] - Animate almost any Minecraft texture with more options.  
-  - Available for: fabric,quilt: 1.16 -> 1.18, forge: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.19, forge: 1.16 -> 1.19  
 - [Transparent] - Allows resource packs to make entities support transparency.  
-  - Available for: fabric,quilt,forge: 1.15 -> 1.18  
+  - Available for: fabric,quilt,forge: 1.15 -> 1.19  
 - [Varied Mob Textures] - This mod allows the resource packs creator to have multiple randomized textures for the same mob. Uses custom format, OptiFine-based resource packs will need conversion.  
   - Available for: fabric: 1.16  
 
 #### Splash Screen
 
 - [Custom Splash Screen] - Change Minecraft's loading screen to your liking! Completely configurable!  
-  - Available for: fabric,quilt: 1.16 -> 1.18  
-- [Dark Loading Screen] - A simple mod to make the loading screen darker.  
-  - Available for: fabric,quilt: 1.15 -> 1.19  
-- [Quilt Loading Screen] - A loading screen based off of The Quilt Community's server banner.  
   - Available for: quilt: 1.18, fabric: 1.16 -> 1.18  
+- [Dark Loading Screen] - A simple mod to make the loading screen darker.  
+  - Available for: quilt: 1.18 -> 1.19, fabric: 1.15 -> 1.19  
+- [Quilt Loading Screen] - A loading screen based off of The Quilt Community's server banner.  
+  - Available for: quilt: 1.18 -> 1.19, fabric: 1.16 -> 1.18  
 - [Splash] - Splash is a Fabric mod that allows you to customize the colors of your splash screen.  
   - Available for: fabric: 1.16 -> 1.17  
 
 ### Shaders
 
 - [Canvas Renderer] - A new rendering engine. Incompatible with Sodium.  
-  - Available for: fabric,quilt: 1.17 -> 1.18, fabric: 1.16 (Abandoned)  
+  - Available for: fabric,quilt: 1.17 -> 1.19, fabric: 1.16  
 - [Iris] - A new shaders mod for Minecraft intended to be compatible with existing ShadersMod/Optifine shaders.  
-  - Available for: fabric,quilt: 1.16 -> 1.19  
+  - Available for: quilt: 1.18 -> 1.19, fabric: 1.16 -> 1.19  
 
 ### Fog
 
@@ -140,12 +140,12 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Resolution Control] - Allows you to set render resolutions and take large screenshots.  
   - Available for: fabric: 1.14 -> 1.16  
 - [ResolutionControl+] - Allows you to set render resolutions and take large screenshots.  
-  - Available for: fabric: 1.16  
+  - Available for: fabric: 1.16 -> 1.17, fabric: 1.19  
 
 #### Cloud Height
 
 - [Raised Clouds] - Allows changing the height at which clouds appear.  
-  - Available for: fabric,quilt: 1.16 -> 1.18  
+  - Available for: fabric,quilt: 1.16 -> 1.19  
 - [Soaring Clouds] - Allows changing the height at which clouds appear.  
   - Available for: fabric: 1.15 -> 1.16  
 
@@ -156,62 +156,62 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Logical Zoom] - Super simple zoom key for Minecraft.  
   - Available for: fabric,quilt: 1.15 -> 1.19  
 - [Ok Zoomer] - Adds a highly-configurable zoom key for Fabric. The zoom is yours!  
-  - Available for: quilt: 1.18.2, fabric: 1.14 -> 1.18.1  
+  - Available for: quilt: 1.18 -> 1.19, fabric: 1.14 -> 1.18  
 - [Quick Spyglasser] - Adds a client-side keybind for using a spyglass anywhere in your inventory.  
   - Available for: fabric: 1.17  
 - [Zoomify] - A rather simple zoom mod with moderate customizability.  
   - Available for: fabric,quilt: 1.18 -> 1.19  
 
-[Cull Leaves]: https://curseforge.com/minecraft/mc-mods/cull-leaves "Cull Leaves CurseForge page"
+[Cull Leaves]: https://modrinth.com/mod/cull-leaves "Cull Leaves Modrinth page"
 [Cull Particles]: https://curseforge.com/minecraft/mc-mods/cull-particles-fabric "Cull Particles CurseForge page"
-[Dynamic FPS]: https://curseforge.com/minecraft/mc-mods/dynamic-fps "Dynamic FPS CurseForge page"
-[Enhanced Block Entities]: https://curseforge.com/minecraft/mc-mods/enhanced-block-entities "Enhanced Block Entities CurseForge page"
-[EntityCulling]: https://curseforge.com/minecraft/mc-mods/entityculling "EntityCulling CurseForge page"
+[Dynamic FPS]: https://modrinth.com/mod/dynamic-fps "Dynamic FPS Modrinth page"
+[Enhanced Block Entities]: https://modrinth.com/mod/ebe "Enhanced Block Entities Modrinth page"
+[EntityCulling]: https://modrinth.com/mod/entityculling "EntityCulling Modrinth page"
 [Sodium]: https://modrinth.com/mod/sodium "Sodium Modrinth page"
-[LazyDFU]: https://curseforge.com/minecraft/mc-mods/lazydfu "LazyDFU CurseForge page"
+[LazyDFU]: https://modrinth.com/mod/lazydfu "LazyDFU Modrinth page"
 [Lithium]: https://modrinth.com/mod/lithium "Lithium Modrinth page"
 [Phosphor]: https://modrinth.com/mod/phosphor "Phosphor Modrinth page"
-[Starlight]: https://curseforge.com/minecraft/mc-mods/starlight "Starlight CurseForge page"
-[Animatica]: https://curseforge.com/minecraft/mc-mods/animatica "Animatica CurseForge page"
-[Chime]: https://curseforge.com/minecraft/mc-mods/chime-fabric "Chime CurseForge page"
-[CIT Resewn]: https://curseforge.com/minecraft/mc-mods/cit-resewn "CIT Resewn CurseForge page"
-[Clear Skies]: https://curseforge.com/minecraft/mc-mods/clear-skies "Clear Skies CurseForge page"
-[Colormatic]: https://curseforge.com/minecraft/mc-mods/colormatic "Colormatic CurseForge page"
-[Connected Block Textures]: https://curseforge.com/minecraft/mc-mods/connected-block-textures "Connected Block Textures CurseForge page"
-[Continuity]: https://curseforge.com/minecraft/mc-mods/continuity "Continuity CurseForge page"
-[Custom Entity Models (CEM)]: https://curseforge.com/minecraft/mc-mods/custom-entity-models-cem "Custom Entity Models (CEM) CurseForge page"
+[Starlight]: https://modrinth.com/mod/starlight "Starlight Modrinth page"
+[Animatica]: https://modrinth.com/mod/animatica "Animatica Modrinth page"
+[Chime]: https://modrinth.com/mod/chime "Chime Modrinth page"
+[CIT Resewn]: https://modrinth.com/mod/cit-resewn "CIT Resewn Modrinth page"
+[Clear Skies]: https://modrinth.com/mod/clear-skies "Clear Skies Modrinth page"
+[Colormatic]: https://modrinth.com/mod/colormatic "Colormatic Modrinth page"
+[Connected Block Textures]: https://github.com/TwilightFlower/connected-block-textures "Connected Block Textures GitHub page"
+[Continuity]: https://modrinth.com/mod/continuity "Continuity Modrinth page"
+[Custom Entity Models (CEM)]: https://modrinth.com/mod/cem "Custom Entity Models (CEM) Modrinth page"
 [Custom GUI]: https://modrinth.com/mod/customgui "Custom GUI Modrinth page"
-[Entity Texture Features]: https://curseforge.com/minecraft/mc-mods/entity-texture-features-fabric "Entity Texture Features CurseForge page"
+[Entity Texture Features]: https://modrinth.com/mod/entitytexturefeatures "Entity Texture Features Modrinth page"
 [FabricSkyboxes]: https://modrinth.com/mod/fabricskyboxes "FabricSkyboxes Modrinth page"
-[JMX]: https://curseforge.com/minecraft/mc-mods/jmx "JMX CurseForge page"
+[JMX]: https://modrinth.com/mod/imx "JMX Modrinth page"
 [JsonEM (Json Entity Models)]: https://modrinth.com/mod/jsonem "JsonEM (Json Entity Models) Modrinth page"
-[LambdaBetterGrass]: https://curseforge.com/minecraft/mc-mods/lambdabettergrass "LambdaBetterGrass CurseForge page"
-[LambDynamicLights]: https://curseforge.com/minecraft/mc-mods/lambdynamiclights "LambDynamicLights CurseForge page"
+[LambdaBetterGrass]: https://modrinth.com/mod/lambdabettergrass "LambdaBetterGrass Modrinth page"
+[LambDynamicLights]: https://modrinth.com/mod/lambdynamiclights "LambDynamicLights Modrinth page"
 [More Block Predicates]: https://modrinth.com/mod/mbp "More Block Predicates Modrinth page"
-[MoreMcmeta]: https://curseforge.com/minecraft/mc-mods/moremcmeta-fabric "MoreMcmeta CurseForge page"
-[Transparent]: https://curseforge.com/minecraft/mc-mods/transparent-fabric "Transparent CurseForge page"
+[MoreMcmeta]: https://modrinth.com/mod/moremcmeta "MoreMcmeta Modrinth page"
+[Transparent]: https://modrinth.com/mod/transparent "Transparent Modrinth page"
 [Varied Mob Textures]: https://curseforge.com/minecraft/mc-mods/varied-mob-textures "Varied Mob Textures CurseForge page"
-[Custom Splash Screen]: https://curseforge.com/minecraft/mc-mods/custom-splash-screen "Custom Splash Screen CurseForge page"
+[Custom Splash Screen]: https://modrinth.com/mod/custom-splash-screen "Custom Splash Screen Modrinth page"
 [Dark Loading Screen]: https://curseforge.com/minecraft/mc-mods/dark-loading-screen "Dark Loading Screen CurseForge page"
 [Quilt Loading Screen]: https://modrinth.com/mod/quilt-loading-screen "Quilt Loading Screen Modrinth page"
 [Splash]: https://curseforge.com/minecraft/mc-mods/splash "Splash CurseForge page"
-[Canvas Renderer]: https://curseforge.com/minecraft/mc-mods/canvas-renderer "Canvas Renderer CurseForge page"
-[Iris]: https://curseforge.com/minecraft/mc-mods/irisshaders "Iris CurseForge page"
+[Canvas Renderer]: https://modrinth.com/mod/canvas "Canvas Renderer Modrinth page"
+[Iris]: https://modrinth.com/mod/iris "Iris Modrinth page"
 [ClearView]: https://curseforge.com/minecraft/mc-mods/clearview "ClearView CurseForge page"
-[Custom Fog]: https://curseforge.com/minecraft/mc-mods/custom-fog "Custom Fog CurseForge page"
+[Custom Fog]: https://modrinth.com/mod/custom-fog "Custom Fog Modrinth page"
 [Fog Control]: https://modrinth.com/mod/fog-control "Fog Control Modrinth page"
 [FogYeet]: https://modrinth.com/mod/fogyeet "FogYeet Modrinth page"
-[NoFog]: https://curseforge.com/minecraft/mc-mods/nofog "NoFog CurseForge page"
-[Fabrishot]: https://curseforge.com/minecraft/mc-mods/fabrishot "Fabrishot CurseForge page"
+[NoFog]: https://modrinth.com/mod/no_fog "NoFog Modrinth page"
+[Fabrishot]: https://modrinth.com/mod/fabrishot "Fabrishot Modrinth page"
 [Resolution Control]: https://curseforge.com/minecraft/mc-mods/resolution-control "Resolution Control CurseForge page"
 [ResolutionControl+]: https://modrinth.com/mod/resolution-control-plus "ResolutionControl+ Modrinth page"
 [Raised Clouds]: https://curseforge.com/minecraft/mc-mods/raised-clouds "Raised Clouds CurseForge page"
 [Soaring Clouds]: https://curseforge.com/minecraft/mc-mods/soaring-clouds "Soaring Clouds CurseForge page"
-[Camera Utils]: https://curseforge.com/minecraft/mc-mods/camera-utils "Camera Utils CurseForge page"
-[Logical Zoom]: https://curseforge.com/minecraft/mc-mods/logical-zoom "Logical Zoom CurseForge page"
-[Ok Zoomer]: https://curseforge.com/minecraft/mc-mods/ok-zoomer "Ok Zoomer CurseForge page"
+[Camera Utils]: https://modrinth.com/mod/camera-utils "Camera Utils Modrinth page"
+[Logical Zoom]: https://modrinth.com/mod/logical-zoom "Logical Zoom Modrinth page"
+[Ok Zoomer]: https://modrinth.com/mod/ok-zoomer "Ok Zoomer Modrinth page"
 [Quick Spyglasser]: https://curseforge.com/minecraft/mc-mods/quick-spyglasser "Quick Spyglasser CurseForge page"
-[Zoomify]: https://curseforge.com/minecraft/mc-mods/zoomify "Zoomify CurseForge page"
+[Zoomify]: https://modrinth.com/mod/zoomify "Zoomify Modrinth page"
 
 
 ### Extras
@@ -223,7 +223,7 @@ The mods listed below are not part of the OptiFine alternatives directly but tho
 - [DashLoader] - Attempts to improve loading times by caching the game's content. May be incompatible with some of the mods in this list.
   - Available for: 1.16 -> 1.19
 - [Entity View Distance] - This mods allows more precise manipulation of entity view distance on client and server 
-  - Available for: 1.17 -> 1.18
+  - Available for: 1.17 -> 1.19
 - [FerriteCore] - Memory usage optimizations.
   - Available for: [1.16 -> 1.19][FerriteCore], [1.16 -> 1.19 (Forge)](https://www.curseforge.com/minecraft/mc-mods/ferritecore)
 - [Hydrogen] - Reduces the memory usage of the game in more modded scenarios.
@@ -234,15 +234,18 @@ The mods listed below are not part of the OptiFine alternatives directly but tho
   - Available for: 1.16
 - [Sodium Extra] - Adds features that should not be in Sodium.
   - Available for: 1.16 -> 1.19
+- [Reese's Sodium Options] - Alternative Options Menu for Sodium with intention of improving UX.
+  - Available for: 1.16 -> 1.19
 
 [Ears]: https://ears.unascribed.com/ "Ears Website"
 [FerriteCore]: https://modrinth.com/mod/ferrite-core "FerriteCore Modrinth page"
-[Entity View Distance]: https://www.curseforge.com/minecraft/mc-mods/entity-view-distance "Entity View Distance Curseforge page"
+[Entity View Distance]: https://modrinth.com/mod/entity-view-distance "Entity View Distance Curseforge page"
 [Hydrogen]: https://modrinth.com/mod/hydrogen "Hydrogen Modrinth page"
 [Krypton]: https://modrinth.com/mod/krypton "Krypton Modrinth page"
 [DashLoader]: https://modrinth.com/mod/dashloader "DashLoader Modrinth page"
 [Overworld Two]: https://www.curseforge.com/minecraft/mc-mods/overworld-two "Overworld Two Curseforge Page"
 [Sodium Extra]: https://modrinth.com/mod/sodium-extra "Sodium Extra Modrinth page"
+[Reese's Sodium Options]: https://modrinth.com/mod/reeses-sodium-options "Reese's Sodium Options Modrinth page"
 
 ### No Dynamic FOV
 
