@@ -9,7 +9,7 @@ export default new Mod(
 .add_version({ loader: ["fabric", "quilt"], v: [16, 17, 18, 19] })
 .add_category("Cosmetic")
 .add_link(
-	{ host: "curseforge", params: { namespace: "custom-entity-models-cem" } },
 	{ host: "modrinth", params: { namespace: "cem" } },
+	{ host: "curseforge", params: { namespace: "custom-entity-models-cem" } },
 	{ host: "github", params: { namespace: "cem" } }
 );

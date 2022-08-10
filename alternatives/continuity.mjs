@@ -9,8 +9,8 @@ export default new Mod(
 .add_version({ loader: ["fabric", "quilt"], v: [17, 18, 19] })
 .add_category("Cosmetic")
 .add_link(
-	{ host: "curseforge" },
 	{ host: "modrinth" },
+	{ host: "curseforge" },
 	{ host: "github" }
 )
 .requires("frapi");

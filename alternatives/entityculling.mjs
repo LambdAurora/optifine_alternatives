@@ -9,7 +9,7 @@ export default new Mod(
 .add_version({ loader: ["fabric", "quilt"], v: [16, 17, 18, 19] }, { loader: ["forge"], v: [8.9, 16, 17, 18, 19] })
 .add_category("Performance", "Client")
 .add_link(
-	{ host: "curseforge" },
 	{ host: "modrinth" },
+	{ host: "curseforge" },
 	{ host: "github" }
 );
