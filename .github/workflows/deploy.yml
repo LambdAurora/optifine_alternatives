@@ -2,7 +2,7 @@ name: 'Deploy'
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "data" ]
   # Allows to run this workflow manually.
   workflow_dispatch:
   repository_dispatch:
