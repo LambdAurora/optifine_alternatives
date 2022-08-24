@@ -6,7 +6,7 @@ export default new Mod(
 	"A loading screen based off of The Quilt Community's server banner.",
 )
 .icon("https://cdn.modrinth.com/data/VPU6VYVP/icon.png")
-.add_version(16, 17, 18)
+.add_version({ loader: ["quilt"], v: [18, 19] }, { loader: ["fabric"], v: [16, 17, 18] })
 .add_category("Cosmetic", "Splash Screen")
 .add_link(
 	{ host: "modrinth" },

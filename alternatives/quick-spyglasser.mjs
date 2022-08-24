@@ -6,7 +6,7 @@ export default new Mod(
 	"Adds a client-side keybind for using a spyglass anywhere in your inventory.",
 )
 .icon("https://i.imgur.com/vCWHvTs.png", true)
-.add_version(17)
+.add_version({ loader: ["fabric"], v: [17] })
 .add_category("Utility", "Zoom")
 .add_link(
 	{ host: "curseforge" },

@@ -6,7 +6,7 @@ export default new Mod(
 	"Allows changing the height at which clouds appear.",
 )
 .icon("https://github.com/haykam821/Raised-Clouds/blob/master/src/main/resources/assets/raisedclouds/icon.png?raw=true", true)
-.add_version(16, 17, 18)
+.add_version({ loader: ["fabric", "quilt"], v: [16, 17, 18, 19] })
 .add_category("Utility", "Cloud Height")
 .add_link(
 	{ host: "curseforge" },

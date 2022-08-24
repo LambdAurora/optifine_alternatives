@@ -6,7 +6,7 @@ export default new Mod(
 	"A mod allowing to animate GUI textures or replace container textures with minimal predicates.",
 )
 .icon("https://cdn.modrinth.com/data/cCkptEaQ/icon.png")
-.add_version(16, 17)
+.add_version({ loader: ["fabric"], v: [16, 17] })
 .add_category("Cosmetic")
 .add_link(
 	{ host: "modrinth" },

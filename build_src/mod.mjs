@@ -1,11 +1,14 @@
 import { default as md, html } from "https://lambdaurora.dev/lib.md/lib/index.mjs";
 import { load_hosts } from "./host.mjs";
+import { load_loaders } from "./loader.mjs";
 import { load_requirements } from "./requirement.mjs";
 
-function new_version(version) {
+function new_version(version, loaders = [ "fabric", "quilt" ]) {
 	if (typeof version === "number") {
-		return {id: version, note: ""};
+		return {id: version, loader: loaders, note: ""};
 	} else {
+		if (!version.note) version.note = "";
+		if (!version.loader) version.loader = loaders;
 		return version;
 	}
 }
@@ -47,12 +50,29 @@ export default class Mod {
 		for (let i = 0; i < arguments.length; i++) {
 			if (arguments[i] instanceof Array) {
 				this.versions.push(...(arguments[i].map(new_version)));
+			} else if (arguments[i].v) {
+				this.versions.push(...(arguments[i].v.map(v => {
+					const version = new_version(v, arguments[i].loader);
+					return version;
+				})));
 			} else {
 				this.versions.push(new_version(arguments[i]));
 			}
 		}
 
 		return this;
+	}
+
+	async resolve_versions() {
+		return load_loaders().then(loaders => {
+			return this.versions.map(version => {
+				return {
+					id: version.id,
+					loader: version.loader.map(loader => loaders.get_by_id(loader)),
+					note: version.note
+				};
+			});
+		});
 	}
 
 	add_category() {
@@ -164,9 +184,11 @@ export default class Mod {
 		let min = this.versions[0], current = min;
 
 		for (let i = 1; i < this.versions.length; i++) {
-			if (this.versions[i].id !== current.id + 1 || this.versions[i].note !== current.note) {
+			if (Math.floor(this.versions[i].id) !== Math.floor(current.id) + 1 || this.versions[i].loader !== this.versions[i].loader
+				|| this.versions[i].note !== current.note) {
+
 				const note = current.note === "" ? "" : ` (${current.note})`;
-				prettified.push(min === current ? `1.${current.id}${note}` : `1.${min.id} -> 1.${current.id}${note}`);
+				prettified.push(`${current.loader}: ` + (min === current ? `1.${current.id}${note}` : `1.${min.id} -> 1.${current.id}${note}`));
 				min = current = this.versions[i];
 			} else {
 				current = this.versions[i];
@@ -174,7 +196,7 @@ export default class Mod {
 		}
 
 		const note = current.note === "" ? "" : ` (${current.note})`;
-		prettified.push(min === current ? `1.${current.id}${note}` : `1.${min.id} -> 1.${current.id}${note}`);
+		prettified.push(`${current.loader}: ` + (min === current ? `1.${current.id}${note}` : `1.${min.id} -> 1.${current.id}${note}`));
 
 		return prettified;
 	}
@@ -219,6 +241,67 @@ export default class Mod {
 		});
 	}
 
+	/**
+	 * @return {html.Element} a prettified string of the Minecraft versions the mod is compatible with
+	 */
+	async get_html_versions() {
+		const versions_ul = html.create_element("ul");
+
+		if (this.versions.length === 0)
+			return versions_ul;
+
+		const versions = await this.resolve_versions();
+
+		let min = versions[0], current = min;
+
+		function create_li(c) {
+			const li = html.create_element("li")
+				.with_attr("style", "display: flex");
+			versions_ul.append_child(li);
+
+			const loaders_el = html.create_element("span").with_attr("class", "loaders");
+			li.append_child(loaders_el);
+
+			for (const i in c.loader) {
+				const loader = c.loader[i];
+
+				loaders_el.with_child(html.create_element("a")
+						.with_attr("class", "loader")
+						.with_attr("href", loader.website)
+						.with_attr("style", "margin-left: 4px;")
+						.with_child(loader.get_fancy_icon(html))
+						.with_child(new html.Text(loader.name)));
+
+				if (i < c.loader.length - 1) {
+					loaders_el.with_child(new html.Text(", "));
+				}
+			}
+
+			return li;
+		}
+
+		for (let i = 1; i < versions.length; i++) {
+			if (Math.floor(versions[i].id) !== Math.floor(current.id) + 1 || versions[i].loader !== versions[i].loader || versions[i].note !== current.note) {
+				const li = create_li(current);
+
+				const note = current.note === "" ? "" : ` (${current.note})`;
+				li.append_child(html.create_element("span")
+					.with_child(new html.Text(`: ` + (min === current ? `1.${current.id}${note}` : `1.${min.id} -> 1.${current.id}${note}`))));
+				min = current = versions[i];
+			} else {
+				current = versions[i];
+			}
+		}
+
+		const li = create_li(current);
+
+		const note = current.note === "" ? "" : ` (${current.note})`;
+		li.append_child(html.create_element("span")
+					.with_child(new html.Text(`: ` + (min === current ? `1.${current.id}${note}` : `1.${min.id} -> 1.${current.id}${note}`))));
+
+		return versions_ul;
+	}
+
 	async to_html() {
 		const card = html.create_element("div")
 			.with_attr("class", ["card"]);
@@ -254,9 +337,7 @@ export default class Mod {
 			);
 		card.append_child(versions_div);
 
-		const versions_ul = html.create_element("ul");
-		this.get_prettified_version().forEach(version => versions_ul.append_child(html.create_element("li").with_child(new html.Text(version))))
-		versions_div.append_child(versions_ul);
+		versions_div.append_child(await this.get_html_versions());
 
 		await this.resolve_requirements().then(requirements => {
 			const div = html.create_element("div")

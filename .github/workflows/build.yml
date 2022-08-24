@@ -1,0 +1,27 @@
+name: 'Build'
+
+on:
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v3
+      - name: 'Setup Deno'
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: 'Build with Deno'
+        run: |
+          ./build.sh
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Artifacts
+          path: ./build/libs/

@@ -6,7 +6,7 @@ export default new Mod(
 	"No-compromises game logic/server optimization mod.",
 )
 .icon("https://cdn.modrinth.com/data/gvQqBUqZ/icon.png")
-.add_version(15, 16, 17, 18)
+.add_version({ loader: ["fabric", "quilt"], v: [15, 16, 17, 18, 19] })
 .add_category("Performance", "General")
 .add_link(
 	{ host: "modrinth" },
