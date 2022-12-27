@@ -1,4 +1,4 @@
-import { default as md, html } from "https://lambdaurora.dev/lib.md/lib/index.mjs";
+import { md, html } from "@lib.md/mod.mjs";
 
 export default class Requirement {
 	constructor(name, description) {

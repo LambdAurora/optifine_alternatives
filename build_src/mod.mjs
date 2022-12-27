@@ -1,4 +1,4 @@
-import { default as md, html } from "https://lambdaurora.dev/lib.md/lib/index.mjs";
+import { md, html } from "@lib.md/mod.mjs";
 import { load_hosts } from "./host.mjs";
 import { load_loaders } from "./loader.mjs";
 import { load_requirements } from "./requirement.mjs";

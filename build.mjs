@@ -1,4 +1,4 @@
-import { default as md, html } from "https://lambdaurora.dev/lib.md/lib/index.mjs";
+import { md, html } from "@lib.md/mod.mjs";
 import { existsSync } from "https://deno.land/std/fs/mod.ts";
 import { load_mods } from "./build_src/mod.mjs";
 
