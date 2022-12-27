@@ -5,7 +5,7 @@ export default new Mod(
 	"Traben",
 	"A Fabric mod implementing randomized & emissive texture support for mobs set by the resourcepack. Fully compatible with the Optifine format & Sodium.",
 )
-.icon("https://cdn-raw.modrinth.com//data/BVzZfTc1/8652b3d18c262b33e0cf194d402977897267573a.png")
+.icon("https://raw.githubusercontent.com/Traben-0/Entity_Texture_Features/master/.github/README-assets/icon.png")
 .add_version({ loader: ["quilt"], v: [18, 19] }, { loader: ["fabric", "forge"], v: [16, 17, 18, 19] })
 .add_category("Cosmetic")
 .add_link(
