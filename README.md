@@ -155,7 +155,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
   - Available for: fabric,quilt: 1.17 -> 1.19.3  
 - [Logical Zoom][logical zoom] - Super simple zoom key for Minecraft.  
   - Available for: fabric,quilt: 1.15 -> 1.19.3  
-- [Ok Zoomer][ok zoomer] - Adds a highly-configurable zoom key for Fabric. The zoom is yours!  
+- [Ok Zoomer][ok zoomer] - Adds a highly-configurable zoom key for Quilt. The zoom is yours!  
   - Available for: quilt: 1.18 -> 1.19.3, fabric: 1.14 -> 1.18  
 - [Quick Spyglasser][quick spyglasser] - Adds a client-side keybind for using a spyglass anywhere in your inventory.  
   - Available for: fabric: 1.17  
