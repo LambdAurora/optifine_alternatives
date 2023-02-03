@@ -35,7 +35,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 #### Client
 
 - [Cull Leaves][cull leaves] - Adds culling to leaf blocks, providing a huge performance boost over vanilla. Similar to OptiFine's Smart Leaves feature.  
-  - Available for: quilt: 1.17 -> 1.19.3, fabric: 1.16 -> 1.19.3  
+  - Available for: quilt: 1.17 -> 1.19.3, fabric: 1.16 -> 1.19.3, forge: 1.19.2, forge: 1.19.3  
 - [Cull Particles][cull particles] - Don't render particles that can't be seen. Unneeded with Sodium.  
   - Available for: fabric,quilt: 1.15 -> 1.19  
 - [Dynamic FPS][dynamic fps] - Improve performance when Minecraft is in the background.  
@@ -65,7 +65,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Chime][chime] - Adds predicates for more interactive item models, CIT replacement with a custom format.  
   - Available for: fabric: 1.16, fabric,quilt: 1.18 -> 1.19.2  
 - [CIT Resewn][cit resewn] - Re-implements MCPatcher's CIT (custom item textures from optifine resource packs)  
-  - Available for: fabric,quilt: 1.17 -> 1.19.2  
+  - Available for: fabric,quilt: 1.17 -> 1.19.3  
 - [Clear Skies][clear skies] - Horizon and fog match the sky color. True blue skies!  
   - Available for: fabric,quilt: 1.15 -> 1.19.3, forge: 1.16 -> 1.19.3  
 - [Colormatic][colormatic] - An independent implementation of the custom colors mod for Minecraft.  
