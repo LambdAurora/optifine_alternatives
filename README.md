@@ -101,7 +101,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
   - Available for: fabric,quilt,forge: 1.15 -> 1.19.3  
 - [Varied Mob Textures][varied mob textures] - This mod allows the resource packs creator to have multiple randomized textures for the same mob. Uses custom format, OptiFine-based resource packs will need conversion.  
   - Available for: fabric: 1.16  
-- [No Telemetry][no telemetry] - No telemetry is a mod that allows you to disable Microsofts telemetry which has been added in the snapshot 21w38a.  
+- [No Telemetry][no telemetry] - No Telemetry is a mod that allows you to disable Microsofts data tracking which has been added in the snapshot 21w38a.  
   - Available for: fabric,forge,quilt: 1.18 -> 1.19.3  
 
 #### Splash Screen
