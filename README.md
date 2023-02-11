@@ -89,7 +89,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [JsonEM (Json Entity Models)][jsonem (json entity models)] - Data driven entity model library, should work with most entities. Does not support OptiFine's format.  
   - Available for: quilt,fabric: 1.18 -> 1.19.2  
 - [LambdaBetterGrass][lambdabettergrass] - Adds better grass and snow to the game.  
-  - Available for: quilt: 1.18 -> 1.19.2, fabric: 1.16 -> 1.19.2  
+  - Available for: quilt: 1.18 -> 1.19.3, fabric: 1.16 -> 1.19.2  
   - Requires [Fabric Renderer API](#compatibility "More information.")  
 - [LambDynamicLights][lambdynamiclights] - Adds dynamic lighting to the game.  
   - Available for: quilt: 1.17 -> 1.19.3, fabric: 1.15 -> 1.19.3  
