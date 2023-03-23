@@ -39,24 +39,24 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Cull Particles][cull particles] - Don't render particles that can't be seen. Unneeded with Sodium.  
   - Available for: fabric,quilt: 1.15 -> 1.19  
 - [Dynamic FPS][dynamic fps] - Improve performance when Minecraft is in the background.  
-  - Available for: quilt: 1.18 -> 1.19.3, fabric: 1.14 -> 1.19.3  
+  - Available for: quilt: 1.18 -> 1.19.4, fabric: 1.14 -> 1.19.4  
 - [Enhanced Block Entities][enhanced block entities] - Reduce FPS lag with block entities, as well as customize them with resource packs.  
-  - Available for: quilt: 1.18 -> 1.19.2, fabric: 1.16 -> 1.19.2  
+  - Available for: quilt: 1.18 -> 1.19.3, fabric: 1.16 -> 1.19.3  
 - [EntityCulling][entityculling] - Using async path-tracing to hide (Block-)Entities that are not visible.  
-  - Available for: fabric,quilt: 1.16 -> 1.19.3, forge: 1.8.9, forge: 1.16 -> 1.19.3  
+  - Available for: fabric,quilt: 1.16 -> 1.19.4, forge: 1.8.9, forge: 1.16 -> 1.19.4  
 - [Sodium][sodium] - Modern rendering engine and client-side optimization mod for Minecraft.  
-  - Available for: fabric,quilt: 1.16 -> 1.19.3  
+  - Available for: fabric,quilt: 1.16 -> 1.19.4  
 
 #### General
 
 - [LazyDFU][lazydfu] - Makes the initialization of DataFixerUpper "lazy". DataFixerUpper (or DFU for short) is the system used by Minecraft to convert old worlds to the current version you're running, in Vanilla it's initialized at startup and is slow (and eats a lot of resources). This mod delays the initialization of DFU by initializing only when needed, if you're playing only on multiplayer it'll never get initialized for example.  
   - Available for: fabric,quilt: 1.14 -> 1.19.3, forge: 1.16 -> 1.19.3  
 - [Lithium][lithium] - No-compromises game logic/server optimization mod.  
-  - Available for: fabric,quilt: 1.15 -> 1.19.3  
+  - Available for: fabric,quilt: 1.15 -> 1.19.4  
 - [Phosphor][phosphor] - No-compromises lighting engine optimization mod. Incompatible with Starlight.  
   - Available for: fabric,quilt: 1.15 -> 1.19.3  
 - [Starlight][starlight] - Rewrites the light engine to fix lighting performance and lighting errors. Uses a custom format for light storage. Incompatible with Phosphor.  
-  - Available for: fabric,quilt,forge: 1.17 -> 1.19.3  
+  - Available for: fabric,quilt,forge: 1.17 -> 1.19.4  
 
 ### Cosmetic
 
@@ -74,22 +74,22 @@ You can contribute to this list by opening a pull request on the `data` branch v
   - Available for: fabric: 1.16  
   - Requires [Fabric Renderer API](#compatibility "More information.")  
 - [Continuity][continuity] - A Fabric mod that allows for efficient connected textures. Support emissive textures.  
-  - Available for: fabric,quilt: 1.17 -> 1.19.2  
+  - Available for: fabric,quilt: 1.17 -> 1.19.4  
   - Requires [Fabric Renderer API](#compatibility "More information.")  
 - [Custom Entity Models (CEM)][custom entity models (cem)] - An implementation of custom entity models heavily based off of Optifine's format that aims to achieve feature parity with Optifine's custom entity models.  
   - Available for: fabric,quilt: 1.16 -> 1.19.3  
 - [Custom GUI][custom gui] - A mod allowing to animate GUI textures or replace container textures with minimal predicates.  
   - Available for: fabric: 1.16 -> 1.17  
 - [Entity Texture Features][entity texture features] - A Fabric mod implementing randomized & emissive texture support for mobs set by the resourcepack. Fully compatible with the Optifine format & Sodium.  
-  - Available for: quilt: 1.18 -> 1.19.3, fabric,forge: 1.16 -> 1.19.3  
+  - Available for: quilt: 1.18 -> 1.19.4, fabric,forge: 1.16 -> 1.19.4  
 - [FabricSkyboxes][fabricskyboxes] - Allows resource packs to define custom skyboxes. OptiFine format is not compatible by default, converters are available.  
-  - Available for: fabric,quilt: 1.16 -> 1.19.3  
+  - Available for: fabric,quilt: 1.16 -> 1.19.4  
 - [JMX][jmx] - JMX adds support for FREX Rendering API features to Minecraft JSON model loading. It can also be configured to load all JSON models as FREX meshes, which may offer a modest reduction in memory usage due to more efficient data structures.  
   - Available for: fabric,quilt: 1.16 -> 1.19.2  
 - [JsonEM (Json Entity Models)][jsonem (json entity models)] - Data driven entity model library, should work with most entities. Does not support OptiFine's format.  
   - Available for: quilt,fabric: 1.18 -> 1.19.2  
 - [LambdaBetterGrass][lambdabettergrass] - Adds better grass and snow to the game.  
-  - Available for: quilt: 1.18 -> 1.19.3, fabric: 1.16 -> 1.19.2  
+  - Available for: quilt: 1.18 -> 1.19.4, fabric: 1.16 -> 1.19.2  
   - Requires [Fabric Renderer API](#compatibility "More information.")  
 - [LambDynamicLights][lambdynamiclights] - Adds dynamic lighting to the game.  
   - Available for: quilt: 1.17 -> 1.19.3, fabric: 1.15 -> 1.19.3  
@@ -109,7 +109,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Dark Loading Screen][dark loading screen] - A simple mod to make the loading screen darker.  
   - Available for: quilt: 1.18 -> 1.19.3, fabric: 1.15 -> 1.19.3  
 - [Quilt Loading Screen][quilt loading screen] - A loading screen based off of The Quilt Community's server banner.  
-  - Available for: quilt: 1.18 -> 1.19, fabric: 1.16 -> 1.18  
+  - Available for: quilt: 1.18 -> 1.19.3, fabric: 1.16 -> 1.18  
 - [Splash][splash] - Splash is a Fabric mod that allows you to customize the colors of your splash screen.  
   - Available for: fabric: 1.16 -> 1.17  
 
@@ -118,7 +118,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Canvas Renderer][canvas renderer] - A new rendering engine. Incompatible with Sodium.  
   - Available for: fabric,quilt: 1.17 -> 1.19.2, fabric: 1.16  
 - [Iris][iris] - A new shaders mod for Minecraft intended to be compatible with existing ShadersMod/Optifine shaders.  
-  - Available for: quilt: 1.18 -> 1.19.3, fabric: 1.16 -> 1.19.3  
+  - Available for: quilt: 1.18 -> 1.19.4, fabric: 1.16 -> 1.19.4  
 
 ### Fog
 
@@ -156,7 +156,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Logical Zoom][logical zoom] - Super simple zoom key for Minecraft.  
   - Available for: fabric,quilt: 1.15 -> 1.19.3  
 - [Ok Zoomer][ok zoomer] - Adds a highly-configurable zoom key for Quilt. The zoom is yours!  
-  - Available for: quilt: 1.18 -> 1.19.3, fabric: 1.14 -> 1.18  
+  - Available for: quilt: 1.18 -> 1.19.4, fabric: 1.14 -> 1.18  
 - [Quick Spyglasser][quick spyglasser] - Adds a client-side keybind for using a spyglass anywhere in your inventory.  
   - Available for: fabric: 1.17  
 - [Zoomify][zoomify] - A rather simple zoom mod with moderate customizability.  
