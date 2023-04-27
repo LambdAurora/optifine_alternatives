@@ -7,7 +7,7 @@ export default new Mod(
 )
 .icon("https://cdn-raw.modrinth.com/data/hg77g4Pw/icon.png")
 .add_version({ loader: ["fabric", "forge", "quilt"], v: [18, 19.3] })
-.add_category("Utility", "Zoom")
+.add_category("Utility")
 .add_link(
 	{ host: "modrinth"},
 	{ host: "curseforge"}
