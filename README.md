@@ -80,6 +80,8 @@ You can contribute to this list by opening a pull request on the `data` branch v
   - Available for: fabric,quilt: 1.16 -> 1.19.3  
 - [Custom GUI][custom gui] - A mod allowing to animate GUI textures or replace container textures with minimal predicates.  
   - Available for: fabric: 1.16 -> 1.17  
+- [Entity Model Features][entity model features] - A Fabric mod implementing support for OptiFine-format custom entity model (CEM) resourcepacks. Fully compatible with Sodium & Fresh Animations.  
+  - Available for: quilt: 1.19.4, fabric,forge: 1.19.4  
 - [Entity Texture Features][entity texture features] - A Fabric mod implementing randomized & emissive texture support for mobs set by the resourcepack. Fully compatible with the Optifine format & Sodium.  
   - Available for: quilt: 1.18 -> 1.19.4, fabric,forge: 1.16 -> 1.19.4  
 - [FabricSkyboxes][fabricskyboxes] - Allows resource packs to define custom skyboxes. OptiFine format is not compatible by default, converters are available.  
@@ -181,6 +183,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 [continuity]: https://modrinth.com/mod/continuity "Continuity Modrinth page"
 [custom entity models (cem)]: https://modrinth.com/mod/cem "Custom Entity Models (CEM) Modrinth page"
 [custom gui]: https://modrinth.com/mod/customgui "Custom GUI Modrinth page"
+[entity model features]: https://modrinth.com/mod/entity-model-features "Entity Model Features Modrinth page"
 [entity texture features]: https://modrinth.com/mod/entitytexturefeatures "Entity Texture Features Modrinth page"
 [fabricskyboxes]: https://modrinth.com/mod/fabricskyboxes "FabricSkyboxes Modrinth page"
 [jmx]: https://modrinth.com/mod/imx "JMX Modrinth page"
