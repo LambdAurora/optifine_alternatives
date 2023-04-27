@@ -139,6 +139,8 @@ You can contribute to this list by opening a pull request on the `data` branch v
 
 - [Fabrishot][fabrishot] - Take insanely large screenshots because why not?  
   - Available for: fabric,quilt: 1.16 -> 1.19.3  
+- [No Telemetry][no telemetry] - No Telemetry is a mod that allows you to disable Microsofts data tracking which has been added in the snapshot 21w38a.  
+  - Available for: fabric,forge,quilt: 1.18 -> 1.19.3  
 - [Resolution Control][resolution control] - Allows you to set render resolutions and take large screenshots.  
   - Available for: fabric: 1.14 -> 1.16  
 - [ResolutionControl+][resolutioncontrol+] - Allows you to set render resolutions and take large screenshots.  
@@ -206,6 +208,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 [fogyeet]: https://modrinth.com/mod/fogyeet "FogYeet Modrinth page"
 [nofog]: https://modrinth.com/mod/no_fog "NoFog Modrinth page"
 [fabrishot]: https://modrinth.com/mod/fabrishot "Fabrishot Modrinth page"
+[no telemetry]: https://modrinth.com/mod/no-telemetry "No Telemetry Modrinth page"
 [resolution control]: https://curseforge.com/minecraft/mc-mods/resolution-control "Resolution Control CurseForge page"
 [resolutioncontrol+]: https://modrinth.com/mod/resolution-control-plus "ResolutionControl+ Modrinth page"
 [raised clouds]: https://curseforge.com/minecraft/mc-mods/raised-clouds "Raised Clouds CurseForge page"
