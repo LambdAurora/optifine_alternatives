@@ -44,6 +44,8 @@ You can contribute to this list by opening a pull request on the `data` branch v
   - Available for: quilt: 1.18 -> 1.19.3, fabric: 1.16 -> 1.19.3  
 - [EntityCulling][entityculling] - Using async path-tracing to hide (Block-)Entities that are not visible.  
   - Available for: fabric,quilt: 1.16 -> 1.19.4, forge: 1.8.9, forge: 1.16 -> 1.19.4  
+- [FPS Reducer][fps reducer] - Improve performance when Minecraft is in the background, minimized or left inactive/idle for a while.  
+  - Available for: forge: 1.7 -> 1.19.4, fabric: 1.16.5 -> 1.19.4, quilt: 1.19.4  
 - [Sodium][sodium] - Modern rendering engine and client-side optimization mod for Minecraft.  
   - Available for: fabric,quilt: 1.16 -> 1.19.4  
 
@@ -171,6 +173,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 [dynamic fps]: https://modrinth.com/mod/dynamic-fps "Dynamic FPS Modrinth page"
 [enhanced block entities]: https://modrinth.com/mod/ebe "Enhanced Block Entities Modrinth page"
 [entityculling]: https://modrinth.com/mod/entityculling "EntityCulling Modrinth page"
+[fps reducer]: https://curseforge.com/minecraft/mc-mods/fps-reducer "FPS Reducer CurseForge page"
 [sodium]: https://modrinth.com/mod/sodium "Sodium Modrinth page"
 [lazydfu]: https://modrinth.com/mod/lazydfu "LazyDFU Modrinth page"
 [lithium]: https://modrinth.com/mod/lithium "Lithium Modrinth page"
