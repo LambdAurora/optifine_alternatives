@@ -37,7 +37,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Cull Leaves][cull leaves] - Adds culling to leaf blocks, providing a huge performance boost over vanilla. Similar to OptiFine's Smart Leaves feature.  
   - Available for: quilt: 1.17 -> 1.19.3, fabric: 1.16 -> 1.19.3, forge: 1.19.2, forge: 1.19.3  
 - [Cull Particles][cull particles] - Don't render particles that can't be seen. Unneeded with Sodium.  
-  - Available for: fabric,quilt: 1.15 -> 1.19  
+  - Available for: fabric,quilt: 1.15 -> 1.19, forge: 1.15 -> 1.16.2  
 - [Dynamic FPS][dynamic fps] - Improve performance when Minecraft is in the background.  
   - Available for: quilt: 1.18 -> 1.19.4, fabric: 1.14 -> 1.19.4  
 - [Enhanced Block Entities][enhanced block entities] - Reduce FPS lag with block entities, as well as customize them with resource packs.  
