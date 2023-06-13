@@ -101,6 +101,8 @@ You can contribute to this list by opening a pull request on the `data` branch v
   - Available for: fabric,quilt: 1.17 -> 1.19.2  
 - [MoreMcmeta][moremcmeta] - Animate almost any Minecraft texture with more options.  
   - Available for: fabric,quilt: 1.16 -> 1.19.3, forge: 1.16 -> 1.19.3  
+- [OptiGUI][optigui] - Custom inventory GUIs on Fabric&Quilt with OptiFine resource pack support&many more features  
+  - Available for: fabric,quilt: 1.18, fabric,quilt: 1.20.1  
 - [Transparent][transparent] - Allows resource packs to make entities support transparency.  
   - Available for: fabric,quilt,forge: 1.15 -> 1.19.3  
 - [Varied Mob Textures][varied mob textures] - This mod allows the resource packs creator to have multiple randomized textures for the same mob. Uses custom format, OptiFine-based resource packs will need conversion.  
@@ -197,6 +199,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 [lambdynamiclights]: https://modrinth.com/mod/lambdynamiclights "LambDynamicLights Modrinth page"
 [more block predicates]: https://modrinth.com/mod/mbp "More Block Predicates Modrinth page"
 [moremcmeta]: https://modrinth.com/mod/moremcmeta "MoreMcmeta Modrinth page"
+[optigui]: https://modrinth.com/mod/optigui "OptiGUI Modrinth page"
 [transparent]: https://modrinth.com/mod/transparent "Transparent Modrinth page"
 [varied mob textures]: https://curseforge.com/minecraft/mc-mods/varied-mob-textures "Varied Mob Textures CurseForge page"
 [custom splash screen]: https://modrinth.com/mod/custom-splash-screen "Custom Splash Screen Modrinth page"
