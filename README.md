@@ -102,7 +102,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [MoreMcmeta][moremcmeta] - Animate almost any Minecraft texture with more options.  
   - Available for: fabric,quilt: 1.16 -> 1.19.3, forge: 1.16 -> 1.19.3  
 - [OptiGUI][optigui] - Custom inventory GUIs on Fabric&Quilt with OptiFine resource pack support&many more features  
-  - Available for: fabric,quilt: 1.18, fabric,quilt: 1.20.1  
+  - Available for: fabric,quilt: 1.18 -> 1.20.1  
 - [Transparent][transparent] - Allows resource packs to make entities support transparency.  
   - Available for: fabric,quilt,forge: 1.15 -> 1.19.3  
 - [Varied Mob Textures][varied mob textures] - This mod allows the resource packs creator to have multiple randomized textures for the same mob. Uses custom format, OptiFine-based resource packs will need conversion.  
