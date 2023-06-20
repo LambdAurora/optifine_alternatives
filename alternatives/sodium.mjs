@@ -6,7 +6,7 @@ export default new Mod(
 	"Modern rendering engine and client-side optimization mod for Minecraft.",
 )
 .icon("https://cdn.modrinth.com/data/AANobbMI/icon.png")
-.add_version({ loader: ["fabric", "quilt"], v: [16, 17, 18, 19.4] })
+.add_version({ loader: ["fabric", "quilt"], v: [16, 17, 18, 19, 20.1] })
 .add_category("Performance", "Client")
 .add_link(
 	{ host: "modrinth" },
