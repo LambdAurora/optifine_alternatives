@@ -79,6 +79,7 @@ lib*.a
 # Common
 bin/
 build/
+!build/forge.png
 dist/
 lib/
 !src/lib/

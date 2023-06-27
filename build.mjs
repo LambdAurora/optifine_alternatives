@@ -111,7 +111,10 @@ async function build_readme_file(mods) {
 }
 
 async function build_pages(mods) {
-	await Deno.copyFile("giscus_style.css", BUILD_DIR + "/giscus_style.css");
+	Promise.all([
+		Deno.copyFile("giscus_style.css", BUILD_DIR + "/giscus_style.css"),
+		Deno.copyFile("forge.png", BUILD_DIR + "/forge.png")
+	]);
 	/*Promise.all([
 		Deno.readFile("giscus_style.css"),
 		fetch(WEBSITE + "/style.css")
