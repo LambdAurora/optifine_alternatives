@@ -9,6 +9,6 @@ export default new Mod(
 .add_version({ loader: ["fabric", "quilt"], v: [18, 19, 19.1, 19.2, 19.3, 19.4, 20, 20.1] })
 .add_category("Cosmetic")
 .add_link(
-	{ host: "modrinth" },
+	{ host: "modrinth", params: { namespace: "beer" } },
 	{ host: "github" },
 );
