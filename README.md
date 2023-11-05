@@ -41,13 +41,13 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Dynamic FPS][dynamic fps] - Improve performance when Minecraft is in the background.  
   - Available for: quilt: 1.18 -> 1.19.4, fabric: 1.14 -> 1.19.4  
 - [Enhanced Block Entities][enhanced block entities] - Reduce FPS lag with block entities, as well as customize them with resource packs.  
-  - Available for: quilt: 1.18 -> 1.19.3, fabric: 1.16 -> 1.19.3  
+  - Available for: quilt: 1.18 -> 1.20.1, fabric: 1.16 -> 1.20.1  
 - [EntityCulling][entityculling] - Using async path-tracing to hide (Block-)Entities that are not visible.  
   - Available for: fabric,quilt: 1.16 -> 1.19.4, forge: 1.8.9, forge: 1.16 -> 1.19.4  
 - [FPS Reducer][fps reducer] - Improve performance when Minecraft is in the background, minimized or left inactive/idle for a while.  
   - Available for: forge: 1.7 -> 1.19.4, fabric: 1.16.5 -> 1.19.4, quilt: 1.19.4  
 - [Sodium][sodium] - Modern rendering engine and client-side optimization mod for Minecraft.  
-  - Available for: fabric,quilt: 1.16 -> 1.20.1  
+  - Available for: fabric,quilt: 1.16 -> 1.20.2  
 
 #### General
 
@@ -63,7 +63,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 ### Cosmetic
 
 - [Animatica][animatica] - A mod implementing the OptiFine/MCPatcher animated texture format.  
-  - Available for: quilt: 1.18 -> 1.19.3, fabric: 1.17 -> 1.19.3  
+  - Available for: quilt: 1.18 -> 1.20.1, fabric: 1.17 -> 1.20.1  
 - [Chime][chime] - Adds predicates for more interactive item models, CIT replacement with a custom format.  
   - Available for: fabric: 1.16, fabric,quilt: 1.18 -> 1.19.3  
 - [CIT Resewn][cit resewn] - Re-implements MCPatcher's CIT (custom item textures from optifine resource packs)  
@@ -96,7 +96,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
   - Available for: quilt: 1.18 -> 1.20.1, fabric: 1.16 -> 1.19.2  
   - Requires [Fabric Renderer API](#compatibility "More information.")  
 - [LambDynamicLights][lambdynamiclights] - Adds dynamic lighting to the game.  
-  - Available for: quilt: 1.17 -> 1.20.1, fabric: 1.15 -> 1.20.1  
+  - Available for: quilt: 1.17 -> 1.20.2, fabric: 1.15 -> 1.20.2  
 - [More Block Predicates][more block predicates] - Allows resource packs to change block models depending on new conditions! Custom format.  
   - Available for: fabric,quilt: 1.17 -> 1.19.2  
 - [MoreMcmeta][moremcmeta] - Animate almost any Minecraft texture with more options.  
@@ -124,7 +124,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Canvas Renderer][canvas renderer] - A new rendering engine. Incompatible with Sodium.  
   - Available for: fabric,quilt: 1.17 -> 1.20.1, fabric: 1.16  
 - [Iris][iris] - A new shaders mod for Minecraft intended to be compatible with existing ShadersMod/Optifine shaders.  
-  - Available for: quilt: 1.18 -> 1.20.1, fabric: 1.16 -> 1.20.1  
+  - Available for: quilt: 1.18 -> 1.20.2, fabric: 1.16 -> 1.20.2  
 
 ### Fog
 
