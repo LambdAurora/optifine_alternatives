@@ -1,6 +1,6 @@
 {
 	"imports": {
 		"@std/": "https://deno.land/std@0.157.0/",
-		"@lib.md/": "https://deno.land/x/libmd@v1.9.0/"
+		"@lib.md/": "https://deno.land/x/libmd@v1.10.0/"
 	}
 }
