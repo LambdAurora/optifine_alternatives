@@ -22,7 +22,7 @@ This list will list recommended OptiFine alternatives by me (LambdAurora), so it
  - Mods that change gameplay in a way (e.g. zoom) that have a way for servers to disable them will be favored.
  - Free and open-source mods are favored.
 
-This list now has a fancy URL: https://lambdaurora.dev/optifine_alternatives
+This list now has a fancy URL: https://optifine.alternatives.lambdaurora.dev/
 
 ### Contribute
 
@@ -231,7 +231,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 The mods listed below are not part of the OptiFine alternatives directly but those are still nice to have.
 
 - [Ears] - Faithful fancy fashion features for fuzzy folk. It offers a lot of skin customization options, directly encoded into the skin file uploaded to Mojang. A very good alternative to express yourself than restrictive capes.
-  - Available for: b1.7.3, 1.2.5, 1.4.7 -> 1.19.3, Not so Seecret Saturday (a1.1.2), New Frontier Craft (b1.7.3)
+  - Available for: b1.7.3, 1.2.5, 1.4.7 -> 1.20.2, Not so Seecret Saturday (a1.1.2), New Frontier Craft (b1.7.3)
 - [DashLoader] - Attempts to improve loading times by caching the game's content. May be incompatible with some of the mods in this list.
   - Available for: 1.16 -> 1.19.2
 - [Entity View Distance] - This mods allows more precise manipulation of entity view distance on client and server 
@@ -278,7 +278,7 @@ Sodium and Canvas Renderer are incompatible.
 Some mods require the Fabric Renderer API to work, Canvas supports it, but Sodium will not support it by default, [Indium] is required to support it.
 
 - [Indium] - Adds support of the Fabric Renderer API to [Sodium](https://modrinth.com/mod/sodium).
-  - Available for: 1.16 -> 1.19.3
+  - Available for: 1.16 -> 1.20.2
 
 [Indium]: https://modrinth.com/mod/indium "Indium Modrinth Page"
 
