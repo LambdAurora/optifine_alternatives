@@ -1,6 +1,6 @@
 import Mod from "../build_src/mod.mjs";
 
-export default new Mod(
+const mod = new Mod(
 	"LazyDFU",
 	"astei",
 	"Makes the initialization of DataFixerUpper \"lazy\". "
@@ -17,3 +17,7 @@ export default new Mod(
 	{ host: "curseforge", params: { namespace: "lazy-dfu-forge", modloader: "Forge" } },
 	{ host: "github" }
 );
+
+await mod.import_versions_from_modrinth();
+
+export default mod;

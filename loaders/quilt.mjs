@@ -1,4 +1,4 @@
-import Loader from "../build_src/loader.mjs";
+import Loader from "../build_src/loader.ts";
 
 export default new Loader(
 	"Quilt",

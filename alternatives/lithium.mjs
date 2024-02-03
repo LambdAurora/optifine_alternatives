@@ -1,6 +1,6 @@
 import Mod from "../build_src/mod.mjs";
 
-export default new Mod(
+const mod = new Mod(
 	"Lithium",
 	"CaffeineMC",
 	"No-compromises game logic/server optimization mod.",
@@ -10,6 +10,9 @@ export default new Mod(
 .add_category("Performance", "General")
 .add_link(
 	{ host: "modrinth" },
-	{ host: "curseforge" },
 	{ host: "github", params: { namespace: "lithium-fabric" } }
 );
+
+await mod.import_versions_from_modrinth();
+
+export default mod;

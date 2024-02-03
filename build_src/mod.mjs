@@ -1,16 +1,24 @@
-import { md, html } from "@lib.md/mod.mjs";
-import { load_hosts } from "./host.mjs";
-import { load_loaders } from "./loader.mjs";
-import { load_requirements } from "./requirement.mjs";
+import {html, md} from "@lib.md/mod.mjs";
+import {load_hosts} from "./host.mjs";
+import {load_loaders} from "./loader.ts";
+import {load_requirements} from "./requirement.mjs";
+import {get_versions, segment_versions} from "./version.ts";
 
-function new_version(version, loaders = [ "fabric", "quilt" ]) {
+function new_version(version) {
 	if (typeof version === "number") {
-		return {id: version, loader: loaders, note: ""};
+		return {id: `1.${version}`, note: ""};
 	} else {
+		if (typeof version.id === "number") version.id = `1.${version.id}`;
 		if (!version.note) version.note = "";
-		if (!version.loader) version.loader = loaders;
 		return version;
 	}
+}
+
+function array_equals(a, b) {
+	return Array.isArray(a) &&
+		Array.isArray(b) &&
+		a.length === b.length &&
+		a.every((val, index) => val === b[index]);
 }
 
 export default class Mod {
@@ -18,8 +26,8 @@ export default class Mod {
 		this.name = name;
 		this.author = author;
 		this.description = description;
-		this._icon = { url: "", pixelated: false };
-		this.versions = [];
+		this._icon = {url: "", pixelated: false};
+		this.versions = {};
 		this.categories = [];
 		this.links = [];
 		this.requirements = {
@@ -43,35 +51,112 @@ export default class Mod {
 
 	/**
 	 * Adds Minecraft versions this mod is compatible with.
-	 *
-	 * @param {...Number} versions the versions to add
 	 */
 	add_version() {
 		for (let i = 0; i < arguments.length; i++) {
-			if (arguments[i] instanceof Array) {
-				this.versions.push(...(arguments[i].map(new_version)));
-			} else if (arguments[i].v) {
-				this.versions.push(...(arguments[i].v.map(v => {
-					const version = new_version(v, arguments[i].loader);
-					return version;
+			for (const loader of arguments[i].loader) {
+				let data = this.versions[loader];
+
+				if (!data) {
+					this.versions[loader] = data = [];
+				}
+
+				data.push(...(arguments[i].v.map(v => {
+					return new_version(v);
 				})));
-			} else {
-				this.versions.push(new_version(arguments[i]));
 			}
 		}
 
 		return this;
 	}
 
+	async import_versions_from_modrinth(modrinth_slug) {
+		if (!modrinth_slug) {
+			modrinth_slug = this.name;
+		}
+
+		const versions_data = await fetch(`https://api.modrinth.com/v2/project/${modrinth_slug}/version`)
+			.then(response => response.json())
+			.then(response => {
+				const per_loader = {};
+
+				for (const mod_version of response) {
+					for (const loader of mod_version.loaders) {
+						let data = per_loader[loader];
+
+						if (!data) {
+							per_loader[loader] = data = [];
+						}
+
+						data.push(...mod_version.game_versions);
+					}
+				}
+
+				return per_loader;
+			});
+
+		for (const loader of Object.keys(versions_data)) {
+			let data = this.versions[loader];
+
+			if (!data) {
+				this.versions[loader] = data = [];
+			}
+
+			const versions_to_add = [...new Set(versions_data[loader])]
+				.filter(version => {
+					const mc_version_data = get_versions().find(v => v.id === version);
+
+					if (mc_version_data) {
+						return mc_version_data.type === "release";
+					} else {
+						return false;
+					}
+				})
+				.sort()
+				.map(version => {
+					return {id: version, note: ""};
+				});
+
+			for (const version_to_add of versions_to_add) {
+				if (!data.find(version => version.id === version_to_add.id)) {
+					data.push(version_to_add);
+				}
+			}
+
+			data.sort((a, b) => {
+				const a_components = a.id.split(".").map(c => parseInt(c));
+				const b_components = b.id.split(".").map(c => parseInt(c));
+
+				if (a_components.length === 2) a_components.push(0);
+				if (b_components.length === 2) b_components.push(0);
+
+				if (a_components[0] === b_components[0]) {
+					if (a_components[1] === b_components[1]) {
+						if (a_components[2] < b_components[2]) return -1;
+						else if (a_components[2] > b_components[2]) return 1;
+						else return 0;
+					} else if (a_components[1] < b_components[1]) return -1;
+					else return 1;
+				} else if (a_components[0] < b_components[0]) return -1;
+				else return 1;
+			})
+		}
+	}
+
 	async resolve_versions() {
 		return load_loaders().then(loaders => {
-			return this.versions.map(version => {
-				return {
-					id: version.id,
-					loader: version.loader.map(loader => loaders.get_by_id(loader)),
-					note: version.note
-				};
-			});
+			const resolved = [];
+
+			for (const loader of Object.keys(this.versions)) {
+				resolved.push({
+					loader: loaders.get_by_id(loader),
+					versions: this.versions[loader].map(version => {
+						return {id: typeof version.id === "number" ? `1.${version.id}` : version.id, note: version.note};
+					})
+				})
+			}
+
+			return resolved;
 		});
 	}
 
@@ -106,15 +191,15 @@ export default class Mod {
 			for (const link of this.links) {
 				for (const existing of hosts) {
 					if (existing.id === link.host) {
-						resolved.push({ 
+						resolved.push({
 							host: existing,
 							url: existing.get_mod_url(this, link.params),
-							loader: (link.params && link.params.modloader) ? link.params.modloader : "Fabric" 
+							loader: (link.params && link.params.modloader) ? link.params.modloader : "Fabric"
 						});
 					}
 				}
 			}
-	
+
 			return resolved;
 		});
 	}
@@ -140,7 +225,7 @@ export default class Mod {
 					}
 				}
 			}
-	
+
 			return resolved;
 		});
 	}
@@ -181,7 +266,7 @@ export default class Mod {
 			return [];
 
 		let prettified = [];
-		let min = this.versions[0], current = min;
+		/*let min = this.versions[0], current = min;
 
 		for (let i = 1; i < this.versions.length; i++) {
 			if (Math.floor(this.versions[i].id) !== Math.floor(current.id) + 1 || this.versions[i].loader !== this.versions[i].loader
@@ -196,7 +281,7 @@ export default class Mod {
 		}
 
 		const note = current.note === "" ? "" : ` (${current.note})`;
-		prettified.push(`${current.loader}: ` + (min === current ? `1.${current.id}${note}` : `1.${min.id} -> 1.${current.id}${note}`));
+		prettified.push(`${current.loader}: ` + (min === current ? `1.${current.id}${note}` : `1.${min.id} -> 1.${current.id}${note}`));*/
 
 		return prettified;
 	}
@@ -222,15 +307,15 @@ export default class Mod {
 		const metadata_list = new md.List([new md.ListEntry(`Available for: ${this.get_prettified_version().join(",\ ")}  `)]);
 
 		entry.push(summary)
-		     .push(metadata_list);
+			.push(metadata_list);
 
 		return this.resolve_requirements().then(requirements => {
 			const requirements_md = new md.Paragraph();
 
 			for (const requirement of requirements) {
 				requirements_md.push(`Requires `)
-				               .push(requirement.get_markdown_link())
-				               .push("  ");
+					.push(requirement.get_markdown_link())
+					.push("  ");
 			}
 
 			if (requirements.length !== 0) {
@@ -252,8 +337,6 @@ export default class Mod {
 
 		const versions = await this.resolve_versions();
 
-		let min = versions[0], current = min;
-
 		function create_li(c) {
 			const li = html.create_element("li")
 				.with_attr("style", "display: flex");
@@ -262,42 +345,29 @@ export default class Mod {
 			const loaders_el = html.create_element("span").with_attr("class", "loaders");
 			li.append_child(loaders_el);
 
-			for (const i in c.loader) {
-				const loader = c.loader[i];
-
-				loaders_el.with_child(html.create_element("a")
-						.with_attr("class", "loader")
-						.with_attr("href", loader.website)
-						.with_attr("style", "margin-left: 4px;")
-						.with_child(loader.get_fancy_icon(html))
-						.with_child(new html.Text(loader.name)));
-
-				if (i < c.loader.length - 1) {
-					loaders_el.with_child(new html.Text(", "));
-				}
-			}
+			loaders_el.with_child(html.create_element("a")
+				.with_attr("class", "loader")
+				.with_attr("href", c.loader.website)
+				.with_attr("style", "margin-left: 4px;")
+				.with_child(c.loader.get_fancy_icon(html))
+				.with_child(new html.Text(c.loader.name)));
 
 			return li;
 		}
 
-		for (let i = 1; i < versions.length; i++) {
-			if (Math.floor(versions[i].id) !== Math.floor(current.id) + 1 || versions[i].loader !== versions[i].loader || versions[i].note !== current.note) {
-				const li = create_li(current);
+		for (const loader_versions of versions) {
+			const li = create_li(loader_versions);
 
-				const note = current.note === "" ? "" : ` (${current.note})`;
-				li.append_child(html.create_element("span")
-					.with_child(new html.Text(`: ` + (min === current ? `1.${current.id}${note}` : `1.${min.id} -> 1.${current.id}${note}`))));
-				min = current = versions[i];
-			} else {
-				current = versions[i];
-			}
+			let mod_versions = segment_versions(loader_versions.versions)
+				.map(segment => {
+					const note = segment[0].note === "" ? "" : ` (${segment[0].note})`;
+					if (segment.length === 1) return segment[0].id + note;
+					else return segment[0].id + " -> " + segment[segment.length - 1].id + note;
+				}).join(", ");
+
+			li.append_child(html.create_element("span")
+				.with_child(new html.Text(`: ${mod_versions}`)));
 		}
-
-		const li = create_li(current);
-
-		const note = current.note === "" ? "" : ` (${current.note})`;
-		li.append_child(html.create_element("span")
-					.with_child(new html.Text(`: ` + (min === current ? `1.${current.id}${note}` : `1.${min.id} -> 1.${current.id}${note}`))));
 
 		return versions_ul;
 	}

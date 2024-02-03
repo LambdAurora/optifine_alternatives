@@ -1,12 +1,11 @@
 import Mod from "../build_src/mod.mjs";
 
-export default new Mod(
+const mod = new Mod(
 	"LambdaBetterGrass",
 	"LambdAurora",
 	"Adds better grass and snow to the game.",
 )
 .icon("https://cdn.modrinth.com/data/2Uev7LdA/icon.png")
-.add_version({ loader: ["quilt"], v: [18, 19, 20.1] }, { loader: ["fabric"], v: [16, 17, 18, 19.2] })
 .add_category("Cosmetic")
 .add_link(
 	{ host: "modrinth" },
@@ -14,3 +13,7 @@ export default new Mod(
 	{ host: "github" }
 )
 .requires("frapi");
+
+await mod.import_versions_from_modrinth();
+
+export default mod;

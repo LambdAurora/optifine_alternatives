@@ -1,6 +1,6 @@
 import Mod from "../build_src/mod.mjs";
 
-export default new Mod(
+const mod = new Mod(
 	"OptiGUI",
 	"opekope2",
 	"Custom inventory GUIs on Fabric&Quilt with OptiFine resource pack support&many more features",
@@ -13,3 +13,7 @@ export default new Mod(
 	{ host: "curseforge" },
 	{ host: "github" }
 );
+
+await mod.import_versions_from_modrinth();
+
+export default mod;

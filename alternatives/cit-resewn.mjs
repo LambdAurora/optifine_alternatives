@@ -1,6 +1,6 @@
 import Mod from "../build_src/mod.mjs";
 
-export default new Mod(
+const mod = new Mod(
 	"CIT Resewn",
 	"shsupercm",
 	"Re-implements MCPatcher's CIT (custom item textures from optifine resource packs)",
@@ -13,3 +13,7 @@ export default new Mod(
 	{ host: "curseforge" },
 	{ host: "github", params: { namespace: "CITResewn" } },
 );
+
+await mod.import_versions_from_modrinth("cit-resewn");
+
+export default mod;

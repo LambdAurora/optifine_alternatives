@@ -32,7 +32,7 @@ export async function load_hosts() {
 
 		for await (const dir_entry of Deno.readDir("./hosts")) {
 			if (dir_entry.isFile && dir_entry.name.endsWith(".mjs")) {
-				hosts.push(dir_entry.name.substr(0, dir_entry.name.length - 4));
+				hosts.push(dir_entry.name.substring(0, dir_entry.name.length - 4));
 			}
 		}
 

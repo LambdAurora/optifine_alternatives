@@ -37,23 +37,21 @@ ${mods}
 The mods listed below are not part of the OptiFine alternatives directly but those are still nice to have.
 
 - [Ears] - Faithful fancy fashion features for fuzzy folk. It offers a lot of skin customization options, directly encoded into the skin file uploaded to Mojang. A very good alternative to express yourself than restrictive capes.
-  - Available for: b1.7.3, 1.2.5, 1.4.7 -> 1.20.2, Not so Seecret Saturday (a1.1.2), New Frontier Craft (b1.7.3)
+  - Available for: b1.7.3, 1.2.5, 1.4.7 -> 1.20.4, Not so Seecret Saturday (a1.1.2), New Frontier Craft (b1.7.3)
 - [DashLoader] - Attempts to improve loading times by caching the game's content. May be incompatible with some of the mods in this list.
-  - Available for: 1.16 -> 1.19.2
+  - Available for: 1.16 -> 1.20.1
 - [Entity View Distance] - This mods allows more precise manipulation of entity view distance on client and server 
-  - Available for: 1.17 -> 1.19
+  - Available for: 1.17 -> 1.20.4
 - [FerriteCore] - Memory usage optimizations.
-  - Available for: [1.16 -> 1.19][FerriteCore], [1.16 -> 1.19 (Forge)](https://www.curseforge.com/minecraft/mc-mods/ferritecore)
+  - Available for: 1.16 -> 1.20.4
 - [Hydrogen] - Reduces the memory usage of the game in more modded scenarios.
   - Available for: 1.16 -> 1.17
-- [Krypton] - A mod to optimize the Minecraft networking stack
-  - Available for: 1.16 -> 1.19
 - [Overworld Two] provides an alternative optimized world generator for overworld and nether. Much faster than Vanilla but isn't identical to Vanilla.
   - Available for: 1.16
 - [Sodium Extra] - Adds features that should not be in Sodium.
-  - Available for: 1.16 -> 1.19
+  - Available for: 1.16 -> 1.20.4
 - [Reese's Sodium Options] - Alternative Options Menu for Sodium with intention of improving UX.
-  - Available for: 1.16 -> 1.19
+  - Available for: 1.16 -> 1.20.4
 
 [Ears]: https://ears.unascribed.com/ "Ears Website"
 [FerriteCore]: https://modrinth.com/mod/ferrite-core "FerriteCore Modrinth page"
@@ -84,7 +82,7 @@ Sodium and Canvas Renderer are incompatible.
 Some mods require the Fabric Renderer API to work, Canvas supports it, but Sodium will not support it by default, [Indium] is required to support it.
 
 - [Indium] - Adds support of the Fabric Renderer API to [Sodium](https://modrinth.com/mod/sodium).
-  - Available for: 1.16 -> 1.20.2
+  - Available for: 1.16 -> 1.20.4
 
 [Indium]: https://modrinth.com/mod/indium "Indium Modrinth Page"
 

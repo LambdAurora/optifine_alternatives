@@ -1,6 +1,6 @@
 import Mod from "../build_src/mod.mjs";
 
-export default new Mod(
+const mod = new Mod(
 	"Dynamic FPS",
 	"juliand665",
 	"Improve performance when Minecraft is in the background.",
@@ -13,3 +13,7 @@ export default new Mod(
 	{ host: "curseforge" },
 	{ host: "github" }
 );
+
+await mod.import_versions_from_modrinth("dynamic-fps");
+
+export default mod;

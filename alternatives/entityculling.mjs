@@ -1,6 +1,6 @@
 import Mod from "../build_src/mod.mjs";
 
-export default new Mod(
+const mod = new Mod(
 	"EntityCulling",
 	"tr7zw",
 	"Using async path-tracing to hide (Block-)Entities that are not visible.",
@@ -13,3 +13,7 @@ export default new Mod(
 	{ host: "curseforge" },
 	{ host: "github" }
 );
+
+await mod.import_versions_from_modrinth();
+
+export default mod;
