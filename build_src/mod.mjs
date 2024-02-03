@@ -266,22 +266,20 @@ export default class Mod {
 			return [];
 
 		let prettified = [];
-		/*let min = this.versions[0], current = min;
 
-		for (let i = 1; i < this.versions.length; i++) {
-			if (Math.floor(this.versions[i].id) !== Math.floor(current.id) + 1 || this.versions[i].loader !== this.versions[i].loader
-				|| this.versions[i].note !== current.note) {
+		for (const loader of Object.keys(this.versions)) {
+			const versions = this.versions[loader].map(version => {
+				return {id: typeof version.id === "number" ? `1.${version.id}` : version.id, note: version.note};
+			});
+			const segmented = segment_versions(versions)
+				.map(segment => {
+					const note = segment[0].note === "" ? "" : ` (${segment[0].note})`;
+					if (segment.length === 1) return segment[0].id + note;
+					else return segment[0].id + " -> " + segment[segment.length - 1].id + note;
+				}).join(", ");
 
-				const note = current.note === "" ? "" : ` (${current.note})`;
-				prettified.push(`${current.loader}: ` + (min === current ? `1.${current.id}${note}` : `1.${min.id} -> 1.${current.id}${note}`));
-				min = current = this.versions[i];
-			} else {
-				current = this.versions[i];
-			}
+			prettified.push(`${loader}: ${segmented}`);
 		}
-
-		const note = current.note === "" ? "" : ` (${current.note})`;
-		prettified.push(`${current.loader}: ` + (min === current ? `1.${current.id}${note}` : `1.${min.id} -> 1.${current.id}${note}`));*/
 
 		return prettified;
 	}
