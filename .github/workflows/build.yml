@@ -11,8 +11,8 @@ jobs:
 
     steps:
       - name: "Checkout"
-        uses: actions/checkout@v3
-      - name: "Setup Deno"
+        uses: actions/checkout@v4
+      - name: "Set up Deno"
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
@@ -21,7 +21,7 @@ jobs:
         run: |
           ./build.sh
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: Artifacts
           path: ./build/libs/

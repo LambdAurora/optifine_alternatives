@@ -16,8 +16,8 @@ jobs:
 
     steps:
       - name: "Checkout"
-        uses: actions/checkout@v3
-      - name: "Setup Deno"
+        uses: actions/checkout@v4
+      - name: "Set up Deno"
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
@@ -30,7 +30,7 @@ jobs:
           branch: rendered
           folder: build
       - name: "Upload artifact"
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: pages
           path: ./build
@@ -52,7 +52,7 @@ jobs:
 
     steps:
       - name: "Download artifacts"
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: pages
           path: dist
