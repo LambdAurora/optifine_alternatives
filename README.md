@@ -121,6 +121,11 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Splash][splash] - Splash is a Fabric mod that allows you to customize the colors of your splash screen.  
   - Available for: fabric: 1.16 -> 1.17  
 
+#### Fog
+
+- [Polytone][polytone] - Multipurpose Visual Customization mod: tweak Colors, Colormaps, Lightmaps, Sounds, Gui Elements, Biome Effects, Particles, Fog Colors and more. Supports old Optifine formats  
+  - Available for: fabric: 1.18, 1.18.2 -> 1.19, 1.19.2 -> 1.20.1, 1.20.4, neoforge: 1.19 -> 1.20.4, forge: 1.18, 1.18.2 -> 1.19, 1.19.2 -> 1.20.1, 1.20.4  
+
 ### Shaders
 
 - [Canvas Renderer][canvas renderer] - A new rendering engine. Incompatible with Sodium.  
@@ -207,6 +212,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 [dark loading screen]: https://modrinth.com/mod/dark-loading-screen "Dark Loading Screen Modrinth page"
 [quilt loading screen]: https://modrinth.com/mod/quilt-loading-screen "Quilt Loading Screen Modrinth page"
 [splash]: https://curseforge.com/minecraft/mc-mods/splash "Splash CurseForge page"
+[polytone]: https://modrinth.com/mod/polytone "Polytone Modrinth page"
 [canvas renderer]: https://modrinth.com/mod/canvas "Canvas Renderer Modrinth page"
 [iris]: https://modrinth.com/mod/iris "Iris Modrinth page"
 [clearview]: https://curseforge.com/minecraft/mc-mods/clearview "ClearView CurseForge page"
