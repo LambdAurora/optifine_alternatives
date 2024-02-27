@@ -39,7 +39,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Cull Particles][cull particles] - Don't render particles that can't be seen. Unneeded with Sodium.  
   - Available for: fabric: 1.15 -> 1.19, quilt: 1.15 -> 1.19, forge: 1.15 -> 1.16.2  
 - [Dynamic FPS][dynamic fps] - Improve performance when Minecraft is in the background.  
-  - Available for: quilt: 1.16.2 -> 1.20.4, fabric: 1.14 -> 1.16, 1.16.2 -> 1.20.4  
+  - Available for: quilt: 1.14.3 -> 1.20.4, fabric: 1.14, 1.14.3 -> 1.16, 1.16.2 -> 1.20.4, forge: 1.16.5 -> 1.20.4, neoforge: 1.20, 1.20.2 -> 1.20.4  
 - [Enhanced Block Entities][enhanced block entities] - Reduce FPS lag with block entities, as well as customize them with resource packs.  
   - Available for: quilt: 1.18, 1.18.2 -> 1.20.2, fabric: 1.16.2 -> 1.18, 1.18.2 -> 1.20.2  
 - [EntityCulling][entityculling] - Using async path-tracing to hide (Block-)Entities that are not visible.  
@@ -106,7 +106,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [OptiGUI][optigui] - Custom inventory GUIs on Fabric&Quilt with OptiFine resource pack support&many more features  
   - Available for: fabric: 1.18 -> 1.20.4, quilt: 1.18 -> 1.20.4  
 - [Polytone][polytone] - Multipurpose Visual Customization mod: tweak colors, colormaps, lightmaps, sounds, GUI elements, biome effects, particles, fog colors and more.Supports old Optifine formats  
-  - Available for: fabric: 1.18.2 -> 1.20.4, quilt: 1.18.2 -> 1.20.4, neoforge: 1.20.2 -> 1.20.4, forge: 1.18.2 -> 1.20.4  
+  - Available for: fabric: 1.18.2 -> 1.20.4, quilt: 1.18.2 -> 1.20.4, neoforge: 1.20.1 -> 1.20.4, forge: 1.18.2 -> 1.20.4  
 - [Transparent][transparent] - Allows resource packs to make entities support transparency.  
   - Available for: fabric: 1.15 -> 1.20.4, quilt: 1.15 -> 1.20.4, forge: 1.15 -> 1.20.4, neoforge: 1.20.2 -> 1.20.4  
 - [Varied Mob Textures][varied mob textures] - This mod allows the resource packs creator to have multiple randomized textures for the same mob. Uses custom format, OptiFine-based resource packs will need conversion.  
@@ -150,7 +150,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 - [Resolution Control][resolution control] - Allows you to set render resolutions and take large screenshots.  
   - Available for: fabric: 1.14 -> 1.16  
 - [ResolutionControl+][resolutioncontrol+] - Allows you to set render resolutions and take large screenshots.  
-  - Available for: fabric: 1.16.5, 1.19.4 -> 1.20.2  
+  - Available for: fabric: 1.16.5, 1.19.4 -> 1.20.4  
 
 #### Cloud Height
 
