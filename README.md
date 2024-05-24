@@ -66,6 +66,8 @@ You can contribute to this list by opening a pull request on the `data` branch v
 
 - [Animatica][animatica] - A mod implementing the OptiFine/MCPatcher animated texture format.  
   - Available for: quilt: 1.18 -> 1.19, 1.19.2 -> 1.20.1, fabric: 1.17 -> 1.19, 1.19.2 -> 1.20.1  
+- [Block Entity Extended Rendering][block entity extended rendering] - Adds a slider to change the render distance for block entities.  
+  - Available for: fabric: 1.18 -> 1.20.1, quilt: 1.18 -> 1.20.1  
 - [Chime][chime] - Adds predicates for more interactive item models, CIT replacement with a custom format.  
   - Available for: fabric: 1.16, 1.16.4 -> 1.16.5, 1.18 -> 1.20.2, quilt: 1.18 -> 1.20.2  
 - [CIT Resewn][cit resewn] - Re-implements MCPatcher's CIT (custom item textures from optifine resource packs)  
@@ -185,6 +187,7 @@ You can contribute to this list by opening a pull request on the `data` branch v
 [phosphor]: https://modrinth.com/mod/phosphor "Phosphor Modrinth page"
 [starlight]: https://modrinth.com/mod/starlight "Starlight Modrinth page"
 [animatica]: https://modrinth.com/mod/animatica "Animatica Modrinth page"
+[block entity extended rendering]: https://modrinth.com/mod/beer "Block Entity Extended Rendering Modrinth page"
 [chime]: https://modrinth.com/mod/chime "Chime Modrinth page"
 [cit resewn]: https://modrinth.com/mod/cit-resewn "CIT Resewn Modrinth page"
 [clear skies]: https://modrinth.com/mod/clear-skies "Clear Skies Modrinth page"
