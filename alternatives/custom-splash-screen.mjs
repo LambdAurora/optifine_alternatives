@@ -1,6 +1,6 @@
 import Mod from "../build_src/mod.mjs";
 
-export default new Mod(
+const mod = new Mod(
 	"Custom Splash Screen",
 	"TeamMidnightDust",
 	"Change Minecraft's loading screen to your liking! Completely configurable!",
@@ -13,3 +13,7 @@ export default new Mod(
 	{ host: "curseforge" },
 	{ host: "github", params: { namespace: "CustomSplashScreen" } }
 );
+
+await mod.import_versions_from_modrinth("custom-splash-screen");
+
+export default mod;

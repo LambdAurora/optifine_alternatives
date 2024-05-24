@@ -1,19 +1,26 @@
+import {html} from "@lib.md/mod.mjs";
+
 export default class Loader {
-	constructor(name, website, create_icon) {
-		this.id = undefined;
+	public id = "";
+
+	constructor(
+		public readonly name: string,
+		public readonly website: string,
+		public readonly create_icon: (html: any, width: number, height: number) => html.Element
+	) {
 		this.name = name;
 		this.website = website;
 		this.create_icon = create_icon;
 	}
 
-	get_fancy_icon(html) {
+	get_fancy_icon(html: any) {
 		return this.create_icon(html, 24, 24).with_attr("alt", this.name);
 	}
 };
 
 const STATE = {
-	loaders: [],
-	get_by_id(id) {
+	loaders: [] as Loader[],
+	get_by_id(id: string) {
 		for (const loader of this.loaders) {
 			if (loader.id === id) {
 				return loader;
@@ -31,7 +38,7 @@ export async function load_loaders() {
 
 		for await (const dir_entry of Deno.readDir("./loaders")) {
 			if (dir_entry.isFile && dir_entry.name.endsWith(".mjs")) {
-				loaders.push(dir_entry.name.substr(0, dir_entry.name.length - 4));
+				loaders.push(dir_entry.name.substring(0, dir_entry.name.length - 4));
 			}
 		}
 

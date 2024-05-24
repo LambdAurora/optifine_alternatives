@@ -2,8 +2,8 @@ import { md, html } from "@lib.md/mod.mjs";
 import { existsSync } from "https://deno.land/std/fs/mod.ts";
 import { load_mods } from "./build_src/mod.mjs";
 
-const WEBSITE = "https://lambdaurora.dev";
-const WEBSITE_PREFIX = WEBSITE + "/optifine_alternatives";
+const WEBSITE = "https://optifine.alternatives.lambdaurora.dev";
+const WEBSITE_PREFIX = WEBSITE + "/";
 const BUILD_DIR = "./build";
 const DECODER = new TextDecoder("utf-8");
 const ENCODER = new TextEncoder();
@@ -115,21 +115,6 @@ async function build_pages(mods) {
 		Deno.copyFile("giscus_style.css", BUILD_DIR + "/giscus_style.css"),
 		Deno.copyFile("forge.png", BUILD_DIR + "/forge.png")
 	]);
-	/*Promise.all([
-		Deno.readFile("giscus_style.css"),
-		fetch(WEBSITE + "/style.css")
-			.then(response => {
-				if (!response.ok) {
-					throw new Error(`Could not fetch ${WEBSITE + "/style.css"}, cannot compose giscus stylesheet.`);
-				}
-
-				return response.text();
-			})
-	]).then(args => {
-		let content = DECODER.decode(args[0]);
-
-		Deno.writeFile(BUILD_DIR + "/giscus_style.css", ENCODER.encode(args[1] + "\n\n" + content));
-	});*/
 
 	async function build_mod_cards(parent, mods, level = 3) {
 		for (const category of mods) {

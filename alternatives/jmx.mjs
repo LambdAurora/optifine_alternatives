@@ -1,6 +1,6 @@
 import Mod from "../build_src/mod.mjs";
 
-export default new Mod(
+const mod = new Mod(
 	"JMX",
 	"vram-guild",
 	"JMX adds support for FREX Rendering API features to Minecraft JSON model loading. It can also be configured to load all JSON models as FREX meshes, which may offer a modest reduction in memory usage due to more efficient data structures.",
@@ -13,3 +13,7 @@ export default new Mod(
 	{ host: "curseforge" },
 	{ host: "github", params: { namespace: "json-model-extensions" } }
 );
+
+await mod.import_versions_from_modrinth("imx");
+
+export default mod;
