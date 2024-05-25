@@ -9,6 +9,7 @@ const mod = new Mod(
 .add_category("Utility")
 .add_link(
 	{ host: "modrinth" },
+	{ host: "curseforge", params: { namespace: "resolutioncontrol" }},
 	{ host: "github", params: { namespace: "resolution-control" } }
 );
 

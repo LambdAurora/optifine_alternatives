@@ -7,7 +7,7 @@ const mod = new Mod(
 	"Traben",
 	"A Fabric mod implementing support for OptiFine-format custom entity model (CEM) resourcepacks. Fully compatible with Sodium & Fresh Animations.",
 )
-.icon("https://cdn.modrinth.com/data/4I1XuqiY/5e127e83e3b55e3cebf32e3e8b355296ea62d87d.png")
+.icon("https://cdn.modrinth.com/data/4I1XuqiY/7a6acd528931a1a0d1b60fd0925b88227fb345cc.png")
 .add_version({ loader: ["quilt"], v: [ 19.4] }, { loader: ["fabric", "forge"], v: [ 19.4] })
 .add_category("Cosmetic")
 .add_link(

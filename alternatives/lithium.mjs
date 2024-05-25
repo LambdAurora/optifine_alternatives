@@ -10,6 +10,7 @@ const mod = new Mod(
 .add_category("Performance", "General")
 .add_link(
 	{ host: "modrinth" },
+	{ host: "curseforge" },
 	{ host: "github", params: { namespace: "lithium-fabric" } }
 );
 

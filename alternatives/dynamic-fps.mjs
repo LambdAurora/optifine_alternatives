@@ -12,7 +12,7 @@ const mod = new Mod(
 .add_link(
 	{ host: "modrinth" },
 	{ host: "curseforge" },
-	{ host: "github" }
+	{ host: "github", params: { author: "juliand665" } }
 );
 
 await mod.import_versions_from_modrinth("dynamic-fps");

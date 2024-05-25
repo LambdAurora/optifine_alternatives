@@ -9,7 +9,8 @@ const mod = new Mod(
 .add_category("Utility")
 .add_link(
 	{ host: "modrinth"},
-	{ host: "curseforge"}
+	{ host: "curseforge"},
+	{ host: "github", params: { author: "kb-1000" }  }
 );
 
 await mod.import_versions_from_modrinth("no-telemetry");

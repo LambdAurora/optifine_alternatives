@@ -5,7 +5,7 @@ export default new Mod(
 	"TwilightFlower",
 	"An implementation of the MCPatcher/Optifine connected textures format on the Fabric modloader. Unmaintained.",
 )
-.icon("https://cdn.discordapp.com/attachments/523633816078647296/708497185003536424/connected.png")
+.icon("images/connected-block-textures.png")
 .add_version({ loader: ["fabric"], v: [16] })
 .add_category("Cosmetic")
 .add_link(
