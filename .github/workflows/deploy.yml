@@ -23,7 +23,7 @@ jobs:
           deno-version: v1.x
       - name: "Build with Deno"
         run: |
-          ./build.sh
+          deno task build
       - name: "Deploy README"
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:

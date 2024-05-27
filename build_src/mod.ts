@@ -1,32 +1,59 @@
-import {html, md} from "@lib.md/mod.mjs";
-import {load_hosts} from "./host.mjs";
-import {load_loaders} from "./loader.ts";
-import {load_requirements} from "./requirement.mjs";
+import * as html from "@lambdaurora/libhtml";
+import * as md from "@lambdaurora/libmd";
+import {ModPathResolveParams, load_hosts} from "./host.ts";
+import Loader, {load_loaders} from "./loader.ts";
+import Requirement, {load_requirements} from "./requirement.ts";
 import {get_versions, segment_versions} from "./version.ts";
 
-function new_version(version) {
+export interface Icon {
+	url: string;
+	pixelated: boolean;
+}
+
+export interface Version {
+	id: string;
+	note: string;
+}
+
+export type PerLoaderVersions = { [key: string]: Version[] };
+
+export interface ResolvedLoaderVersions {
+	loader: Loader;
+	versions: Version[];
+}
+
+export type VersionInput = number | { id: number | string; note?: string; };
+
+export interface Link {
+	host: string;
+	params?: ModPathResolveParams;
+}
+
+function new_version(version: VersionInput): Version {
 	if (typeof version === "number") {
 		return {id: `1.${version}`, note: ""};
 	} else {
 		if (typeof version.id === "number") version.id = `1.${version.id}`;
 		if (!version.note) version.note = "";
-		return version;
+		return version as Version;
 	}
 }
 
-function array_equals(a, b) {
-	return Array.isArray(a) &&
-		Array.isArray(b) &&
-		a.length === b.length &&
-		a.every((val, index) => val === b[index]);
+export interface RequirementsData {
+	require: string[];
+	provide: string[];
 }
 
 export default class Mod {
-	constructor(name, author, description) {
-		this.name = name;
-		this.author = author;
-		this.description = description;
-		this._icon = {url: "", pixelated: false};
+	public namespace: string = "";
+	private _icon: Icon;
+	public versions: PerLoaderVersions;
+	public categories: string[];
+	public links: Link[];
+	private requirements: RequirementsData;
+
+	constructor(public name: string, public author: string, public description: string) {
+		this._icon = { url: "", pixelated: false };
 		this.versions = {};
 		this.categories = [];
 		this.links = [];
@@ -34,16 +61,15 @@ export default class Mod {
 			require: [],
 			provide: []
 		};
-		this.special_handlings = [];
 	}
 
 	/**
 	 * Sets the icon of this mod.
 	 *
-	 * @param {string} icon the link to the icon for this mod
-	 * @param {boolean} pixelated `true` if the icon is pixelated, otherwise `false`
+	 * @param icon the link to the icon for this mod
+	 * @param pixelated `true` if the icon is pixelated, otherwise `false`
 	 */
-	icon(icon, pixelated = false) {
+	icon(icon: string, pixelated: boolean = false): this {
 		this._icon.url = icon;
 		this._icon.pixelated = pixelated;
 		return this;
@@ -61,7 +87,7 @@ export default class Mod {
 					this.versions[loader] = data = [];
 				}
 
-				data.push(...(arguments[i].v.map(v => {
+				data.push(...(arguments[i].v.map((v: any) => {
 					return new_version(v);
 				})));
 			}
@@ -70,7 +96,7 @@ export default class Mod {
 		return this;
 	}
 
-	async import_versions_from_modrinth(modrinth_slug) {
+	async import_versions_from_modrinth(modrinth_slug: string) {
 		if (!modrinth_slug) {
 			modrinth_slug = this.name;
 		}
@@ -78,7 +104,7 @@ export default class Mod {
 		const versions_data = await fetch(`https://api.modrinth.com/v2/project/${modrinth_slug}/version`)
 			.then(response => response.json())
 			.then(response => {
-				const per_loader = {};
+				const per_loader = {} as { [key: string]: string[] };
 
 				for (const mod_version of response) {
 					for (const loader of mod_version.loaders) {
@@ -144,12 +170,12 @@ export default class Mod {
 	}
 
 	async resolve_versions() {
-		return load_loaders().then(loaders => {
-			const resolved = [];
+		return await load_loaders().then(loaders => {
+			const resolved: ResolvedLoaderVersions[] = [];
 
 			for (const loader of Object.keys(this.versions)) {
 				resolved.push({
-					loader: loaders.get_by_id(loader),
+					loader: loaders.get_by_id(loader)!,
 					versions: this.versions[loader].map(version => {
 						return {id: typeof version.id === "number" ? `1.${version.id}` : version.id, note: version.note};
 					})
@@ -185,7 +211,7 @@ export default class Mod {
 	}
 
 	async resolve_links() {
-		return load_hosts().then(hosts => {
+		return await load_hosts().then(hosts => {
 			const resolved = [];
 
 			for (const link of this.links) {
@@ -204,7 +230,7 @@ export default class Mod {
 		});
 	}
 
-	requires(requirement) {
+	requires(requirement: string | string[]) {
 		if (requirement instanceof Array) {
 			this.requirements.require.push(...requirement);
 		} else {
@@ -215,8 +241,8 @@ export default class Mod {
 	}
 
 	async resolve_requirements() {
-		return load_requirements().then(requirements => {
-			const resolved = [];
+		return await load_requirements().then(requirements => {
+			const resolved: Requirement[] = [];
 
 			for (const existing of requirements) {
 				for (const requirement of this.requirements.require) {
@@ -230,7 +256,7 @@ export default class Mod {
 		});
 	}
 
-	provides(requirement) {
+	provides(requirement: string | string[]) {
 		if (requirement instanceof Array) {
 			this.requirements.provide.push(...requirement);
 		} else {
@@ -240,29 +266,27 @@ export default class Mod {
 		return this;
 	}
 
-	is_providing(requirement) {
+	is_providing(requirement: Requirement | string) {
 		if (requirement === this.namespace) {
 			return true;
 		}
 
-		for (const provide of this.requirements.provide) {
-			if (provide === requirement.id) {
-				return true;
+		if (requirement instanceof Requirement) {
+			for (const provide of this.requirements.provide) {
+				if (provide === requirement.id) {
+					return true;
+				}
 			}
 		}
 
 		return false;
 	}
 
-	add_special_handling(special_handlings) {
-		this.special_handlings.push(special_handlings);
-	}
-
 	/**
 	 * @return {string[]} a prettified string of the Minecraft versions the mod is compatible with
 	 */
 	get_prettified_version() {
-		if (this.versions.length === 0)
+		if (Object.keys(this.versions).length === 0)
 			return [];
 
 		let prettified = [];
@@ -285,9 +309,9 @@ export default class Mod {
 	}
 
 	async to_markdown() {
-		const entry = new md.ListEntry();
+		const entry = new md.ListEntry([]);
 
-		let name = new md.Text(this.name);
+		let name: md.Node = new md.Text(this.name);
 
 		const links = await this.resolve_links();
 		if (links.length !== 0) {
@@ -308,7 +332,7 @@ export default class Mod {
 			.push(metadata_list);
 
 		return this.resolve_requirements().then(requirements => {
-			const requirements_md = new md.Paragraph();
+			const requirements_md = new md.Paragraph([]);
 
 			for (const requirement of requirements) {
 				requirements_md.push(`Requires `)
@@ -330,12 +354,12 @@ export default class Mod {
 	async get_html_versions() {
 		const versions_ul = html.create_element("ul");
 
-		if (this.versions.length === 0)
+		if (Object.keys(this.versions).length === 0)
 			return versions_ul;
 
 		const versions = await this.resolve_versions();
 
-		function create_li(c) {
+		function create_li(c: ResolvedLoaderVersions) {
 			const li = html.create_element("li")
 				.with_attr("style", "display: flex");
 			versions_ul.append_child(li);
@@ -347,7 +371,7 @@ export default class Mod {
 				.with_attr("class", "loader")
 				.with_attr("href", c.loader.website)
 				.with_attr("style", "margin-left: 4px;")
-				.with_child(c.loader.get_fancy_icon(html))
+				.with_child(c.loader.get_fancy_icon())
 				.with_child(new html.Text(c.loader.name)));
 
 			return li;
@@ -356,7 +380,7 @@ export default class Mod {
 		for (const loader_versions of versions) {
 			const li = create_li(loader_versions);
 
-			let mod_versions = segment_versions(loader_versions.versions)
+			const mod_versions = segment_versions(loader_versions.versions)
 				.map(segment => {
 					const note = segment[0].note === "" ? "" : ` (${segment[0].note})`;
 					if (segment.length === 1) return segment[0].id + note;
@@ -381,8 +405,8 @@ export default class Mod {
 
 		if (this._icon) {
 			const icon = html.create_element("img");
-			icon.src(this._icon.url);
-			icon.alt(this.name + "'s logo");
+			icon.src = this._icon.url;
+			icon.alt = this.name + "'s logo";
 
 			if (this._icon.pixelated) {
 				icon.with_attr("class", "ls_pixelated");
@@ -440,7 +464,7 @@ export default class Mod {
 			host_div.append_child(a);
 
 			if (link.host.create_icon) {
-				a.append_child(link.host.create_icon(html, 42, 42));
+				a.append_child(link.host.create_icon(42, 42));
 			} else {
 				a.append_child(new html.Text(link.host.name));
 			}
@@ -451,22 +475,22 @@ export default class Mod {
 };
 
 const STATE = {
-	mods: [],
+	mods: [] as Mod[],
 	loaded: false
 };
 
-export async function load_mods() {
+export async function load_mods(): Promise<Mod[]> {
 	if (!STATE.loaded) {
-		const mods = [];
+		const mods: string[] = [];
 
 		for await (const dir_entry of Deno.readDir("./alternatives")) {
 			if (dir_entry.isFile && dir_entry.name.endsWith(".mjs")) {
-				mods.push(dir_entry.name.substr(0, dir_entry.name.length - 4));
+				mods.push(dir_entry.name.substring(0, dir_entry.name.length - 4));
 			}
 		}
 
 		STATE.mods = await Promise.all(mods.map(async (id) => {
-			const mod = (await import(`../alternatives/${id}.mjs`))["default"];
+			const mod = (await import(`../alternatives/${id}.mjs`))["default"] as Mod;
 			mod.namespace = id;
 			return mod;
 		}));

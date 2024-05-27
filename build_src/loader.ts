@@ -1,4 +1,4 @@
-import {html} from "@lib.md/mod.mjs";
+import * as html from "@lambdaurora/libhtml";
 
 export default class Loader {
 	public id = "";
@@ -6,15 +6,15 @@ export default class Loader {
 	constructor(
 		public readonly name: string,
 		public readonly website: string,
-		public readonly create_icon: (html: any, width: number, height: number) => html.Element
+		public readonly create_icon: (width: number, height: number) => html.Element
 	) {
 		this.name = name;
 		this.website = website;
 		this.create_icon = create_icon;
 	}
 
-	get_fancy_icon(html: any) {
-		return this.create_icon(html, 24, 24).with_attr("alt", this.name);
+	get_fancy_icon() {
+		return this.create_icon(24, 24).with_attr("alt", this.name);
 	}
 };
 
@@ -34,7 +34,7 @@ const STATE = {
 
 export async function load_loaders() {
 	if (!STATE.loaded) {
-		const loaders = [];
+		const loaders: string[] = [];
 
 		for await (const dir_entry of Deno.readDir("./loaders")) {
 			if (dir_entry.isFile && dir_entry.name.endsWith(".mjs")) {

@@ -1,10 +1,11 @@
-import Host from "../build_src/host.mjs";
+import * as html from "@lambdaurora/libhtml";
+import { Host } from "../build_src/host.ts";
 
 export default new Host(
 	"CurseForge",
 	"https://curseforge.com",
 	(base_url, params) => `${base_url}/minecraft/mc-mods/${params.namespace}`,
-	(html, width, height) => html.create_element("svg")
+	(width, height) => html.create_element("svg")
 		.with_attr("aria-hidden", "true")
 		.with_attr("viewBox", "-2017 853 43 23")
 		.with_attr("version", "1.1")

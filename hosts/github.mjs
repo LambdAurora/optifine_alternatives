@@ -1,10 +1,11 @@
-import Host from "../build_src/host.mjs";
+import * as html from "@lambdaurora/libhtml";
+import { Host } from "../build_src/host.ts";
 
 export default new Host(
 	"GitHub",
 	"https://github.com",
 	(base_url, params) => `${base_url}/${params.author}/${params.namespace}`,
-	(html, width, height) => {
+	(width, height) => {
 		return html.create_element("svg")
 			.with_attr("aria-hidden", "true")
 			.with_attr("viewBox", "0 0 16 16")

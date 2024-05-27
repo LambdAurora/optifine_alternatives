@@ -1,4 +1,4 @@
-import Mod from "../build_src/mod.mjs";
+import Mod from "../build_src/mod.ts";
 
 const mod = new Mod(
 	"Custom Splash Screen",

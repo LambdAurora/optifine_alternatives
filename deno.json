@@ -1,0 +1,10 @@
+{
+	"tasks": {
+		"build": "deno run --allow-read --allow-write --allow-net build.ts"
+	},
+	"imports": {
+		"@std/fs": "jsr:@std/fs@^0.229.1",
+		"@lambdaurora/libhtml": "jsr:@lambdaurora/libhtml@^1.2.3",
+		"@lambdaurora/libmd": "jsr:@lambdaurora/libmd@^2.1.1"
+	}
+}

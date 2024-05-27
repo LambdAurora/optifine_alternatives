@@ -1,13 +1,17 @@
-import { md, html } from "@lib.md/mod.mjs";
+import * as html from "@lambdaurora/libhtml";
+import * as md from "@lambdaurora/libmd";
+import Mod from "./mod.ts";
 
 export default class Requirement {
-	constructor(name, description) {
+	public id: string = "";
+	public providers: Mod[] = [];
+
+	constructor(public name: string, public description: string) {
 		this.name = name;
 		this.description = description;
-		this.providers = [];
 	}
 
-	is_mod() {
+	is_mod(): boolean {
 		return this.as_mod() !== undefined;
 	}
 
@@ -15,7 +19,7 @@ export default class Requirement {
 		return this.providers.find(provider => provider.namespace === this.id);
 	}
 
-	resolve_providers(mods) {
+	resolve_providers(mods: Mod[]) {
 		this.providers = [];
 
 		for (const mod of mods) {
@@ -53,13 +57,13 @@ export default class Requirement {
 };
 
 const STATE = {
-	requirements: [],
+	requirements: [] as Requirement[],
 	loaded: false
 };
 
 export async function load_requirements() {
 	if (!STATE.loaded) {
-		const requirements = [];
+		const requirements: string[] = [];
 
 		for await (const dir_entry of Deno.readDir("./requirements")) {
 			if (dir_entry.isFile && dir_entry.name.endsWith(".mjs")) {
@@ -68,7 +72,7 @@ export async function load_requirements() {
 		}
 
 		STATE.requirements = await Promise.all(requirements.map(async (id) => {
-			const requirement = (await import(`../requirements/${id}.mjs`))["default"];
+			const requirement = (await import(`../requirements/${id}.mjs`))["default"] as Requirement;
 			requirement.id = id;
 			return requirement;
 		}));

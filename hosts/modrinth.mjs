@@ -1,10 +1,11 @@
-import Host from "../build_src/host.mjs";
+import * as html from "@lambdaurora/libhtml";
+import { Host } from "../build_src/host.ts";
 
 export default new Host(
 	"Modrinth",
 	"https://modrinth.com",
 	(base_url, params) => `${base_url}/mod/${params.namespace}`,
-	(html, width, height) => html.create_element("svg")
+	(width, height) => html.create_element("svg")
 		.with_attr("aria-hidden", "true")
 		.with_attr("viewBox", "16 -2 150 150")
 		.with_attr("version", "1.1")

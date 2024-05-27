@@ -1,4 +1,4 @@
-import Mod from "../build_src/mod.mjs";
+import Mod from "../build_src/mod.ts";
 
 export default new Mod(
 	"Varied Mob Textures",

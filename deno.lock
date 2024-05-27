@@ -1,0 +1,45 @@
+{
+  "version": "3",
+  "packages": {
+    "specifiers": {
+      "jsr:@lambdaurora/libhtml@^1.2.1": "jsr:@lambdaurora/libhtml@1.2.3",
+      "jsr:@lambdaurora/libhtml@^1.2.3": "jsr:@lambdaurora/libhtml@1.2.3",
+      "jsr:@lambdaurora/libmd@^2.1.1": "jsr:@lambdaurora/libmd@2.1.1",
+      "jsr:@std/assert@^0.225.2": "jsr:@std/assert@0.225.3",
+      "jsr:@std/fs@^0.229.1": "jsr:@std/fs@0.229.1",
+      "jsr:@std/path@^0.225.1": "jsr:@std/path@0.225.1"
+    },
+    "jsr": {
+      "@lambdaurora/libhtml@1.2.3": {
+        "integrity": "3016a55bcbaba217cd3f57961599b4de4a1445c291756803f68bb607024ad812"
+      },
+      "@lambdaurora/libmd@2.1.1": {
+        "integrity": "881f90352c4185d5c08d7be4a5d93c41550baaca635a31b9222bc253859b1308",
+        "dependencies": [
+          "jsr:@lambdaurora/libhtml@^1.2.1"
+        ]
+      },
+      "@std/assert@0.225.3": {
+        "integrity": "b3c2847aecf6955b50644cdb9cf072004ea3d1998dd7579fc0acb99dbb23bd4f"
+      },
+      "@std/fs@0.229.1": {
+        "integrity": "38d3fb31f0ca0a8c1118e039939188f32e291a3f7f17dc0868fec22024bdfadd",
+        "dependencies": [
+          "jsr:@std/assert@^0.225.2",
+          "jsr:@std/path@^0.225.1"
+        ]
+      },
+      "@std/path@0.225.1": {
+        "integrity": "8c3220635a73730eb51fe43de9e10b79e2724a5bb8638b9355d35ae012fd9429"
+      }
+    }
+  },
+  "remote": {},
+  "workspace": {
+    "dependencies": [
+      "jsr:@lambdaurora/libhtml@^1.2.3",
+      "jsr:@lambdaurora/libmd@^2.1.1",
+      "jsr:@std/fs@^0.229.1"
+    ]
+  }
+}

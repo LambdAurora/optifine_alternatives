@@ -19,7 +19,7 @@ jobs:
 
       - name: "Build with Deno"
         run: |
-          ./build.sh
+          deno task build
 
       - uses: actions/upload-artifact@v4
         with:
