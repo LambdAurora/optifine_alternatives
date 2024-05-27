@@ -10,7 +10,8 @@ const mod = new Mod(
 .add_category("Utility", "Zoom")
 .add_link(
 	{ host: "modrinth"},
-	{ host: "curseforge", params: { namespace: "camera-utils" } }
+	{ host: "curseforge", params: { namespace: "camera-utils" } },
+	{ host: "github" }
 );
 
 await mod.import_versions_from_modrinth("camera-utils");

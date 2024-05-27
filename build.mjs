@@ -5,6 +5,7 @@ import { load_mods } from "./build_src/mod.mjs";
 const WEBSITE = "https://optifine.alternatives.lambdaurora.dev";
 const WEBSITE_PREFIX = WEBSITE + "/";
 const BUILD_DIR = "./build";
+const IMAGES_DIR = BUILD_DIR + "/images";
 const DECODER = new TextDecoder("utf-8");
 const ENCODER = new TextEncoder();
 
@@ -13,7 +14,7 @@ const ENCODER = new TextEncoder();
 console.log("Creating build directory.");
 if (existsSync(BUILD_DIR))
 	await Deno.remove(BUILD_DIR, {recursive: true});
-await Deno.mkdir(BUILD_DIR);
+await Deno.mkdir(IMAGES_DIR, { recursive: true });
 
 console.log("Building...");
 const categorized_mods = await fetch_mods();
@@ -113,7 +114,8 @@ async function build_readme_file(mods) {
 async function build_pages(mods) {
 	Promise.all([
 		Deno.copyFile("giscus_style.css", BUILD_DIR + "/giscus_style.css"),
-		Deno.copyFile("forge.png", BUILD_DIR + "/forge.png")
+		Deno.copyFile("images/forge.png", IMAGES_DIR + "/forge.png"),
+		Deno.copyFile("images/connected-block-textures.png", IMAGES_DIR + "/connected-block-textures.png")
 	]);
 
 	async function build_mod_cards(parent, mods, level = 3) {

@@ -7,7 +7,7 @@ const mod = new Mod(
 	"EnnuiL",
 	"Adds a highly-configurable zoom key for Quilt. The zoom is yours!",
 )
-.icon("https://cdn.modrinth.com/data/aXf2OSFU/icon.png")
+.icon("https://cdn.modrinth.com/data/aXf2OSFU/e4eadd819f064a6c652313229b218fc207d6b805.png")
 .add_version({ loader: ["quilt"], v: [18.2, 19, 20.1] }, { loader: ["fabric"], v: [15, 17, 18] })
 .add_category("Utility", "Zoom")
 .add_link(

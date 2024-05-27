@@ -10,6 +10,7 @@ const mod = new Mod(
 .add_category("Cosmetic", "Splash Screen")
 .add_link(
 	{ host: "modrinth" },
+	{ host: "curseforge" },
 	{ host: "github", params: { author: "emmods" } }
 );
 
