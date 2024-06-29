@@ -2,8 +2,9 @@
   "version": "3",
   "packages": {
     "specifiers": {
-      "jsr:@lambdaurora/libhtml@^1.2.1": "jsr:@lambdaurora/libhtml@1.2.3",
+      "jsr:@lambdaurora/libhtml@^1.2.1": "jsr:@lambdaurora/libhtml@1.3.0",
       "jsr:@lambdaurora/libhtml@^1.2.3": "jsr:@lambdaurora/libhtml@1.2.3",
+      "jsr:@lambdaurora/libhtml@^1.3.0": "jsr:@lambdaurora/libhtml@1.3.0",
       "jsr:@lambdaurora/libmd@^2.1.1": "jsr:@lambdaurora/libmd@2.1.1",
       "jsr:@std/assert@^0.225.2": "jsr:@std/assert@0.225.3",
       "jsr:@std/fs@^0.229.1": "jsr:@std/fs@0.229.1",
@@ -12,6 +13,9 @@
     "jsr": {
       "@lambdaurora/libhtml@1.2.3": {
         "integrity": "3016a55bcbaba217cd3f57961599b4de4a1445c291756803f68bb607024ad812"
+      },
+      "@lambdaurora/libhtml@1.3.0": {
+        "integrity": "0cca3b4e38ec78329b00e1e012bfb6d9fe3089f8c2510328c8d02447caaa658f"
       },
       "@lambdaurora/libmd@2.1.1": {
         "integrity": "881f90352c4185d5c08d7be4a5d93c41550baaca635a31b9222bc253859b1308",
@@ -37,7 +41,7 @@
   "remote": {},
   "workspace": {
     "dependencies": [
-      "jsr:@lambdaurora/libhtml@^1.2.3",
+      "jsr:@lambdaurora/libhtml@^1.3.0",
       "jsr:@lambdaurora/libmd@^2.1.1",
       "jsr:@std/fs@^0.229.1"
     ]

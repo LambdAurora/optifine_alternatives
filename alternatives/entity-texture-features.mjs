@@ -8,7 +8,7 @@ const mod = new Mod(
 	"A Fabric mod implementing randomized & emissive texture support for mobs set by the resourcepack. Fully compatible with the Optifine format & Sodium.",
 )
 .icon("https://raw.githubusercontent.com/Traben-0/Entity_Texture_Features/master/.github/README-assets/icon.png")
-.add_version({ loader: ["quilt"], v: [18, 19.4] }, { loader: ["fabric", "forge"], v: [17, 18, 19.4] })
+.add_version({ loader: ["fabric", "forge"], v: [17, 18, 19.4] }, { loader: ["quilt"], v: [18, 19.4] })
 .add_category("Cosmetic")
 .add_link(
 	{ host: "modrinth", params: { namespace: NAMESPACE } },

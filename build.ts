@@ -2,6 +2,7 @@ import * as html from "@lambdaurora/libhtml";
 import * as md from "@lambdaurora/libmd";
 import { copy, exists } from "@std/fs";
 import { load_mods, default as Mod } from "./build_src/mod.ts";
+import { LINK_SVG_PATH, process_headings } from "./build_src/utils.ts";
 
 const WEBSITE = "https://optifine.alternatives.lambdaurora.dev";
 const WEBSITE_PREFIX = WEBSITE + "/";
@@ -127,13 +128,38 @@ async function build_pages(mods: Category[]) {
 			const details = html.create_element("details")
 			parent.append_child(details);
 
+			const category_id = encodeURI(category.name)
+				.replace(/%20/g, "-")
+				.toLocaleLowerCase();
+
 			details.append_child(
-				html.create_element("summary")
-					.with_child(
-						html.create_element("h" + level)
-							.with_attr("id", encodeURI(category.name).replace(/%20/g, "-").toLocaleLowerCase())
-							.with_child(category.name)
-					)
+				html.summary([
+					html.create_element(`h${level}`)
+						.with_attr("id", category_id)
+						.with_child(html.a({
+							attributes: {
+								class: "ls_heading_anchor",
+								href: `#${category_id}`,
+								"aria-label": `Anchor link: ${category.name}`
+							},
+							children: [
+								html.svg({
+									attributes: {
+										class: "ls_icon",
+										ls_size: "small",
+										viewBox: "0 0 16 16",
+										version: "1.1",
+										"aria-hidden": "true"
+									},
+									children: [
+										html.create_element("path")
+											.with_attr("d", LINK_SVG_PATH)
+									]
+								})
+							]
+						}))
+						.with_child(category.name)
+				])
 			);
 	
 			if (category.mods.length !== 0) {
@@ -184,6 +210,8 @@ async function build_pages(mods: Category[]) {
 					article.children[i] = section;
 				}
 			}
+
+			process_headings(article, { exclude: ["h1"] });
 
 			content = content.replace(/\$\{WEBSITE\}/g, WEBSITE).replace(/\$\{WEBSITE_PREFIX\}/g, WEBSITE_PREFIX)
 				.replace("${list_content}", article.html(new html.StringifyStyle("\t", 3)).trimStart());

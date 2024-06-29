@@ -6,7 +6,7 @@ const mod = new Mod(
 	"Adds dynamic lighting to the game.",
 )
 .icon("https://cdn.modrinth.com/data/yBW8D80W/icon.png")
-.add_version({ loader: ["quilt"], v: [17, 18, 19, 20.2] }, { loader: ["fabric"], v: [15, 16.1, 17, 18, 19, 20.2] })
+.add_version({ loader: ["fabric"], v: [15, 16.1, 17, 18, 19, 20.2] }, { loader: ["quilt"], v: [17, 18, 19, 20.2] })
 .add_category("Cosmetic")
 .add_link(
 	{ host: "modrinth" },
