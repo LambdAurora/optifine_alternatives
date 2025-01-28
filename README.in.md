@@ -88,8 +88,11 @@ Some mods require the Fabric Renderer API to work, Canvas supports it, but Sodiu
 
 ## Missing
 
-- Custom entity models (might come in Vanilla to an unknown date?)
+- Custom entity models (might come to Vanilla at an unknown date?)
   currently incompletely replaced: current existing implementations are very hardcoded to Vanilla entities
+- Vertical culling for glass panes
+  currently incompletely replaced: culling is either excessive (MC-264676) or none at all
+- Overlay blending mode for glass (originally a MCPatcher feature)
 
 ## Need help?
 
