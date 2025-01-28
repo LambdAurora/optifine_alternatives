@@ -18,17 +18,12 @@ jobs:
       - name: "Checkout"
         uses: actions/checkout@v4
       - name: "Set up Deno"
-        uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@v2
         with:
-          deno-version: v1.x
+          deno-version: v2.x
       - name: "Build with Deno"
         run: |
           deno task build
-      - name: "Deploy README"
-        uses: JamesIves/github-pages-deploy-action@4.1.5
-        with:
-          branch: rendered
-          folder: build
       - name: "Upload artifact"
         uses: actions/upload-artifact@v4
         with:

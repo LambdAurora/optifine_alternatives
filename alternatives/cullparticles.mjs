@@ -12,7 +12,7 @@ export default new Mod(
 .add_category("Performance", "Client")
 .add_link(
 	{ host: "curseforge", params: { namespace: HOST_ID } },
-	{ host: "curseforge", params: { namespace: "cull-particles" } },
+	{ host: "curseforge", params: { namespace: "cull-particles", modloader: "forge" } },
 	{ host: "github", params: { namespace: "CullParticlesFabric" } },
-	{ host: "github", params: { namespace: "CullParticles" } }
+	{ host: "github", params: { namespace: "CullParticles", modloader: "forge" } }
 );

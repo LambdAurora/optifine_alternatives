@@ -28,10 +28,6 @@ await Deno.mkdir(BUILD_DIR);
 console.log("Building...");
 const categorized_mods = await fetch_mods();
 
-// Build README file
-
-build_readme_file(categorized_mods);
-
 // Build HTML files
 
 build_pages(categorized_mods);
@@ -86,36 +82,9 @@ async function fetch_mods() {
 	return categorized_mods;
 }
 
-async function build_mod_tree(md_doc: md.Document, mods: Category[], level: md.HeadingLevel = 3) {
-	for (const category of mods) {
-		if (category.mods.length === 0 && category.categories.length === 0)
-			continue;
-
-		md_doc.push(new md.Heading(category.name, level));
-
-		if (category.mods.length !== 0) {
-			md_doc.push(new md.List(await Promise.all(category.mods.map((mod) => mod.to_markdown()))));
-		}
-
-		if (category.categories.length !== 0) {
-			await build_mod_tree(md_doc, category.categories, level + 1);
-		}
-	}
-}
-
-async function build_readme_file(mods: Category[]) {
-	const md_doc = new md.Document();
-
-	await Promise.all([Deno.readTextFile("README.in.md"), build_mod_tree(md_doc, mods)])
-		.then(([content, _]) => {
-			content = content.replace("${mods}", md_doc.toString());
-
-			Deno.writeTextFile(BUILD_DIR + "/README.md", content);
-		});
-}
-
 async function build_pages(mods: Category[]) {
 	await Promise.all([
+		Deno.copyFile("style.css", BUILD_DIR + "/style.css"),
 		Deno.copyFile("giscus_style.css", BUILD_DIR + "/giscus_style.css"),
 		copy("images/", IMAGES_DIR)
 	]);

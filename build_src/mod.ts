@@ -1,9 +1,10 @@
 import * as html from "@lambdaurora/libhtml";
 import * as md from "@lambdaurora/libmd";
-import {ModPathResolveParams, load_hosts} from "./host.ts";
-import Loader, {load_loaders} from "./loader.ts";
-import Requirement, {load_requirements} from "./requirement.ts";
-import {get_versions, segment_versions} from "./version.ts";
+import { ModPathResolveParams } from "../data/host.ts";
+import { HOSTS } from "../data/hosts.ts";
+import Loader, { load_loaders, LoaderRegistry } from "./loader.ts";
+import Requirement, { load_requirements } from "./requirement.ts";
+import { get_versions, segment_versions } from "./version.ts";
 
 export interface Icon {
 	url: string;
@@ -53,7 +54,7 @@ export default class Mod {
 	private requirements: RequirementsData;
 
 	constructor(public name: string, public author: string, public description: string) {
-		this._icon = { url: "", pixelated: false };
+		this._icon = {url: "", pixelated: false};
 		this.versions = {};
 		this.categories = [];
 		this.links = [];
@@ -169,21 +170,19 @@ export default class Mod {
 		}
 	}
 
-	async resolve_versions() {
-		return await load_loaders().then(loaders => {
-			const resolved: ResolvedLoaderVersions[] = [];
+	resolve_versions(loaders: LoaderRegistry) {
+		const resolved: ResolvedLoaderVersions[] = [];
 
-			for (const loader of Object.keys(this.versions)) {
-				resolved.push({
-					loader: loaders.get_by_id(loader)!,
-					versions: this.versions[loader].map(version => {
-						return {id: typeof version.id === "number" ? `1.${version.id}` : version.id, note: version.note};
-					})
+		for (const loader of Object.keys(this.versions)) {
+			resolved.push({
+				loader: loaders.get_by_id(loader)!,
+				versions: this.versions[loader].map(version => {
+					return {id: typeof version.id === "number" ? `1.${version.id}` : version.id, note: version.note};
 				})
-			}
+			})
+		}
 
-			return resolved;
-		});
+		return resolved;
 	}
 
 	add_category() {
@@ -210,24 +209,37 @@ export default class Mod {
 		return this;
 	}
 
-	async resolve_links() {
-		return await load_hosts().then(hosts => {
-			const resolved = [];
+	resolve_links() {
+		const resolved = [];
+		const host_count: { [id: string]: number } = {};
 
-			for (const link of this.links) {
-				for (const existing of hosts) {
-					if (existing.id === link.host) {
-						resolved.push({
-							host: existing,
-							url: existing.get_mod_url(this, link.params),
-							loader: (link.params && link.params.modloader) ? link.params.modloader : "Fabric"
-						});
-					}
-				}
+		for (const link of this.links) {
+			if (link.host in host_count) {
+				host_count[link.host]++;
+			} else {
+				host_count[link.host] = 1;
 			}
 
-			return resolved;
-		});
+			for (const existing of HOSTS) {
+				if (existing.id === link.host) {
+					resolved.push({
+						host: existing,
+						url: existing.get_mod_url(this, link.params),
+						loader: (link.params && link.params.modloader) ? link.params.modloader : "Fabric",
+						should_display_loader: false
+					});
+				}
+			}
+		}
+
+		console.log(host_count)
+
+		for (const link of resolved) {
+			if (host_count[link.host.id] > 1)
+				link.should_display_loader = true;
+		}
+
+		return resolved;
 	}
 
 	requires(requirement: string | string[]) {
@@ -308,56 +320,16 @@ export default class Mod {
 		return prettified;
 	}
 
-	async to_markdown() {
-		const entry = new md.ListEntry([]);
-
-		let name: md.Node = new md.Text(this.name);
-
-		const links = await this.resolve_links();
-		if (links.length !== 0) {
-			// Pick an URL.
-			name = new md.Link(links[0].url, this.name, links[0].host.get_mod_tooltip(this), this.name);
-		}
-
-		const summary = new md.Paragraph(name);
-		if (this.description !== null) {
-			summary.push(` - ${this.description}  `);
-		} else {
-			summary.push(`  `);
-		}
-
-		const metadata_list = new md.List([new md.ListEntry(`Available for: ${this.get_prettified_version().join(",\ ")}  `)]);
-
-		entry.push(summary)
-			.push(metadata_list);
-
-		return this.resolve_requirements().then(requirements => {
-			const requirements_md = new md.Paragraph([]);
-
-			for (const requirement of requirements) {
-				requirements_md.push(`Requires `)
-					.push(requirement.get_markdown_link())
-					.push("  ");
-			}
-
-			if (requirements.length !== 0) {
-				metadata_list.push(requirements_md);
-			}
-
-			return entry;
-		});
-	}
-
 	/**
 	 * @return {html.Element} a prettified string of the Minecraft versions the mod is compatible with
 	 */
-	async get_html_versions() {
+	get_html_versions(loaders: LoaderRegistry) {
 		const versions_ul = html.create_element("ul");
 
 		if (Object.keys(this.versions).length === 0)
 			return versions_ul;
 
-		const versions = await this.resolve_versions();
+		const versions = this.resolve_versions(loaders);
 
 		function create_li(c: ResolvedLoaderVersions) {
 			const li = html.create_element("li")
@@ -429,7 +401,8 @@ export default class Mod {
 			);
 		card.append_child(versions_div);
 
-		versions_div.append_child(await this.get_html_versions());
+		const loaders = await load_loaders();
+		versions_div.append_child(this.get_html_versions(loaders));
 
 		await this.resolve_requirements().then(requirements => {
 			const div = html.create_element("div")
@@ -454,7 +427,7 @@ export default class Mod {
 			.with_attr("class", ["card_content"]);
 		card.append_child(host_div);
 
-		const links = await this.resolve_links();
+		const links = this.resolve_links();
 
 		for (const link of links) {
 			const a = html.create_element("a")
@@ -465,8 +438,24 @@ export default class Mod {
 
 			if (link.host.create_icon) {
 				a.append_child(link.host.create_icon(42, 42));
+
+				if (link.should_display_loader) {
+					const loader = loaders.get_by_id(link.loader);
+
+					if (loader) {
+						const loader_icon = loader.get_fancy_icon();
+						loader_icon.attr("class", "loader");
+						a.append_child(loader_icon);
+					}
+				}
 			} else {
-				a.append_child(new html.Text(link.host.name));
+				let text = link.host.name;
+
+				if (link.should_display_loader) {
+					text += ` (${link.loader})`;
+				}
+
+				a.append_child(text);
 			}
 		}
 

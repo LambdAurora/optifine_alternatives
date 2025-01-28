@@ -13,14 +13,22 @@ export default class Loader {
 		this.create_icon = create_icon;
 	}
 
-	get_fancy_icon() {
+	get_fancy_icon(): html.Element {
 		return this.create_icon(24, 24).with_attr("alt", this.name);
 	}
 };
 
-const STATE = {
-	loaders: [] as Loader[],
+export interface LoaderRegistry {
+	loaders: Loader[];
+
+	get_by_id(id: string): Loader | null;
+}
+
+const STATE: LoaderRegistry & { loaded: boolean } = {
+	loaders: [],
 	get_by_id(id: string) {
+		id = id.toLowerCase();
+
 		for (const loader of this.loaders) {
 			if (loader.id === id) {
 				return loader;
@@ -32,7 +40,7 @@ const STATE = {
 	loaded: false
 };
 
-export async function load_loaders() {
+export async function load_loaders(): Promise<LoaderRegistry> {
 	if (!STATE.loaded) {
 		const loaders: string[] = [];
 
