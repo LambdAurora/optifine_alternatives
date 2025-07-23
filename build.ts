@@ -1,8 +1,8 @@
 import * as html from "@lambdaurora/libhtml";
 import * as md from "@lambdaurora/libmd";
 import { copy, exists } from "@std/fs";
-import { load_mods, default as Mod } from "./build_src/mod.ts";
-import { LINK_SVG_PATH, process_headings } from "./build_src/utils.ts";
+import Mod, { load_mods } from "./build_logic/mod.ts";
+import { LINK_SVG_PATH, process_headings } from "./build_logic/utils.ts";
 
 const WEBSITE = "https://optifine.alternatives.lambdaurora.dev";
 const WEBSITE_PREFIX = WEBSITE + "/";
@@ -21,8 +21,9 @@ class Category {
 /* Main */
 
 console.log("Creating build directory.");
-if (await exists(BUILD_DIR))
-	await Deno.remove(BUILD_DIR, {recursive: true});
+if (await exists(BUILD_DIR)) {
+	await Deno.remove(BUILD_DIR, { recursive: true });
+}
 await Deno.mkdir(BUILD_DIR);
 
 console.log("Building...");
@@ -38,12 +39,12 @@ async function fetch_mods() {
 	const mods = (await load_mods()).sort((a, b) => a.namespace.localeCompare(b.namespace));
 
 	const categorized_mods = [
-		new Category("Performance", [ new Category("Client"), new Category("General") ]),
+		new Category("Performance", [new Category("Client"), new Category("General")]),
 		new Category("Cosmetic"),
 		new Category("Shaders"),
 		new Category("Fog"),
-		new Category("Utility", [ new Category("Cloud Height"), new Category("Zoom") ]),
-		new Category("Extras")
+		new Category("Utility", [new Category("Cloud Height"), new Category("Zoom")]),
+		new Category("Extras"),
 	];
 
 	// Build categorization of mods.
@@ -86,15 +87,16 @@ async function build_pages(mods: Category[]) {
 	await Promise.all([
 		Deno.copyFile("style.css", BUILD_DIR + "/style.css"),
 		Deno.copyFile("giscus_style.css", BUILD_DIR + "/giscus_style.css"),
-		copy("images/", IMAGES_DIR)
+		copy("images/", IMAGES_DIR),
 	]);
 
 	async function build_mod_cards(parent: html.Element, mods: Category[], level = 3) {
 		for (const category of mods) {
-			if (category.mods.length === 0 && category.categories.length === 0)
+			if (category.mods.length === 0 && category.categories.length === 0) {
 				continue;
-	
-			const details = html.create_element("details")
+			}
+
+			const details = html.create_element("details");
 			parent.append_child(details);
 
 			const category_id = encodeURI(category.name)
@@ -109,7 +111,7 @@ async function build_pages(mods: Category[]) {
 							attributes: {
 								class: "ls_heading_anchor",
 								href: `#${category_id}`,
-								"aria-label": `Anchor link: ${category.name}`
+								"aria-label": `Anchor link: ${category.name}`,
 							},
 							children: [
 								html.svg({
@@ -118,30 +120,30 @@ async function build_pages(mods: Category[]) {
 										ls_size: "small",
 										viewBox: "0 0 16 16",
 										version: "1.1",
-										"aria-hidden": "true"
+										"aria-hidden": "true",
 									},
 									children: [
 										html.create_element("path")
-											.with_attr("d", LINK_SVG_PATH)
-									]
-								})
-							]
+											.with_attr("d", LINK_SVG_PATH),
+									],
+								}),
+							],
 						}))
-						.with_child(category.name)
-				])
+						.with_child(category.name),
+				]),
 			);
-	
+
 			if (category.mods.length !== 0) {
 				details.attr("open", "");
 
 				const rendered_mods = await Promise.all(category.mods.map((mod) => mod.to_html()));
-				rendered_mods.forEach(mod => {
+				rendered_mods.forEach((mod) => {
 					details.append_child(mod);
 				});
 
 				details.append_child(html.create_element("hr"));
 			}
-	
+
 			if (category.categories.length !== 0) {
 				details.attr("open", "");
 
@@ -162,15 +164,18 @@ async function build_pages(mods: Category[]) {
 			const article = html.create_element("article");
 			md.render_to_html(md_doc, { parent: article });
 
-			(article.children.find(child => child instanceof html.Element && child.tag === html.Tag.h1) as html.Element)
-				.append_child(html.create_element("span").with_attr("class", ["right"]).with_child(html.create_element("a")
-					.with_attr("class", ["github-button", "right"])
-					.with_attr("href", "https://github.com/LambdAurora/optifine_alternatives")
-					.with_attr("data-color-scheme", "no-preference: light_high_contrast; light: light_high_contrast; dark: dark_high_contrast;")
-					.with_attr("data-icon", "octicon-star")
-					.with_attr("data-show-count", "true")
-					.with_attr("aria-label", "Star LambdAurora/optifine_alternatives on GitHub")
-				));
+			(article.children.find((child) => child instanceof html.Element && child.tag === html.Tag.h1) as html.Element)
+				.append_child(
+					html.create_element("span").with_attr("class", ["right"]).with_child(
+						html.create_element("a")
+							.with_attr("class", ["github-button", "right"])
+							.with_attr("href", "https://github.com/LambdAurora/optifine_alternatives")
+							.with_attr("data-color-scheme", "no-preference: light_high_contrast; light: light_high_contrast; dark: dark_high_contrast;")
+							.with_attr("data-icon", "octicon-star")
+							.with_attr("data-show-count", "true")
+							.with_attr("aria-label", "Star LambdAurora/optifine_alternatives on GitHub"),
+					),
+				);
 
 			for (let i = 0; i < article.children.length; i++) {
 				const child = article.children[i];

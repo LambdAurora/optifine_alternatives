@@ -17,6 +17,10 @@ jobs:
         with:
           deno-version: v2.x
 
+      - name: "Check with Deno"
+        run: |
+          deno check
+
       - name: "Build with Deno"
         run: |
           deno task build

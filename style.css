@@ -6,6 +6,10 @@ summary > h1, summary > h2, summary > h3, summary > h4, summary > h5, summary > 
 	display: inline-block;
 }
 
+.status_chip {
+	margin-left: 0.8em;
+}
+
 .card {
 	display: flex;
 	flex-direction: column;

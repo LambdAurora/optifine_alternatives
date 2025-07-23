@@ -1,7 +1,7 @@
 #
 # LambdAurora's ignore file
 #
-# v0.21
+# v0.24
 
 # JetBrains
 .idea/
@@ -50,6 +50,8 @@ logs/
 # Languages
 ## Java
 classes/
+## Kotlin
+.kotlin/
 ## Python
 __pycache__/
 venv/
@@ -59,7 +61,7 @@ venv/
 # OS
 ## Windows
 desktop.ini
-# MacOS
+## MacOS
 .DS_Store
 
 # File types
@@ -81,11 +83,12 @@ lib*.a
 # Common
 bin/
 build/
-!build/forge.png
 dist/
 lib/
+!/lib/
 !src/lib/
 !src/**/lib/
 obj/
 run/
 target/
+/local.properties

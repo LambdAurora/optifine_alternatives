@@ -1,0 +1,17 @@
+import Mod from "../build_logic/mod.ts";
+import { LIGHT } from "../build_logic/status.ts";
+
+export default new Mod(
+	"Phosphor",
+	"CaffeineMC",
+	"No-compromises lighting engine optimization mod. Incompatible with Starlight.",
+)
+	.icon("https://cdn.modrinth.com/data/hEOCdOgW/icon.png")
+	.add_version({ loader: ["fabric"], v: [15, 16, 17, 18, 19.4] })
+	.add_category("Performance", "General")
+	.add_link(
+		{ host: "modrinth" },
+		{ host: "curseforge" },
+		{ host: "github", params: { namespace: "phosphor-fabric" } },
+	)
+	.set_status(LIGHT);

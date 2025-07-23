@@ -15,12 +15,12 @@ In the modern Minecraft era, with Fabric's community effort, modders have begun 
 
 This list will list recommended OptiFine alternatives by me (LambdAurora), so it has some requirements for mods to be listed here:
 
- - They must be publicly available - if they're only available on request they are not eligible.
- - Mods must respect the Mojang EULA.
- - “PVP” clients (Badlion / Lunar / etc.) and cheat clients are not considered mods.
- - Mods must not refer to cheat clients.
- - Mods that change gameplay in a way (e.g. zoom) that have a way for servers to disable them will be favored.
- - Free and open-source mods are favored.
+- They must be publicly available - if they're only available on request they are not eligible.
+- Mods must respect the Mojang EULA.
+- “PVP” clients (Badlion / Lunar / etc.) and cheat clients are not considered mods.
+- Mods must not refer to cheat clients.
+- Mods that change gameplay in a way (e.g. zoom) that have a way for servers to disable them will be favored.
+- Free and open-source mods are favored.
 
 This list now has a fancy URL: https://optifine.alternatives.lambdaurora.dev/
 
@@ -102,4 +102,4 @@ If you need help related to LambDynamicLights, LambdaBetterGrass, or Inspecio, i
 
 ## Other lists
 
- - [Useful Fabric server-side mods](https://github.com/comp500/fabric-serverside-mods/blob/main/README.md)
+- [Useful Fabric server-side mods](https://github.com/comp500/fabric-serverside-mods/blob/main/README.md)
