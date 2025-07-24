@@ -37,7 +37,7 @@ ${mods}
 The mods listed below are not part of the OptiFine alternatives directly but those are still nice to have.
 
 - [Ears] - Faithful fancy fashion features for fuzzy folk. It offers a lot of skin customization options, directly encoded into the skin file uploaded to Mojang. A very good alternative to express yourself than restrictive capes.
-  - Available for: b1.7.3, 1.2.5, 1.4.7 -> 1.20.4, Not so Seecret Saturday (a1.1.2), New Frontier Craft (b1.7.3)
+  - Available for: b1.7.3, 1.2.5, 1.4.7 -> 1.21, Not so Seecret Saturday (a1.1.2), New Frontier Craft (b1.7.3)
 - [DashLoader] - Attempts to improve loading times by caching the game's content. May be incompatible with some of the mods in this list.
   - Available for: 1.16 -> 1.20.1
 - [Entity View Distance] - This mods allows more precise manipulation of entity view distance on client and server 
@@ -77,12 +77,14 @@ These are client-only mods that prevent Minecraft from changing the FOV in all s
 
 ## Compatibility
 
-Sodium and Canvas Renderer are incompatible.
+Only one mod at a time can replace the rendering engine, as such feature requires a full control of the engine to avoid graphical corruption and crashes.
+This means rendering mods like Sodium, VulkanMod, and Canvas Renderer are incompatible.
 
-Some mods require the Fabric Renderer API to work, Canvas supports it, but Sodium will not support it by default, [Indium] is required to support it.
+When a mod replaces the rendering engine it will also need to provide support for Fabric Renderer API,
+so that mods which interact with custom models can properly render them.
 
-- [Indium] - Adds support of the Fabric Renderer API to [Sodium](https://modrinth.com/mod/sodium).
-  - Available for: 1.16 -> 1.20.4
+Canvas provides a Fabric Renderer implementation, Sodium only provides one since its 0.6 release, before then [Indium] was required to add support.
+As a rule of thumb, Sodium 0.6 exists since 1.21, Sodium 0.5 and below target 1.20.6 and below and will require [Indium] on those versions.
 
 [Indium]: https://modrinth.com/mod/indium "Indium Modrinth Page"
 

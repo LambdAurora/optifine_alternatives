@@ -12,7 +12,8 @@ const mod = new Mod(
 		{ host: "modrinth" },
 		{ host: "curseforge", params: { namespace: "enhanced-block-entities" } },
 		{ host: "github", params: { namespace: "EnhancedBlockEntities" } },
-	);
+	)
+	.requires("frapi");
 
 await mod.import_versions_from_modrinth("ebe");
 

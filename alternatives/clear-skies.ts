@@ -1,4 +1,5 @@
 import Mod from "../build_logic/mod.ts";
+import { UNMAINTAINED } from "../build_logic/status.ts";
 
 export default new Mod(
 	"Clear Skies",
@@ -13,4 +14,5 @@ export default new Mod(
 		{ host: "curseforge" },
 		{ host: "curseforge", params: { namespace: "clear-skies-forge-port", modloader: "Forge" } },
 		{ host: "github" },
-	);
+	)
+	.set_status(UNMAINTAINED);

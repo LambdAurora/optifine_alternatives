@@ -3,7 +3,7 @@ import Mod from "../build_logic/mod.ts";
 const mod = new Mod(
 	"OptiGUI",
 	"opekope2",
-	"Custom inventory GUIs on Fabric&Quilt with OptiFine resource pack support&many more features",
+	"Custom inventory GUIs on Fabric with OptiFine resource pack support & many more features.",
 )
 	.icon("https://cdn-raw.modrinth.com/data/JuksLGBQ/2ec739011e612256ebe0c79a4ce064d0e453dd0f.png")
 	.add_version({ loader: ["fabric"], v: [18, 19, 20.1] })
