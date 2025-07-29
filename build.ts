@@ -154,8 +154,8 @@ async function build_pages(mods: Category[]) {
 
 	const section = html.create_element("section");
 
-	await Promise.all([Deno.readTextFile("index.in.html"), Deno.readTextFile("README.in.md"), build_mod_cards(section, mods)])
-		.then(([content, readme, _]) => {
+	await Promise.all([Deno.readTextFile("index.in.html"), Deno.readTextFile("README.in.md"), build_mod_cards(section, mods), Deno.readTextFile("404.in.html")])
+		.then(([content, readme, _, not_found_page]) => {
 			const INSERT_MODS_MARKER = "insert_mods";
 
 			readme = readme.replace("${mods}", `<!--${INSERT_MODS_MARKER}-->`);
@@ -187,9 +187,16 @@ async function build_pages(mods: Category[]) {
 
 			process_headings(article, { exclude: ["h1"] });
 
-			content = content.replace(/\$\{WEBSITE\}/g, WEBSITE).replace(/\$\{WEBSITE_PREFIX\}/g, WEBSITE_PREFIX)
+			content = process_base_page(content)
 				.replace("${list_content}", article.html(new html.StringifyStyle("\t", 3)).trimStart());
 
-			Deno.writeTextFile(BUILD_DIR + "/index.html", content);
+			return Promise.all([
+				Deno.writeTextFile(BUILD_DIR + "/index.html", content),
+				Deno.writeTextFile(BUILD_DIR + "/404.html", process_base_page(not_found_page))
+			]);
 		});
+}
+
+function process_base_page(content: string): string {
+	return content.replace(/\$\{WEBSITE\}/g, WEBSITE).replace(/\$\{WEBSITE_PREFIX\}/g, WEBSITE_PREFIX);
 }
